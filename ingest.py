@@ -1,5 +1,5 @@
 """
-ingest.py — load documents, data files, and statistical output into the store.
+ingest.py — load documents and data files into the store.
 
 Papers (txt/docx) are converted to text, split into overlapping chunks,
 and embedded via the configured OpenAI-compatible embeddings endpoint.
@@ -169,7 +169,8 @@ def process_file(path: Path, store: dict) -> bool:
             return True
 
         print(f"skip (unsupported format '{suffix}') — supported: "
-              f"{CONFIG['paper']['formats']} papers, {CONFIG['data']['formats']} data")
+              f"{CONFIG['paper']['formats']} papers, {CONFIG['data']['formats']} data "
+              f"(PDF unsupported: convert to docx/txt)")
         return False
 
     except APIConnectionError as exc:

@@ -31,8 +31,6 @@ paper:
   formats: [txt, docx]
 data:
   formats: [csv, xlsx]
-stat_output:
-  formats: [spv, sav]
 
 paths:
   sources: "sources/"          # user drops the paper here
