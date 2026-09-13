@@ -29,7 +29,6 @@ import yaml
 from ingest import CONFIG, chunk_text, client, load_paper
 
 EXTRACT_PATH = Path(CONFIG["paths"]["extracted"])
-MAX_TOKENS_EXTRACT = 2048  # extraction replies can exceed the chat reply length
 
 EXTRACTION_PROMPT = """You are a meticulous research assistant. Extract
 every published statistic from the text below: means, standard deviations,
@@ -132,18 +131,28 @@ def _validate(proposal: dict, text_norm: str,
 
 
 def _extract_once(text: str) -> tuple[list, bool]:
-    """One LLM extraction call. Returns (proposals, was_truncated)."""
-    c = client()
+    """One LLM extraction call. Returns (proposals, was_truncated).
+
+    Uses the cloudflare provider (GLM-4.7-flash via 9router): extraction
+    is the slow path, and the remote model is ~100x faster than local
+    Gemma on this hardware.
+    """
+    c = client("cloudflare")
     resp = c.chat.completions.create(
-        model=CONFIG["llm"]["model"],
+        model=CONFIG["cloudflare"]["model"],
         messages=[
             {"role": "system", "content": EXTRACTION_PROMPT},
             {"role": "user", "content": text},
         ],
         temperature=CONFIG["llm"]["temperature"],
-        max_tokens=MAX_TOKENS_EXTRACT,
+        max_tokens=CONFIG["cloudflare"]["max_tokens"],
     )
-    raw = (resp.choices[0].message.content or "").strip()
+    msg = resp.choices[0].message
+    raw = (msg.content or "").strip()
+    # reasoning models may put everything in `reasoning` with null content —
+    # fall back to it so truncation detection and salvage still work
+    if not raw and (msg.reasoning or getattr(msg, "reasoning_content", None)):
+        raw = (msg.reasoning or msg.reasoning_content or "").strip()
     truncated = resp.choices[0].finish_reason == "length"
 
     raw = re.sub(r"^```(json)?\s*|\s*```$", "", raw)

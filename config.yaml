@@ -7,6 +7,12 @@ llm:
   temperature: 0.0                       # accuracy-first: deterministic outputs
   max_tokens: 1024                       # per-response cap (JSON verdicts are small)
 
+cloudflare:                              # via 9router proxy, OpenAI-compatible
+  base_url: "http://localhost:20128/v1"
+  api_key_env: "VERITAS_CF_KEY"          # key read from env — never stored in repo
+  model: "cf/@cf/zai-org/glm-4.7-flash"  # reasoning model: needs token headroom
+  max_tokens: 4096
+
 embeddings:
   base_url: "http://localhost:1234/v1"   # same server serves embeddings
   model: "text-embedding-nomic-embed-text-v1.5"

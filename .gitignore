@@ -4,3 +4,5 @@ extracted_values.json
 audit_report.json
 __pycache__/
 .venv/
+*.env
+.env

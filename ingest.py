@@ -17,6 +17,7 @@ Run:  uv run ingest.py sources/my_paper.txt
 
 import csv
 import json
+import os
 import sys
 import zipfile
 from pathlib import Path
@@ -28,14 +29,25 @@ from openai import APIConnectionError, OpenAI
 CONFIG = yaml.safe_load(Path("config.yaml").read_text())
 
 
-def client() -> OpenAI:
-    """OpenAI-compatible client pointed at the configured server."""
-    return OpenAI(base_url=CONFIG["llm"]["base_url"], api_key="***")
+def client(provider: str = "llm") -> OpenAI:
+    """OpenAI-compatible client for a provider block in config.yaml.
+
+    provider "llm"       -> local LM Studio (Gemma), no key needed
+    provider "cloudflare" -> 9router proxy (GLM-4.7-flash), key from env
+    """
+    block = CONFIG[provider]
+    api_key = os.environ.get(block.get("api_key_env", ""), "none")
+    if block.get("api_key_env") and api_key == "none":
+        raise ValueError(
+            f"environment variable {block['api_key_env']} is not set — "
+            f"export it with the {provider} API key and retry."
+        )
+    return OpenAI(base_url=block["base_url"], api_key=api_key)
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """Get one embedding vector per text via the embeddings endpoint."""
-    c = client()
+    c = client("embeddings")
     resp = c.embeddings.create(
         model=CONFIG["embeddings"]["model"],
         input=texts,
