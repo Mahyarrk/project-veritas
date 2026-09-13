@@ -1,0 +1,31 @@
+# project-veritas configuration
+# All paths relative to the project root.
+
+llm:
+  base_url: "http://localhost:1234/v1"   # LM Studio local server
+  model: "google/gemma-4-e4b"            # the auditor/chat model
+  temperature: 0.0                       # accuracy-first: deterministic outputs
+  max_tokens: 1024                       # per-response cap (JSON verdicts are small)
+
+embeddings:
+  base_url: "http://localhost:1234/v1"   # same server serves embeddings
+  model: "text-embedding-nomic-embed-text-v1.5"
+
+retrieval:
+  chunk_size: 800          # characters per chunk
+  chunk_overlap: 150       # overlap so sentences split across chunks stay findable
+  top_k: 4                 # chunks retrieved per query
+
+paper:
+  formats: [txt, docx]
+data:
+  formats: [csv, xlsx]
+stat_output:
+  formats: [spv, sav]
+
+paths:
+  sources: "sources/"          # user drops the paper here
+  store: "store.json"          # generated: chunks + embeddings
+  extracted: "extracted_values.json"
+  audit_report: "audit_report.json"
+  chat_history: "chat_history.json"
