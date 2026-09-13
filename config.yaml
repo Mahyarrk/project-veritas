@@ -15,6 +15,10 @@ retrieval:
   chunk_size: 800          # characters per chunk
   chunk_overlap: 150       # overlap so sentences split across chunks stay findable
   top_k: 4                 # chunks retrieved per query
+  # similarity floor for "is this even in the document?" — must be calibrated
+  # per embedding model (nomic-text-embed scores ~0.3 even for unrelated text;
+  # a naive 0.25 floor filters nothing). Calibrated during validation.
+  min_score: 0.55
 
 paper:
   formats: [txt, docx]
