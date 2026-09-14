@@ -61,12 +61,14 @@ def client(provider: str = "llm") -> OpenAI:
         api_key = os.environ[env_key]
     if not api_key or api_key == "none":
         api_key = "none"   # local endpoints ignore the key; cloud needs one
-    # 15s request timeout: no LLM call should hang the pipeline. Local
-    # models answer in ~2s; a stalled server fails fast and visibly.
+    # Timeout rule: fail fast, never hang. 15s for pings/extraction JSON
+    # (short outputs); 120s for chat, whose RAG prompts make a local model
+    # generate for 20s+ legitimately (measured: 22s for one answer).
     # max_retries=0: the SDK's default retry loop otherwise re-queues a
     # 429'd request for minutes (observed: 9router + gemma free tier).
+    timeout = 120.0 if provider == "llm" else 15.0
     return OpenAI(base_url=base_url, api_key=api_key,
-                  timeout=15.0, max_retries=0)
+                  timeout=timeout, max_retries=0)
 
 
 def model(provider: str = "llm") -> str:

@@ -22,7 +22,7 @@ from pathlib import Path
 
 import yaml
 
-from ingest import CONFIG, client
+from ingest import CONFIG, client, model
 from retrieve import retrieve
 
 HISTORY_PATH = Path(CONFIG["paths"]["chat_history"])
