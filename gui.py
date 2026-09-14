@@ -267,33 +267,41 @@ with tab_chat:
     st.header("Chat about the paper")
     if "chat_messages" not in st.session_state:
         st.session_state["chat_messages"] = []
-    for msg in st.session_state["chat_messages"]:
-        with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
-    if prompt := st.chat_input("Ask about the paper..."):
-        st.session_state["chat_messages"].append(
-            {"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
-        with st.chat_message("assistant"):
-            with st.spinner("retrieving..."):
-                try:
-                    from chat import answer
-                    history = [(m["role"], m["content"])
-                               for m in st.session_state["chat_messages"]]
-                    reply, sources_used = answer(prompt, history)
-                except Exception as exc:   # noqa: BLE001
-                    reply = f"ERROR: {type(exc).__name__} — {str(exc)[:200]}"
-                    sources_used = []
-            st.markdown(reply)
-            if sources_used:
-                with st.expander("sources"):
-                    for s in sources_used:
+    # entries: dicts {role, content, sources?} — sources survive reruns so
+    # every answer stays source-checkable at any time.
+
+    # --- scrollable message container (fixed height; input stays pinned) ---
+    chat_container = st.container(height=520)
+    with chat_container:
+        for msg in st.session_state["chat_messages"]:
+            with st.chat_message(msg["role"]):
+                st.markdown(msg["content"])
+                for s in msg.get("sources", []):
+                    with st.expander("sources"):
                         st.caption(f"[{s['source']}, offset {s['offset']}] "
                                    f"(score {s['score']:.2f})")
                         st.text(s["text"][:400])
+
+    # --- input pinned below the container ---
+    if prompt := st.chat_input("Ask about the paper..."):
         st.session_state["chat_messages"].append(
-            {"role": "assistant", "content": reply})
+            {"role": "user", "content": prompt})
+        with chat_container:
+            with st.chat_message("user"):
+                st.markdown(prompt)
+        with st.spinner("retrieving..."):
+            try:
+                from chat import answer
+                history = [(m["role"], m["content"])
+                           for m in st.session_state["chat_messages"]]
+                reply, sources_used = answer(prompt, history)
+            except Exception as exc:   # noqa: BLE001
+                reply = f"ERROR: {type(exc).__name__} — {str(exc)[:200]}"
+                sources_used = []
+        st.session_state["chat_messages"].append(
+            {"role": "assistant", "content": reply,
+             "sources": sources_used})
+        st.rerun()   # redraw: message appears inside the scroll container
 
 # =====================================================================
 # TAB 3: ABOUT
