@@ -99,7 +99,7 @@ def rewrite_query(history: list[dict], question: str) -> tuple[bool, str]:
     try:
         c = client()
         resp = c.chat.completions.create(
-            model=CONFIG["llm"]["model"],
+            model=model("llm"),
             messages=[
                 {"role": "system", "content": REWRITE_PROMPT},
                 {"role": "user", "content":
@@ -147,6 +147,30 @@ def build_messages(history: list[dict], question: str,
         *history,
         {"role": "user", "content": content},
     ]
+
+
+def answer(question: str, history: list[dict] | None = None) -> tuple[str, list[dict]]:
+    """One RAG turn for the GUI: rewrite (if dependent), retrieve, answer.
+
+    Returns (reply_text, excerpts_used). Raises on endpoint errors — the
+    GUI decides how to present failures. No state is saved to disk here;
+    history management is the caller's job."""
+    history = history or []
+    from retrieve import retrieve
+    dependent, search_query = rewrite_query(history, question)
+    excerpts = retrieve(search_query)
+    if not excerpts:
+        return REFUSAL, []
+    messages = build_messages(history, question, excerpts)
+    c = client()
+    resp = c.chat.completions.create(
+        model=model("llm"),
+        messages=messages,
+        temperature=CONFIG["llm"]["temperature"],
+        max_tokens=CONFIG["llm"]["max_tokens"],
+    )
+    reply = (resp.choices[0].message.content or "").strip() or REFUSAL
+    return reply, excerpts
 
 
 def main() -> None:
@@ -204,7 +228,7 @@ def main() -> None:
             messages = build_messages(history, question, excerpts)
             c = client()
             resp = c.chat.completions.create(
-                model=CONFIG["llm"]["model"],
+                model=model("llm"),
                 messages=messages,
                 temperature=CONFIG["llm"]["temperature"],
                 max_tokens=CONFIG["llm"]["max_tokens"],
