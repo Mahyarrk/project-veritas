@@ -1,0 +1,3303 @@
+[
+  {
+    "table": "Methods",
+    "row": "adult patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "range",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "range",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "Polysomnographic and psychometric data from the remaining 42 patients",
+    "kind": "count",
+    "offsets": [
+      1728
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "males",
+    "value": "32",
+    "unit": "",
+    "snippet": "(32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1798,
+      5049
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "females",
+    "value": "10",
+    "unit": "",
+    "snippet": "(32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1798,
+      5049
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1919
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "comparison",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1950
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI and Oxygen Desaturation Index (ODI)",
+    "column": "correlation",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$)",
+    "kind": "r",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI and Oxygen Desaturation Index (ODI)",
+    "column": "p-value",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "adult patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "age",
+    "column": "range",
+    "value": "20",
+    "unit": "years of age",
+    "snippet": "(20–65 years of age)",
+    "kind": "min",
+    "offsets": [
+      4390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "age",
+    "column": "range",
+    "value": "65",
+    "unit": "years of age",
+    "snippet": "(20–65 years of age)",
+    "kind": "max",
+    "offsets": [
+      4390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "patients",
+    "column": "excluded",
+    "value": "13",
+    "unit": "",
+    "snippet": "13 patients were excluded",
+    "kind": "count",
+    "offsets": [
+      4658
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Isolated severe mechanical upper airway obstruction",
+    "column": "excluded",
+    "value": "4",
+    "unit": "",
+    "snippet": "Isolated severe mechanical upper airway obstruction ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4729
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Normal diagnostic PSG without sleep pathology",
+    "column": "excluded",
+    "value": "4",
+    "unit": "",
+    "snippet": "Normal diagnostic PSG without sleep pathology ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4795
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Narcolepsy",
+    "column": "excluded",
+    "value": "2",
+    "unit": "",
+    "snippet": "Narcolepsy ($n = 2$)",
+    "kind": "count",
+    "offsets": [
+      4855
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Active seizure disorder / Convulsions",
+    "column": "excluded",
+    "value": "1",
+    "unit": "",
+    "snippet": "Active seizure disorder / Convulsions ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4880
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Isolated primary snoring",
+    "column": "excluded",
+    "value": "1",
+    "unit": "",
+    "snippet": "Isolated primary snoring ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4932
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Parasomnia",
+    "column": "excluded",
+    "value": "1",
+    "unit": "",
+    "snippet": "Parasomnia ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4971
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Analytical Cohort",
+    "row": "total patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Analytical Cohort",
+    "row": "patients",
+    "column": "males",
+    "value": "32",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Analytical Cohort",
+    "row": "patients",
+    "column": "females",
+    "value": "10",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "apnea definition",
+    "column": "airflow amplitude drop",
+    "value": "90",
+    "unit": "%",
+    "snippet": "an apnea was defined as a $\\ge 90\\%$ drop in airflow amplitude",
+    "kind": "other",
+    "offsets": [
+      5695
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "apnea definition",
+    "column": "duration",
+    "value": "10",
+    "unit": "seconds",
+    "snippet": "lasting $\\ge 10$ seconds",
+    "kind": "other",
+    "offsets": [
+      5758
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "hypopnea definition",
+    "column": "airflow reduction",
+    "value": "30",
+    "unit": "%",
+    "snippet": "Hypopneas were scored as a $\\ge 30\\%$ reduction in airflow",
+    "kind": "other",
+    "offsets": [
+      5784
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "hypopnea definition",
+    "column": "arterial oxygen desaturation",
+    "value": "3",
+    "unit": "%",
+    "snippet": "accompanied by $\\ge 3\\%$ arterial oxygen desaturation",
+    "kind": "other",
+    "offsets": [
+      5843
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Introduction",
+    "row": "arterial oxygen desaturation",
+    "column": "threshold",
+    "value": "3",
+    "unit": "%",
+    "snippet": "nied by $\\ge 3\\%$ arterial oxygen desaturation",
+    "kind": "other",
+    "offsets": [
+      5850
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "REM-AHI",
+    "column": "Gabryelska et al.",
+    "value": "5.8",
+    "unit": "",
+    "snippet": "mean $\\pm$ SD of REM-AHI $= 5.8 \\pm 1.9$",
+    "kind": "mean",
+    "offsets": [
+      7029
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "REM-AHI",
+    "column": "Gabryelska et al.",
+    "value": "1.9",
+    "unit": "",
+    "snippet": "mean $\\pm$ SD of REM-AHI $= 5.8 \\pm 1.9$",
+    "kind": "std",
+    "offsets": [
+      7029
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "NREM-AHI",
+    "column": "Gabryelska et al.",
+    "value": "3.2",
+    "unit": "",
+    "snippet": "NREM-AHI $= 3.2 \\pm 1.55$",
+    "kind": "mean",
+    "offsets": [
+      7071
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "NREM-AHI",
+    "column": "Gabryelska et al.",
+    "value": "1.55",
+    "unit": "",
+    "snippet": "NREM-AHI $= 3.2 \\pm 1.55$",
+    "kind": "std",
+    "offsets": [
+      7071
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "Gabryelska et al.",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "$p = 0.0001$",
+    "kind": "p",
+    "offsets": [
+      2274,
+      7098,
+      14022,
+      18022,
+      21358,
+      22006,
+      22546
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "alpha",
+    "column": "setting",
+    "value": "0.05",
+    "unit": "",
+    "snippet": "Setting $\\alpha = 0.05$",
+    "kind": "other",
+    "offsets": [
+      7257
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Sample Size Calculation",
+    "row": "confidence level",
+    "column": "setting",
+    "value": "95",
+    "unit": "%",
+    "snippet": "95% confidence lev",
+    "kind": "other",
+    "offsets": [
+      7282
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Introduction/Sample Size Calculation",
+    "row": "alpha",
+    "column": "total",
+    "value": "0.05",
+    "unit": "",
+    "snippet": "Setting $\\alpha = 0.05$",
+    "kind": "other",
+    "offsets": [
+      7257
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Introduction/Sample Size Calculation",
+    "row": "confidence level",
+    "column": "total",
+    "value": "95",
+    "unit": "%",
+    "snippet": "(95% confidence level)",
+    "kind": "other",
+    "offsets": [
+      7281
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Introduction/Sample Size Calculation",
+    "row": "statistical power",
+    "column": "total",
+    "value": "80",
+    "unit": "%",
+    "snippet": "statistical power at $80\\%$",
+    "kind": "other",
+    "offsets": [
+      7308
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Introduction/Sample Size Calculation",
+    "row": "required sample size",
+    "column": "total",
+    "value": "40",
+    "unit": "participants",
+    "snippet": "the required sample size was computed as 40 participants.",
+    "kind": "count",
+    "offsets": [
+      7354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "men",
+    "column": "count",
+    "value": "32",
+    "unit": "",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "count",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "men",
+    "column": "percentage",
+    "value": "76.2",
+    "unit": "%",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "other",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "women",
+    "column": "count",
+    "value": "10",
+    "unit": "",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "count",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "women",
+    "column": "percentage",
+    "value": "23.8",
+    "unit": "%",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "other",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM sleep",
+    "column": "physiological norms",
+    "value": "20–25",
+    "unit": "%",
+    "snippet": "REM sleep percentage was markedly depressed compared to physiological norms (expected: 20–25%).",
+    "kind": "other",
+    "offsets": [
+      10279
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 1",
+    "value": "19.12",
+    "unit": "events/hr",
+    "snippet": "$19.12 \\pm 20.18$",
+    "kind": "mean",
+    "offsets": [
+      11750
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 1",
+    "value": "20.18",
+    "unit": "events/hr",
+    "snippet": "$19.12 \\pm 20.18$",
+    "kind": "std",
+    "offsets": [
+      11750
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 2",
+    "value": "14.41",
+    "unit": "events/hr",
+    "snippet": "$14.41 \\pm 17.26$",
+    "kind": "mean",
+    "offsets": [
+      11774,
+      13819,
+      21212
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 2",
+    "value": "17.26",
+    "unit": "events/hr",
+    "snippet": "$14.41 \\pm 17.26$",
+    "kind": "std",
+    "offsets": [
+      11774,
+      13819,
+      21212
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 3",
+    "value": "34.17",
+    "unit": "events/hr",
+    "snippet": "$34.17 \\pm 22.33$",
+    "kind": "mean",
+    "offsets": [
+      11798,
+      13797,
+      21190
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 3",
+    "value": "22.33",
+    "unit": "events/hr",
+    "snippet": "$34.17 \\pm 22.33$",
+    "kind": "std",
+    "offsets": [
+      11798,
+      13797,
+      21190
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Arousal Index (events/hr)",
+    "column": "p-value",
+    "value": "0.005",
+    "unit": "",
+    "snippet": "**0.005**",
+    "kind": "p",
+    "offsets": [
+      11822
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "Group 1",
+    "value": "1.72",
+    "unit": "events/hr",
+    "snippet": "$1.72 \\pm 4.25$",
+    "kind": "mean",
+    "offsets": [
+      11873
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "Group 1",
+    "value": "4.25",
+    "unit": "events/hr",
+    "snippet": "$1.72 \\pm 4.25$",
+    "kind": "std",
+    "offsets": [
+      11873
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "Group 2",
+    "value": "2.14",
+    "unit": "events/hr",
+    "snippet": "$2.14 \\pm 4.78$",
+    "kind": "mean",
+    "offsets": [
+      11895
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "Group 2",
+    "value": "4.78",
+    "unit": "events/hr",
+    "snippet": "$2.14 \\pm 4.78$",
+    "kind": "std",
+    "offsets": [
+      11895
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "Group 3",
+    "value": "0.36",
+    "unit": "events/hr",
+    "snippet": "$0.36 \\pm 1.13$",
+    "kind": "mean",
+    "offsets": [
+      11917
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "Group 3",
+    "value": "1.13",
+    "unit": "events/hr",
+    "snippet": "$0.36 \\pm 1.13$",
+    "kind": "std",
+    "offsets": [
+      11917
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "PLMS Index (events/hr)",
+    "column": "p-value",
+    "value": "0.059",
+    "unit": "",
+    "snippet": "0.059",
+    "kind": "p",
+    "offsets": [
+      11939
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "Group 1",
+    "value": "59.92",
+    "unit": "events/hr",
+    "snippet": "$59.92 \\pm 36.32$",
+    "kind": "mean",
+    "offsets": [
+      11981,
+      14663,
+      19712
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "Group 1",
+    "value": "36.32",
+    "unit": "events/hr",
+    "snippet": "$59.92 \\pm 36.32$",
+    "kind": "std",
+    "offsets": [
+      11981,
+      14663,
+      19712
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "Group 2",
+    "value": "52.27",
+    "unit": "events/hr",
+    "snippet": "$52.27 \\pm 35.01$",
+    "kind": "mean",
+    "offsets": [
+      12005
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "Group 2",
+    "value": "35.01",
+    "unit": "events/hr",
+    "snippet": "$52.27 \\pm 35.01$",
+    "kind": "std",
+    "offsets": [
+      12005
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "Group 3",
+    "value": "63.39",
+    "unit": "events/hr",
+    "snippet": "$63.39 \\pm 31.04$",
+    "kind": "mean",
+    "offsets": [
+      12029
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "Group 3",
+    "value": "31.04",
+    "unit": "events/hr",
+    "snippet": "$63.39 \\pm 31.04$",
+    "kind": "std",
+    "offsets": [
+      12029
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "REM-AHI (events/hr)",
+    "column": "p-value",
+    "value": "0.994",
+    "unit": "",
+    "snippet": "0.994 (NS)",
+    "kind": "p",
+    "offsets": [
+      12053
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Group 1",
+    "value": "53.61",
+    "unit": "events/hr",
+    "snippet": "$53.61 \\pm 33.72$",
+    "kind": "mean",
+    "offsets": [
+      12101,
+      14717,
+      19734
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Group 1",
+    "value": "33.72",
+    "unit": "events/hr",
+    "snippet": "$53.61 \\pm 33.72$",
+    "kind": "std",
+    "offsets": [
+      12101,
+      14717,
+      19734
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Group 2",
+    "value": "50.90",
+    "unit": "events/hr",
+    "snippet": "$50.90 \\pm 31.13$",
+    "kind": "mean",
+    "offsets": [
+      12125
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Group 2",
+    "value": "31.13",
+    "unit": "events/hr",
+    "snippet": "$50.90 \\pm 31.13$",
+    "kind": "std",
+    "offsets": [
+      12125
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Group 3",
+    "value": "62.30",
+    "unit": "events/hr",
+    "snippet": "$62.30 \\pm 41.61$",
+    "kind": "mean",
+    "offsets": [
+      12149
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Group 3",
+    "value": "41.61",
+    "unit": "events/hr",
+    "snippet": "$62.30 \\pm 41.61$",
+    "kind": "std",
+    "offsets": [
+      12149
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "NREM-AHI (events/hr)",
+    "column": "p-value",
+    "value": "0.093",
+    "unit": "",
+    "snippet": "0.093 (NS)",
+    "kind": "p",
+    "offsets": [
+      12173
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Not specified",
+    "row": "Unknown",
+    "column": "Unknown",
+    "value": "0.62",
+    "unit": "",
+    "snippet": "0.62 (NS)",
+    "kind": "other",
+    "offsets": [
+      11700
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 1",
+    "value": "1.29",
+    "unit": "",
+    "snippet": "$1.29 \\pm 2.69$",
+    "kind": "mean",
+    "offsets": [
+      12352
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 1",
+    "value": "2.69",
+    "unit": "",
+    "snippet": "$1.29 \\pm 2.69$",
+    "kind": "std",
+    "offsets": [
+      12352
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 2",
+    "value": "1.00",
+    "unit": "",
+    "snippet": "$1.00 \\pm 1.64$",
+    "kind": "mean",
+    "offsets": [
+      12374
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 2",
+    "value": "1.64",
+    "unit": "",
+    "snippet": "$1.00 \\pm 1.64$",
+    "kind": "std",
+    "offsets": [
+      12374
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 3",
+    "value": "2.20",
+    "unit": "",
+    "snippet": "$2.20 \\pm 4.73$",
+    "kind": "mean",
+    "offsets": [
+      12396
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 3",
+    "value": "4.73",
+    "unit": "",
+    "snippet": "$2.20 \\pm 4.73$",
+    "kind": "std",
+    "offsets": [
+      12396
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "p-value",
+    "value": "0.23",
+    "unit": "",
+    "snippet": "0.23 (NS)",
+    "kind": "p",
+    "offsets": [
+      12418
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "Group 1",
+    "value": "1.98",
+    "unit": "",
+    "snippet": "$1.98 \\pm 9.40$",
+    "kind": "mean",
+    "offsets": [
+      12466
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "Group 1",
+    "value": "9.40",
+    "unit": "",
+    "snippet": "$1.98 \\pm 9.40$",
+    "kind": "std",
+    "offsets": [
+      12466
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "Group 2",
+    "value": "0.53",
+    "unit": "",
+    "snippet": "$0.53 \\pm 1.31$",
+    "kind": "mean",
+    "offsets": [
+      12488
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "Group 2",
+    "value": "1.31",
+    "unit": "",
+    "snippet": "$0.53 \\pm 1.31$",
+    "kind": "std",
+    "offsets": [
+      12488
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "Group 3",
+    "value": "6.60",
+    "unit": "",
+    "snippet": "$6.60 \\pm 19.12$",
+    "kind": "mean",
+    "offsets": [
+      12510
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "Group 3",
+    "value": "19.12",
+    "unit": "",
+    "snippet": "$6.60 \\pm 19.12$",
+    "kind": "std",
+    "offsets": [
+      12510
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in REM (n)",
+    "column": "p-value",
+    "value": "0.08",
+    "unit": "",
+    "snippet": "0.08 (NS)",
+    "kind": "p",
+    "offsets": [
+      12533,
+      13264
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "Group 1",
+    "value": "146.33",
+    "unit": "",
+    "snippet": "$146.33 \\pm 157.43$",
+    "kind": "mean",
+    "offsets": [
+      12588
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "Group 1",
+    "value": "157.43",
+    "unit": "",
+    "snippet": "$146.33 \\pm 157.43$",
+    "kind": "std",
+    "offsets": [
+      12588
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "Group 2",
+    "value": "123.31",
+    "unit": "",
+    "snippet": "$123.31 \\pm 139.62$",
+    "kind": "mean",
+    "offsets": [
+      12614
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "Group 2",
+    "value": "139.62",
+    "unit": "",
+    "snippet": "$123.31 \\pm 139.62$",
+    "kind": "std",
+    "offsets": [
+      12614
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "Group 3",
+    "value": "220.00",
+    "unit": "",
+    "snippet": "$220.00 \\pm 194.56$",
+    "kind": "mean",
+    "offsets": [
+      12640
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "Group 3",
+    "value": "194.56",
+    "unit": "",
+    "snippet": "$220.00 \\pm 194.56$",
+    "kind": "std",
+    "offsets": [
+      12640
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Obstructive Apneas in NREM (n)",
+    "column": "p-value",
+    "value": "0.089",
+    "unit": "",
+    "snippet": "0.089 (NS)",
+    "kind": "p",
+    "offsets": [
+      12666
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "Group 1",
+    "value": "6.81",
+    "unit": "",
+    "snippet": "$6.81 \\pm 7.80$",
+    "kind": "mean",
+    "offsets": [
+      12718
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "Group 1",
+    "value": "7.80",
+    "unit": "",
+    "snippet": "$6.81 \\pm 7.80$",
+    "kind": "std",
+    "offsets": [
+      12718
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "Group 2",
+    "value": "7.34",
+    "unit": "",
+    "snippet": "$7.34 \\pm 8.05$",
+    "kind": "mean",
+    "offsets": [
+      12740
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "Group 2",
+    "value": "8.05",
+    "unit": "",
+    "snippet": "$7.34 \\pm 8.05$",
+    "kind": "std",
+    "offsets": [
+      12740
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "Group 3",
+    "value": "5.10",
+    "unit": "",
+    "snippet": "$5.10 \\pm 7.01$",
+    "kind": "mean",
+    "offsets": [
+      12762
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "Group 3",
+    "value": "7.01",
+    "unit": "",
+    "snippet": "$5.10 \\pm 7.01$",
+    "kind": "std",
+    "offsets": [
+      12762
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Central Apneas in NREM (n)",
+    "column": "p-value",
+    "value": "0.43",
+    "unit": "",
+    "snippet": "0.43 (NS)",
+    "kind": "p",
+    "offsets": [
+      12784
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "Group 1",
+    "value": "8.40",
+    "unit": "",
+    "snippet": "$8.40 \\pm 18.62$",
+    "kind": "mean",
+    "offsets": [
+      12833
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "Group 1",
+    "value": "18.62",
+    "unit": "",
+    "snippet": "$8.40 \\pm 18.62$",
+    "kind": "std",
+    "offsets": [
+      12833
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "Group 2",
+    "value": "2.81",
+    "unit": "",
+    "snippet": "$2.81 \\pm 5.71$",
+    "kind": "mean",
+    "offsets": [
+      12856,
+      13998,
+      21334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "Group 2",
+    "value": "5.71",
+    "unit": "",
+    "snippet": "$2.81 \\pm 5.71$",
+    "kind": "std",
+    "offsets": [
+      12856,
+      13998,
+      21334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "Group 3",
+    "value": "26.30",
+    "unit": "",
+    "snippet": "$26.30 \\pm 31.63$",
+    "kind": "mean",
+    "offsets": [
+      12878,
+      13976,
+      21312
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "Group 3",
+    "value": "31.63",
+    "unit": "",
+    "snippet": "$26.30 \\pm 31.63$",
+    "kind": "std",
+    "offsets": [
+      12878,
+      13976,
+      21312
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mixed Apneas in NREM (n)",
+    "column": "p-value",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "**0.0001**",
+    "kind": "p",
+    "offsets": [
+      12902
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "Group 1",
+    "value": "20.00",
+    "unit": "",
+    "snippet": "$20.00 \\pm 23.00$",
+    "kind": "mean",
+    "offsets": [
+      12952
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "Group 1",
+    "value": "23.00",
+    "unit": "",
+    "snippet": "$20.00 \\pm 23.00$",
+    "kind": "std",
+    "offsets": [
+      12952
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "Group 2",
+    "value": "20.50",
+    "unit": "",
+    "snippet": "$20.50 \\pm 22.72$",
+    "kind": "mean",
+    "offsets": [
+      12976
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "Group 2",
+    "value": "22.72",
+    "unit": "",
+    "snippet": "$20.50 \\pm 22.72$",
+    "kind": "std",
+    "offsets": [
+      12976
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "Group 3",
+    "value": "18.40",
+    "unit": "",
+    "snippet": "$18.40 \\pm 25.07$",
+    "kind": "mean",
+    "offsets": [
+      13000
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "Group 3",
+    "value": "25.07",
+    "unit": "",
+    "snippet": "$18.40 \\pm 25.07$",
+    "kind": "std",
+    "offsets": [
+      13000
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in REM (n)",
+    "column": "p-value",
+    "value": "0.80",
+    "unit": "",
+    "snippet": "0.80 (NS)",
+    "kind": "p",
+    "offsets": [
+      13024
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "Group 1",
+    "value": "118.21",
+    "unit": "",
+    "snippet": "$118.21 \\pm 95.10$",
+    "kind": "mean",
+    "offsets": [
+      13070
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "Group 1",
+    "value": "95.10",
+    "unit": "",
+    "snippet": "$118.21 \\pm 95.10$",
+    "kind": "std",
+    "offsets": [
+      13070
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "Group 2",
+    "value": "123.34",
+    "unit": "",
+    "snippet": "$123.34 \\pm 96.20$",
+    "kind": "mean",
+    "offsets": [
+      13091
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "Group 2",
+    "value": "96.20",
+    "unit": "",
+    "snippet": "$123.34 \\pm 96.20$",
+    "kind": "std",
+    "offsets": [
+      13091
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "Group 3",
+    "value": "101.80",
+    "unit": "",
+    "snippet": "$101.80 \\pm 93.15$",
+    "kind": "mean",
+    "offsets": [
+      13112
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "Group 3",
+    "value": "93.15",
+    "unit": "",
+    "snippet": "$101.80 \\pm 93.15$",
+    "kind": "std",
+    "offsets": [
+      13112
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Hypopneas in NREM (n)",
+    "column": "p-value",
+    "value": "0.53",
+    "unit": "",
+    "snippet": "0.53 (NS)",
+    "kind": "p",
+    "offsets": [
+      13137
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 1",
+    "value": "18.40",
+    "unit": "",
+    "snippet": "$18.40 \\pm 25.07$",
+    "kind": "mean",
+    "offsets": [
+      13000
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "Group 1",
+    "value": "25.07",
+    "unit": "",
+    "snippet": "$18.40 \\pm 25.07$",
+    "kind": "std",
+    "offsets": [
+      13000
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Unknown",
+    "column": "p-value",
+    "value": "0.80",
+    "unit": "",
+    "snippet": "0.80 (NS)",
+    "kind": "p",
+    "offsets": [
+      13024
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "Group 1",
+    "value": "92.01",
+    "unit": "%",
+    "snippet": "$92.01 \\pm 3.33$",
+    "kind": "mean",
+    "offsets": [
+      13195
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "Group 1",
+    "value": "3.33",
+    "unit": "%",
+    "snippet": "$92.01 \\pm 3.33$",
+    "kind": "std",
+    "offsets": [
+      13195
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "Group 2",
+    "value": "91.52",
+    "unit": "%",
+    "snippet": "$91.52 \\pm 3.54$",
+    "kind": "mean",
+    "offsets": [
+      13218
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "Group 2",
+    "value": "3.54",
+    "unit": "%",
+    "snippet": "$91.52 \\pm 3.54$",
+    "kind": "std",
+    "offsets": [
+      13218
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "Group 3",
+    "value": "93.58",
+    "unit": "%",
+    "snippet": "$93.58 \\pm 1.93$",
+    "kind": "mean",
+    "offsets": [
+      13241
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "Group 3",
+    "value": "1.93",
+    "unit": "%",
+    "snippet": "$93.58 \\pm 1.93$",
+    "kind": "std",
+    "offsets": [
+      13241
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Awake Baseline SpO2 (%)",
+    "column": "p-value",
+    "value": "0.08",
+    "unit": "",
+    "snippet": "0.08 (NS)",
+    "kind": "p",
+    "offsets": [
+      12533,
+      13264
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "Group 1",
+    "value": "90.78",
+    "unit": "%",
+    "snippet": "$90.78 \\pm 4.12$",
+    "kind": "mean",
+    "offsets": [
+      13316
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "Group 1",
+    "value": "4.12",
+    "unit": "%",
+    "snippet": "$90.78 \\pm 4.12$",
+    "kind": "std",
+    "offsets": [
+      13316
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "Group 2",
+    "value": "90.50",
+    "unit": "%",
+    "snippet": "$90.50 \\pm 4.48$",
+    "kind": "mean",
+    "offsets": [
+      13339
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "Group 2",
+    "value": "4.48",
+    "unit": "%",
+    "snippet": "$90.50 \\pm 4.48$",
+    "kind": "std",
+    "offsets": [
+      13339
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "Group 3",
+    "value": "91.59",
+    "unit": "%",
+    "snippet": "$91.59 \\pm 2.88$",
+    "kind": "mean",
+    "offsets": [
+      13362
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "Group 3",
+    "value": "2.88",
+    "unit": "%",
+    "snippet": "$91.59 \\pm 2.88$",
+    "kind": "std",
+    "offsets": [
+      13362
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean REM SpO2 (%)",
+    "column": "p-value",
+    "value": "0.46",
+    "unit": "",
+    "snippet": "0.46 (NS)",
+    "kind": "p",
+    "offsets": [
+      13385
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "Group 1",
+    "value": "90.54",
+    "unit": "%",
+    "snippet": "$90.54 \\pm 4.20$",
+    "kind": "mean",
+    "offsets": [
+      13438
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "Group 1",
+    "value": "4.20",
+    "unit": "%",
+    "snippet": "$90.54 \\pm 4.20$",
+    "kind": "std",
+    "offsets": [
+      13438
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "Group 2",
+    "value": "90.44",
+    "unit": "%",
+    "snippet": "$90.44 \\pm 4.47$",
+    "kind": "mean",
+    "offsets": [
+      13461
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "Group 2",
+    "value": "4.47",
+    "unit": "%",
+    "snippet": "$90.44 \\pm 4.47$",
+    "kind": "std",
+    "offsets": [
+      13461
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "Group 3",
+    "value": "90.86",
+    "unit": "%",
+    "snippet": "$90.86 \\pm 3.39$",
+    "kind": "mean",
+    "offsets": [
+      13484
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "Group 3",
+    "value": "3.39",
+    "unit": "%",
+    "snippet": "$90.86 \\pm 3.39$",
+    "kind": "std",
+    "offsets": [
+      13484
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Mean NREM SpO2 (%)",
+    "column": "p-value",
+    "value": "0.78",
+    "unit": "",
+    "snippet": "0.78 (NS)",
+    "kind": "p",
+    "offsets": [
+      13507
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "Group 1",
+    "value": "26.93",
+    "unit": "ODI/hr",
+    "snippet": "$26.93 \\pm 26.20$",
+    "kind": "mean",
+    "offsets": [
+      13566
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "Group 1",
+    "value": "26.20",
+    "unit": "ODI/hr",
+    "snippet": "$26.93 \\pm 26.20$",
+    "kind": "std",
+    "offsets": [
+      13566
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "Group 2",
+    "value": "24.21",
+    "unit": "ODI/hr",
+    "snippet": "$24.21 \\pm 23.74$",
+    "kind": "mean",
+    "offsets": [
+      13590
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "Group 2",
+    "value": "23.74",
+    "unit": "ODI/hr",
+    "snippet": "$24.21 \\pm 23.74$",
+    "kind": "std",
+    "offsets": [
+      13590
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "Group 3",
+    "value": "35.61",
+    "unit": "ODI/hr",
+    "snippet": "$35.61 \\pm 32.82$",
+    "kind": "mean",
+    "offsets": [
+      13614
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "Group 3",
+    "value": "32.82",
+    "unit": "ODI/hr",
+    "snippet": "$35.61 \\pm 32.82$",
+    "kind": "std",
+    "offsets": [
+      13614
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Oxygen Desaturation Index (ODI/hr)",
+    "column": "p-value",
+    "value": "0.22",
+    "unit": "",
+    "snippet": "0.22 (NS)",
+    "kind": "p",
+    "offsets": [
+      13638
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Arousal Index",
+    "column": "Females",
+    "value": "34",
+    "unit": "",
+    "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34",
+    "kind": "other",
+    "offsets": [
+      13721
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Arousal Index",
+    "column": "Females",
+    "value": "34.17",
+    "unit": "events/hr",
+    "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+    "kind": "mean",
+    "offsets": [
+      13721
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Arousal Index",
+    "column": "Females",
+    "value": "22.33",
+    "unit": "events/hr",
+    "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+    "kind": "std",
+    "offsets": [
+      13721
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Arousal Index",
+    "column": "males",
+    "value": "14.41",
+    "unit": "events/hr",
+    "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+    "kind": "mean",
+    "offsets": [
+      13721
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Arousal Index",
+    "column": "males",
+    "value": "17.26",
+    "unit": "events/hr",
+    "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+    "kind": "std",
+    "offsets": [
+      13721
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Arousal Index",
+    "column": "total",
+    "value": "0.005",
+    "unit": "",
+    "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+    "kind": "p",
+    "offsets": [
+      13721
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "NREM Mixed Apneas",
+    "column": "Females",
+    "value": "26.30",
+    "unit": "events",
+    "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+    "kind": "mean",
+    "offsets": [
+      13889
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "NREM Mixed Apneas",
+    "column": "Females",
+    "value": "31.63",
+    "unit": "events",
+    "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+    "kind": "std",
+    "offsets": [
+      13889
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "NREM Mixed Apneas",
+    "column": "males",
+    "value": "2.81",
+    "unit": "events",
+    "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+    "kind": "mean",
+    "offsets": [
+      13889
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "NREM Mixed Apneas",
+    "column": "males",
+    "value": "5.71",
+    "unit": "events",
+    "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+    "kind": "std",
+    "offsets": [
+      13889
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "NREM Mixed Apneas",
+    "column": "total",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+    "kind": "p",
+    "offsets": [
+      13889
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Total AHI",
+    "column": "total",
+    "value": "1.11",
+    "unit": "",
+    "snippet": "One-way ANOVA revealed no significant difference in Total AHI across sexes ($F = 1.11, df = 41, p = 0.297$).",
+    "kind": "other",
+    "offsets": [
+      14056
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Total AHI",
+    "column": "total",
+    "value": "41",
+    "unit": "",
+    "snippet": "One-way ANOVA revealed no significant difference in Total AHI across sexes ($F = 1.11, df = 41, p = 0.297$).",
+    "kind": "count",
+    "offsets": [
+      14056
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Key Findings from Sex-Stratified Comparisons",
+    "row": "Total AHI",
+    "column": "total",
+    "value": "0.297",
+    "unit": "",
+    "snippet": "One-way ANOVA revealed no significant difference in Total AHI across sexes ($F = 1.11, df = 41, p = 0.297$).",
+    "kind": "p",
+    "offsets": [
+      14056
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Comparison of REM vs. NREM Respiratory Events Across the Cohort",
+    "row": "Obstructive Apnea Frequency",
+    "column": "total",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "Highly significant difference between REM and NREM sleep ($p = 0.001$).",
+    "kind": "p",
+    "offsets": [
+      14324
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Obstructive Apnea Frequency",
+    "column": "REM vs NREM",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "Highly significant difference between REM and NREM sleep ($p = 0.001$).",
+    "kind": "p",
+    "offsets": [
+      14324
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Central Apnea Frequency",
+    "column": "REM vs NREM",
+    "value": "0.004",
+    "unit": "",
+    "snippet": "Significant difference between REM and NREM sleep ($p = 0.004$).",
+    "kind": "p",
+    "offsets": [
+      14429
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Mixed Apnea Frequency",
+    "column": "sleep states",
+    "value": "0.006",
+    "unit": "",
+    "snippet": "Significant differences between sleep states ($p = 0.006$ and $p = 0.001$, respectively).",
+    "kind": "p",
+    "offsets": [
+      14538
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Hypopnea Frequency",
+    "column": "sleep states",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "Significant differences between sleep states ($p = 0.006$ and $p = 0.001$, respectively).",
+    "kind": "p",
+    "offsets": [
+      14538
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI",
+    "column": "REM",
+    "value": "59.92",
+    "unit": "",
+    "snippet": "REM-AHI ($59.92 \\pm 36.32$) was elevated compared to NREM-AHI ($53.61 \\pm 33.72$)",
+    "kind": "mean",
+    "offsets": [
+      14654
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI",
+    "column": "REM",
+    "value": "36.32",
+    "unit": "",
+    "snippet": "REM-AHI ($59.92 \\pm 36.32$) was elevated compared to NREM-AHI ($53.61 \\pm 33.72$)",
+    "kind": "std",
+    "offsets": [
+      14654
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "NREM-AHI",
+    "column": "NREM",
+    "value": "53.61",
+    "unit": "",
+    "snippet": "REM-AHI ($59.92 \\pm 36.32$) was elevated compared to NREM-AHI ($53.61 \\pm 33.72$)",
+    "kind": "mean",
+    "offsets": [
+      14654
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "NREM-AHI",
+    "column": "NREM",
+    "value": "33.72",
+    "unit": "",
+    "snippet": "REM-AHI ($59.92 \\pm 36.32$) was elevated compared to NREM-AHI ($53.61 \\pm 33.72$)",
+    "kind": "std",
+    "offsets": [
+      14654
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "ESS Score",
+    "column": "Test Statistic",
+    "value": "2.15",
+    "unit": "",
+    "snippet": "$F = 2.15, df = 1$",
+    "kind": "other",
+    "offsets": [
+      15152
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "ESS Score",
+    "column": "p-value",
+    "value": "0.150",
+    "unit": "",
+    "snippet": "0.150",
+    "kind": "p",
+    "offsets": [
+      15177
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Impact of Pathological Somnolence",
+    "row": "ESS cut-off",
+    "column": "total",
+    "value": "8",
+    "unit": "",
+    "snippet": "Setting the cut-off at $\\ge 8$",
+    "kind": "other",
+    "offsets": [
+      15250
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Impact of Pathological Somnolence",
+    "row": "excessive sleepiness vs Total AHI",
+    "column": "total",
+    "value": "-0.305",
+    "unit": "",
+    "snippet": "excessive sleepiness did not exhibit a statistically significant linear correlation with Total AHI ($r = -0.305, p = 0.138$)",
+    "kind": "r",
+    "offsets": [
+      15282
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Impact of Pathological Somnolence",
+    "row": "excessive sleepiness vs Total AHI",
+    "column": "total",
+    "value": "0.138",
+    "unit": "",
+    "snippet": "excessive sleepiness did not exhibit a statistically significant linear correlation with Total AHI ($r = -0.305, p = 0.138$)",
+    "kind": "p",
+    "offsets": [
+      15282
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Impact of Pathological Somnolence",
+    "row": "excessive sleepiness vs REM-AHI",
+    "column": "total",
+    "value": "0.269",
+    "unit": "",
+    "snippet": "REM-AHI ($p = 0.269$)",
+    "kind": "p",
+    "offsets": [
+      15408,
+      20780
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Impact of Pathological Somnolence",
+    "row": "excessive sleepiness vs NREM-AHI",
+    "column": "total",
+    "value": "0.53",
+    "unit": "",
+    "snippet": "or NREM-AHI ($p = 0.53$)",
+    "kind": "p",
+    "offsets": [
+      15431,
+      20803
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Arousal Index vs. Sleepiness",
+    "row": "Arousal Index and daytime sleepiness",
+    "column": "total",
+    "value": "-0.27",
+    "unit": "",
+    "snippet": "($r = -0.27, p = 0.89$)",
+    "kind": "r",
+    "offsets": [
+      15629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Arousal Index vs. Sleepiness",
+    "row": "Arousal Index and daytime sleepiness",
+    "column": "total",
+    "value": "0.89",
+    "unit": "",
+    "snippet": "($r = -0.27, p = 0.89$)",
+    "kind": "p",
+    "offsets": [
+      15629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Text",
+    "row": "statistical significance",
+    "column": "not specified",
+    "value": "-0.27",
+    "unit": "",
+    "snippet": "eve statistical significance ($r = -0.27, p = 0.89$).",
+    "kind": "r",
+    "offsets": [
+      15600
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Text",
+    "row": "statistical significance",
+    "column": "not specified",
+    "value": "0.89",
+    "unit": "",
+    "snippet": "eve statistical significance ($r = -0.27, p = 0.89$).",
+    "kind": "p",
+    "offsets": [
+      15600
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "NREM-AHI",
+    "value": "0.366",
+    "unit": "",
+    "snippet": "The Arousal Index demonstrated a statistically significant positive correlation with both NREM-AHI ($r = 0.366, p = 0.017$)",
+    "kind": "r",
+    "offsets": [
+      16081
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "NREM-AHI",
+    "value": "0.017",
+    "unit": "",
+    "snippet": "The Arousal Index demonstrated a statistically significant positive correlation with both NREM-AHI ($r = 0.366, p = 0.017$)",
+    "kind": "p",
+    "offsets": [
+      16081
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "Total AHI",
+    "value": "0.358",
+    "unit": "",
+    "snippet": "and Total AHI ($r = 0.358, p = 0.020$).",
+    "kind": "r",
+    "offsets": [
+      16205
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "Total AHI",
+    "value": "0.020",
+    "unit": "",
+    "snippet": "and Total AHI ($r = 0.358, p = 0.020$).",
+    "kind": "p",
+    "offsets": [
+      16205
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Total AHI and PLMS Index",
+    "column": "not specified",
+    "value": "-0.046",
+    "unit": "",
+    "snippet": "The correlation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+    "kind": "r",
+    "offsets": [
+      16245
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Total AHI and PLMS Index",
+    "column": "not specified",
+    "value": "0.773",
+    "unit": "",
+    "snippet": "The correlation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+    "kind": "p",
+    "offsets": [
+      16245
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Text",
+    "row": "Total AHI and PLMS Index",
+    "column": "correlation",
+    "value": "-0.046",
+    "unit": "",
+    "snippet": "orrelation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+    "kind": "r",
+    "offsets": [
+      16250
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Text",
+    "row": "Total AHI and PLMS Index",
+    "column": "p-value",
+    "value": "0.773",
+    "unit": "",
+    "snippet": "orrelation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+    "kind": "p",
+    "offsets": [
+      16250
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Discussion",
+    "row": "Habitual snoring",
+    "column": "prevalence",
+    "value": "90.5",
+    "unit": "%",
+    "snippet": "Habitual snoring (90.5%)",
+    "kind": "other",
+    "offsets": [
+      18803
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Discussion",
+    "row": "witnessed nocturnal choking/apnea",
+    "column": "prevalence",
+    "value": "69.0",
+    "unit": "%",
+    "snippet": "witnessed nocturnal choking/apnea (69.0%)",
+    "kind": "other",
+    "offsets": [
+      18832
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Apnea-Hypopnea Index",
+    "column": "REM",
+    "value": "59.92",
+    "unit": "events/hr",
+    "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+    "kind": "mean",
+    "offsets": [
+      19629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Apnea-Hypopnea Index",
+    "column": "REM",
+    "value": "36.32",
+    "unit": "events/hr",
+    "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+    "kind": "std",
+    "offsets": [
+      19629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Apnea-Hypopnea Index",
+    "column": "NREM",
+    "value": "53.61",
+    "unit": "events/hr",
+    "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+    "kind": "mean",
+    "offsets": [
+      19629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Apnea-Hypopnea Index",
+    "column": "NREM",
+    "value": "33.72",
+    "unit": "events/hr",
+    "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+    "kind": "std",
+    "offsets": [
+      19629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Apnea-Hypopnea Index",
+    "column": "REM vs NREM",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      19629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "subjective daytime sleepiness (ESS) vs total AHI",
+    "column": "total AHI",
+    "value": "-0.305",
+    "unit": "",
+    "snippet": "subjective daytime sleepiness quantified by the Epworth Sleepiness Scale did not exhibit a linear correlation with total AHI ($r = -0.305, p = 0.138$)",
+    "kind": "r",
+    "offsets": [
+      20628
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "subjective daytime sleepiness (ESS) vs total AHI",
+    "column": "total AHI",
+    "value": "0.138",
+    "unit": "",
+    "snippet": "subjective daytime sleepiness quantified by the Epworth Sleepiness Scale did not exhibit a linear correlation with total AHI ($r = -0.305, p = 0.138$)",
+    "kind": "p",
+    "offsets": [
+      20628
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "subjective daytime sleepiness (ESS) vs REM-AHI",
+    "column": "REM-AHI",
+    "value": "0.269",
+    "unit": "",
+    "snippet": "REM-AHI ($p = 0.269$)",
+    "kind": "p",
+    "offsets": [
+      15408,
+      20780
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "subjective daytime sleepiness (ESS) vs NREM-AHI",
+    "column": "NREM-AHI",
+    "value": "0.53",
+    "unit": "",
+    "snippet": "or NREM-AHI ($p = 0.53$)",
+    "kind": "p",
+    "offsets": [
+      15431,
+      20803
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "NREM-AHI",
+    "column": "total",
+    "value": "0.53",
+    "unit": "",
+    "snippet": "or NREM-AHI ($p = 0.53$).",
+    "kind": "p",
+    "offsets": [
+      15431,
+      20803
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI",
+    "column": "males vs females",
+    "value": "0.297",
+    "unit": "",
+    "snippet": "total AHI did not differ significantly between males and females ($p = 0.297$).",
+    "kind": "p",
+    "offsets": [
+      21043
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "females",
+    "value": "34.17",
+    "unit": "events/hr",
+    "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+    "kind": "mean",
+    "offsets": [
+      21132
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "females",
+    "value": "22.33",
+    "unit": "events/hr",
+    "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+    "kind": "std",
+    "offsets": [
+      21132
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "males",
+    "value": "14.41",
+    "unit": "events/hr",
+    "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+    "kind": "mean",
+    "offsets": [
+      21132
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "males",
+    "value": "17.26",
+    "unit": "events/hr",
+    "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+    "kind": "std",
+    "offsets": [
+      21132
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Arousal Index",
+    "column": "females vs males",
+    "value": "0.005",
+    "unit": "",
+    "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+    "kind": "p",
+    "offsets": [
+      21132
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "mixed apneas during NREM sleep",
+    "column": "females",
+    "value": "26.30",
+    "unit": "events",
+    "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+    "kind": "mean",
+    "offsets": [
+      21258
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "mixed apneas during NREM sleep",
+    "column": "females",
+    "value": "31.63",
+    "unit": "events",
+    "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+    "kind": "std",
+    "offsets": [
+      21258
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "mixed apneas during NREM sleep",
+    "column": "males",
+    "value": "2.81",
+    "unit": "events",
+    "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+    "kind": "mean",
+    "offsets": [
+      21258
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "mixed apneas during NREM sleep",
+    "column": "males",
+    "value": "5.71",
+    "unit": "events",
+    "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+    "kind": "std",
+    "offsets": [
+      21258
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "mixed apneas during NREM sleep",
+    "column": "females vs males",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      21258
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Oxygen Desaturation Index (ODI) and total AHI",
+    "column": "total",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "Oxygen Desaturation Index (ODI) demonstrated a robust, statistically significant positive correlation with total AHI ($r = 0.570, p = 0.0001$)",
+    "kind": "r",
+    "offsets": [
+      21595
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Oxygen Desaturation Index (ODI) and total AHI",
+    "column": "total",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "Oxygen Desaturation Index (ODI) demonstrated a robust, statistically significant positive correlation with total AHI ($r = 0.570, p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      21595
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "desaturations during REM sleep",
+    "column": "REM sleep",
+    "value": "-0.358",
+    "unit": "",
+    "snippet": "with desaturations exhibiting greater severity during REM sleep ($r = -0.358, p = 0.025$)",
+    "kind": "r",
+    "offsets": [
+      21739
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "desaturations during REM sleep",
+    "column": "REM sleep",
+    "value": "0.025",
+    "unit": "",
+    "snippet": "with desaturations exhibiting greater severity during REM sleep ($r = -0.358, p = 0.025$)",
+    "kind": "p",
+    "offsets": [
+      21739
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM sleep suppression",
+    "column": "patients with obesity",
+    "value": "9.88",
+    "unit": "%",
+    "snippet": "In patients with obesity ($\\text{BMI} \\ge 30\\ \\text{kg/m}^2$), REM sleep was further suppressed ($9.88\\%$)",
+    "kind": "other",
+    "offsets": [
+      21830
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI",
+    "column": "patients with obesity",
+    "value": "66.22",
+    "unit": "",
+    "snippet": "respiratory events were magnified (REM-AHI $= 66.22 \\pm 43.66$, $p = 0.0001$)",
+    "kind": "mean",
+    "offsets": [
+      21942
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI",
+    "column": "patients with obesity",
+    "value": "43.66",
+    "unit": "",
+    "snippet": "respiratory events were magnified (REM-AHI $= 66.22 \\pm 43.66$, $p = 0.0001$)",
+    "kind": "std",
+    "offsets": [
+      21942
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI",
+    "column": "patients with obesity",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "respiratory events were magnified (REM-AHI $= 66.22 \\pm 43.66$, $p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      21942
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Conclusions",
+    "row": "Apnea-Hypopnea Index (REM vs NREM)",
+    "column": "total",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "The Apnea-Hypopnea Index is significantly higher during REM sleep compared to NREM sleep ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      22169
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Conclusions",
+    "row": "Arousal Index",
+    "column": "females",
+    "value": "0.005",
+    "unit": "",
+    "snippet": "females demonstrated a significantly higher Arousal Index ($p = 0.005$)",
+    "kind": "p",
+    "offsets": [
+      22441
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Conclusions",
+    "row": "NREM mixed apneas",
+    "column": "females",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "and increased NREM mixed apneas ($p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      22513
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Conclusions",
+    "row": "Oxygen Desaturation Index (ODI) and overall AHI",
+    "column": "total",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "The Oxygen Desaturation Index (ODI) directly and strongly correlates with overall AHI ($r = 0.570, p = 0.0001$)",
+    "kind": "r",
+    "offsets": [
+      22591
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Conclusions",
+    "row": "Oxygen Desaturation Index (ODI) and overall AHI",
+    "column": "total",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "The Oxygen Desaturation Index (ODI) directly and strongly correlates with overall AHI ($r = 0.570, p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      22591
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Diagnostic Concordance",
+    "row": "Clinical disease severity classification vs measured AHI values",
+    "column": "total",
+    "value": "0.73",
+    "unit": "",
+    "snippet": "Clinical disease severity classification corresponds directly with higher measured AHI values ($r = 0.73, p = 0.0001$)",
+    "kind": "r",
+    "offsets": [
+      22801
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Diagnostic Concordance",
+    "row": "Clinical disease severity classification vs measured AHI values",
+    "column": "total",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "Clinical disease severity classification corresponds directly with higher measured AHI values ($r = 0.73, p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      22801
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]
