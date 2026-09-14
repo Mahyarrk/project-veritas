@@ -11,6 +11,7 @@ dependencies = [
     "openpyxl>=3.1",
     "python-docx>=1.1",
     "pyyaml>=6.0",
+    "matplotlib>=3.11.2",
 ]
 
 [build-system]

@@ -1,0 +1,77 @@
+{
+  "known_errors": [
+    {
+      "id": "E1",
+      "label": "REM-AHI total mean = 59.92",
+      "value": 59.92,
+      "true_value": 54.92,
+      "where": "Table 6, REM-AHI row, Total Cohort"
+    },
+    {
+      "id": "E2",
+      "label": "REM-AHI female SD = 31.04",
+      "value": 31.04,
+      "true_value": 41.04,
+      "where": "Table 6, REM-AHI row, Female SD"
+    }
+  ],
+  "detection": {
+    "E1": {
+      "label": "REM-AHI total mean = 59.92",
+      "detected": true,
+      "occurrences_in_paper": 3,
+      "flagged": 3
+    },
+    "E2": {
+      "label": "REM-AHI female SD = 31.04",
+      "detected": true,
+      "occurrences_in_paper": 1,
+      "flagged": 1
+    }
+  },
+  "tolerance_sweep": [
+    {
+      "tol": 0.001,
+      "matches": 38,
+      "errors_detected": 4,
+      "false_matches": 0
+    },
+    {
+      "tol": 0.002,
+      "matches": 44,
+      "errors_detected": 4,
+      "false_matches": 0
+    },
+    {
+      "tol": 0.005,
+      "matches": 66,
+      "errors_detected": 4,
+      "false_matches": 0
+    },
+    {
+      "tol": 0.01,
+      "matches": 80,
+      "errors_detected": 4,
+      "false_matches": 0
+    },
+    {
+      "tol": 0.02,
+      "matches": 74,
+      "errors_detected": 4,
+      "false_matches": 0
+    },
+    {
+      "tol": 0.03,
+      "matches": 70,
+      "errors_detected": 4,
+      "false_matches": 0
+    },
+    {
+      "tol": 0.05,
+      "matches": 53,
+      "errors_detected": 4,
+      "false_matches": 0
+    }
+  ],
+  "extraction_model": "ollama/gemma4:31b"
+}

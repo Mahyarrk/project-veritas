@@ -1,11 +1,11 @@
 {
   "disclaimer": "DISCLAIMERS:\n  1. Each COLUMN is assumed to hold the values of one variable (one column = sex, another = weight). Transposed data (variables in rows) produces wrong verdicts.\n  2. If the paper excluded participants, the data file must contain ONLY the included cases — auditing unfiltered data produces false mismatches.\n  3. Boolean/yes-no coded columns cannot be auto-verified and are assigned manually when prompted. Such statistics (prevalences, symptom rates) are often a paper's most important findings.",
   "summary": {
-    "match": 4,
+    "match": 25,
     "match_human_labeled": 0,
-    "no_match": 41,
+    "no_match": 31,
     "skipped": 0,
-    "other": 29,
+    "other": 18,
     "total": 74
   },
   "results": [
@@ -14,14 +14,28 @@
       "row": "Total Sleep Time (minutes)",
       "column": "Male",
       "value": "362.04",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of tst_min where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'tst_min'].mean()",
+          "battery_value": 362.04375
+        }
+      ]
     },
     {
       "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
       "row": "Total Sleep Time (minutes)",
       "column": "Female",
       "value": "380.36",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of tst_min where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'tst_min'].mean()",
+          "battery_value": 380.36
+        }
+      ]
     },
     {
       "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
@@ -35,63 +49,126 @@
       "row": "Sleep Latency (min)",
       "column": "Total Cohort",
       "value": "17.27",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_latency_min",
+          "computed_from": "df['sleep_latency_min'].mean()",
+          "battery_value": 17.27857142857143
+        }
+      ]
     },
     {
       "table": "Table 6",
       "row": "Sleep Latency (min)",
       "column": "Male",
       "value": "17.56",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_latency_min where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'sleep_latency_min'].mean()",
+          "battery_value": 17.5625
+        }
+      ]
     },
     {
       "table": "Table 6",
       "row": "Sleep Latency (min)",
       "column": "Female",
       "value": "16.37",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_latency_min where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'sleep_latency_min'].mean()",
+          "battery_value": 16.369999999999997
+        }
+      ]
     },
     {
       "table": "Table",
       "row": "Sleep Efficiency Index (%)",
       "column": "Group 1",
       "value": "77.97",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_efficiency_pct",
+          "computed_from": "df['sleep_efficiency_pct'].mean()",
+          "battery_value": 77.97619047619048
+        }
+      ]
     },
     {
       "table": "Table",
       "row": "Sleep Efficiency Index (%)",
       "column": "Group 2",
       "value": "77.48",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_efficiency_pct where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'sleep_efficiency_pct'].mean()",
+          "battery_value": 77.4875
+        }
+      ]
     },
     {
       "table": "Table",
       "row": "Sleep Efficiency Index (%)",
       "column": "Group 3",
       "value": "79.54",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_efficiency_pct where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'sleep_efficiency_pct'].mean()",
+          "battery_value": 79.54
+        }
+      ]
     },
     {
       "table": "Table",
       "row": "Arousal Index (events/hr)",
       "column": "Group 1",
       "value": "19.12",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index",
+          "computed_from": "df['arousal_index'].mean()",
+          "battery_value": 19.121428571428574
+        }
+      ]
     },
     {
       "table": "Table",
       "row": "Arousal Index (events/hr)",
       "column": "Group 2",
       "value": "14.41",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'arousal_index'].mean()",
+          "battery_value": 14.41875
+        }
+      ]
     },
     {
       "table": "Table",
       "row": "Arousal Index (events/hr)",
       "column": "Group 3",
       "value": "34.17",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'arousal_index'].mean()",
+          "battery_value": 34.17
+        }
+      ]
     },
     {
       "table": "Table 1",
@@ -101,9 +178,9 @@
       "verdict": "MATCH",
       "matches": [
         {
-          "item": "mean of q31 where q9=Screen for disordered breathing PLMD",
-          "computed_from": "df.loc[df['q9']=='Screen for disordered breathing PLMD', 'q31'].mean()",
-          "battery_value": 54.38461538461539
+          "item": "mean of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].mean()",
+          "battery_value": 53.61428571428571
         }
       ]
     },
@@ -112,7 +189,14 @@
       "row": "NREM-AHI (events/hr)",
       "column": "Column 2",
       "value": "50.90",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'ahi_nonrem'].mean()",
+          "battery_value": 50.900000000000006
+        }
+      ]
     },
     {
       "table": "Table 1",
@@ -126,63 +210,70 @@
       "row": "patients",
       "column": "total",
       "value": "55",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "NO MATCH IN BATTERY"
     },
     {
       "table": "Methods",
       "row": "age",
       "column": "min",
       "value": "20",
-      "verdict": "MATCH",
-      "matches": [
-        {
-          "item": "min of q5",
-          "computed_from": "df['q5'].min()",
-          "battery_value": 19.9
-        }
-      ]
+      "verdict": "NO MATCH IN BATTERY"
     },
     {
       "table": "Methods",
       "row": "age",
       "column": "max",
       "value": "65",
-      "verdict": "MATCH",
-      "matches": [
-        {
-          "item": "max of q2",
-          "computed_from": "df['q2'].max()",
-          "battery_value": 65.0
-        }
-      ]
+      "verdict": "NO MATCH IN BATTERY"
     },
     {
       "table": "Methods",
       "row": "total patients",
       "column": "count",
       "value": "55",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "NO MATCH IN BATTERY"
     },
     {
       "table": "Methods",
       "row": "remaining patients",
       "column": "count",
       "value": "42",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "number of rows in the dataset (42)",
+          "computed_from": "len(df)",
+          "battery_value": 42.0
+        }
+      ]
     },
     {
       "table": "Methods",
       "row": "males",
       "column": "count",
       "value": "32",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ]
     },
     {
       "table": "Methods",
       "row": "females",
       "column": "count",
       "value": "10",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ]
     },
     {
       "table": "Results",
@@ -217,7 +308,7 @@
       "row": "adult patients",
       "column": "total",
       "value": "55",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "NO MATCH IN BATTERY"
     },
     {
       "table": "Study Population and Exclusion Criteria",
@@ -238,7 +329,14 @@
       "row": "patients",
       "column": "excluded",
       "value": "13",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of apnea_feeling=1 (13 rows)",
+          "computed_from": "(df['apnea_feeling']==np.int64(1)).sum()",
+          "battery_value": 13.0
+        }
+      ]
     },
     {
       "table": "Exclusion criteria",
@@ -252,7 +350,14 @@
       "row": "Isolated severe mechanical upper airway obstruction",
       "column": "count",
       "value": "4",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of snoring=1 (4 rows)",
+          "computed_from": "(df['snoring']==np.int64(1)).sum()",
+          "battery_value": 4.0
+        }
+      ]
     },
     {
       "table": "Exclusion criteria",
@@ -266,28 +371,35 @@
       "row": "Narcolepsy",
       "column": "count",
       "value": "2",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of mallampati_score=2 (2 rows)",
+          "computed_from": "(df['mallampati_score']=='2').sum()",
+          "battery_value": 2.0
+        }
+      ]
     },
     {
       "table": "Exclusion criteria",
       "row": "Active seizure disorder / Convulsions",
       "column": "count",
       "value": "1",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "UNRESOLVED COLLISION"
     },
     {
       "table": "Exclusion criteria",
       "row": "Isolated primary snoring",
       "column": "count",
       "value": "1",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "UNRESOLVED COLLISION"
     },
     {
       "table": "Exclusion criteria",
       "row": "Parasomnia",
       "column": "count",
       "value": "1",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "UNRESOLVED COLLISION"
     },
     {
       "table": "Results",
@@ -357,14 +469,28 @@
       "row": "Habitual Snoring",
       "column": "8",
       "value": "8",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of night_sweats=2 (8 rows)",
+          "computed_from": "(df['night_sweats']==np.int64(2)).sum()",
+          "battery_value": 8.0
+        }
+      ]
     },
     {
       "table": "Habitual Snoring",
       "row": "Habitual Snoring",
       "column": "38 (90.5%)",
       "value": "38",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of snoring=2 (38 rows)",
+          "computed_from": "(df['snoring']==np.int64(2)).sum()",
+          "battery_value": 38.0
+        }
+      ]
     },
     {
       "table": "Habitual Snoring",
@@ -427,14 +553,7 @@
       "row": "REM Sleep (% of TST)",
       "column": "Male",
       "value": "7.72",
-      "verdict": "MATCH",
-      "matches": [
-        {
-          "item": "std of q36",
-          "computed_from": "df['q36'].std()",
-          "battery_value": 7.697216253109825
-        }
-      ]
+      "verdict": "NO MATCH IN BATTERY"
     },
     {
       "table": "Text",
@@ -448,7 +567,14 @@
       "row": "Sleep Latency (min)",
       "column": "Total Cohort",
       "value": "15.75",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of sleep_latency_min",
+          "computed_from": "df['sleep_latency_min'].std()",
+          "battery_value": 15.755255193175723
+        }
+      ]
     },
     {
       "table": "Table 6",
@@ -476,7 +602,14 @@
       "row": "Sleep Efficiency Index (%)",
       "column": "Group 1",
       "value": "12.15",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of sleep_efficiency_pct",
+          "computed_from": "df['sleep_efficiency_pct'].std()",
+          "battery_value": 12.152241779010028
+        }
+      ]
     },
     {
       "table": "Table",
@@ -504,7 +637,14 @@
       "row": "Arousal Index (events/hr)",
       "column": "Group 1",
       "value": "20.18",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of arousal_index",
+          "computed_from": "df['arousal_index'].std()",
+          "battery_value": 20.1820076319416
+        }
+      ]
     },
     {
       "table": "Table",
@@ -532,7 +672,14 @@
       "row": "NREM-AHI (events/hr)",
       "column": "Column 1",
       "value": "33.72",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].std()",
+          "battery_value": 33.72397693346767
+        }
+      ]
     },
     {
       "table": "Table 1",

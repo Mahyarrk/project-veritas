@@ -1,0 +1,171 @@
+[
+  {
+    "table": "Methods",
+    "row": "number of patients",
+    "column": "",
+    "value": "55",
+    "unit": "",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "total patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1386,
+      4361
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "range",
+    "value": "20–65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "other",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "remaining patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "data from the remaining 42 patients",
+    "kind": "count",
+    "offsets": [
+      1762
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "males",
+    "column": "count",
+    "value": "32",
+    "unit": "",
+    "snippet": "42 patients (32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1786
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "females",
+    "column": "count",
+    "value": "10",
+    "unit": "",
+    "snippet": "42 patients (32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1786
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1919
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "comparison",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$), demonstrating markedly aggravated respiratory events during REM sleep despite its shorter cumulative duration.",
+    "kind": "p",
+    "offsets": [
+      1950
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI vs ODI",
+    "column": "comparison",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "r",
+    "offsets": [
+      2126
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI vs ODI",
+    "column": "comparison",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "p",
+    "offsets": [
+      2126
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]
