@@ -1,0 +1,352 @@
+[
+  {
+    "table": "Methods",
+    "row": "sample size",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients (aged 20–65 years) referred to the",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients (aged 20–65 years) referred to the Sleep Disorders Clinic at Qods Hospital between 2016 and 2021 (1395–1400 SH) with presumptive diagnoses of OSA and suspected Periodic Limb Movement Disorder (PLMD) were reviewed.",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "min",
+    "value": "20",
+    "unit": "years",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients (aged 20–65 years) referred to the Sleep Disorders Clinic at Qods Hospital between 2016 and 2021 (1395–1400 SH) with presumptive diagnoses of OSA and suspected Periodic Limb Movement Disorder (PLMD) were reviewed.",
+    "kind": "min",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "max",
+    "value": "65",
+    "unit": "years",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients (aged 20–65 years) referred to the Sleep Disorders Clinic at Qods Hospital between 2016 and 2021 (1395–1400 SH) with presumptive diagnoses of OSA and suspected Periodic Limb Movement Disorder (PLMD) were reviewed.",
+    "kind": "max",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "remaining patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "Polysomnographic and psychometric data from the remaining 42 patients (32 males, 10 females) were extracted and subjected to comparative and correlational statistical analyses.",
+    "kind": "count",
+    "offsets": [
+      1728
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "males",
+    "column": "total",
+    "value": "32",
+    "unit": "",
+    "snippet": "Polysomnographic and psychometric data from the remaining 42 patients (32 males, 10 females) were extracted and subjected to comparative and correlational statistical analyses.",
+    "kind": "count",
+    "offsets": [
+      1728
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "females",
+    "column": "total",
+    "value": "10",
+    "unit": "",
+    "snippet": "Polysomnographic and psychometric data from the remaining 42 patients (32 males, 10 females) were extracted and subjected to comparative and correlational statistical analyses.",
+    "kind": "count",
+    "offsets": [
+      1728
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "difference between REM-AHI and NREM-AHI",
+    "column": "",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$), demonstrating markedly aggravated respiratory events during REM sleep despite its sho",
+    "kind": "p",
+    "offsets": [
+      1919
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$), demonstrating markedly aggravated respiratory events during REM sleep despite its shorter cumulative duration.",
+    "kind": "p",
+    "offsets": [
+      1950
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI vs ODI",
+    "column": "",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "r",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI vs ODI",
+    "column": "",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "p",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population",
+    "row": "sample size",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "count",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population",
+    "row": "excluded patients",
+    "column": "total",
+    "value": "13",
+    "unit": "",
+    "snippet": "To eliminate physiological and neurological confounders, 13 patients were excluded based on confirm",
+    "kind": "count",
+    "offsets": [
+      4601
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population",
+    "row": "age",
+    "column": "minimum",
+    "value": "20",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "min",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population",
+    "row": "age",
+    "column": "maximum",
+    "value": "65",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "max",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "excluded patients",
+    "column": "total",
+    "value": "13",
+    "unit": "",
+    "snippet": "To eliminate physiological and neurological confounders, 13 patients were excluded based on confirmed alternative diagnoses:",
+    "kind": "other",
+    "offsets": [
+      4601
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "isolated severe mechanical upper airway obstruction",
+    "column": "total",
+    "value": "4",
+    "unit": "",
+    "snippet": "* Isolated severe mechanical upper airway obstruction ($n = 4$)",
+    "kind": "other",
+    "offsets": [
+      4727
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "normal diagnostic PSG without sleep pathology",
+    "column": "total",
+    "value": "4",
+    "unit": "",
+    "snippet": "* Normal diagnostic PSG without sleep pathology ($n = 4$)",
+    "kind": "other",
+    "offsets": [
+      4793
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "narcolepsy",
+    "column": "total",
+    "value": "2",
+    "unit": "",
+    "snippet": "* Narcolepsy ($n = 2$)",
+    "kind": "other",
+    "offsets": [
+      4853
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "active seizure disorder / convulsions",
+    "column": "total",
+    "value": "1",
+    "unit": "",
+    "snippet": "* Active seizure disorder / Convulsions ($n = 1$)",
+    "kind": "other",
+    "offsets": [
+      4878
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "isolated primary snoring",
+    "column": "total",
+    "value": "1",
+    "unit": "",
+    "snippet": "* Isolated primary snoring ($n = 1$)",
+    "kind": "other",
+    "offsets": [
+      4930
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "parasomnia",
+    "column": "total",
+    "value": "1",
+    "unit": "",
+    "snippet": "* Parasomnia ($n = 1$)",
+    "kind": "other",
+    "offsets": [
+      4969
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "male patients",
+    "column": "males",
+    "value": "32",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "female patients",
+    "column": "females",
+    "value": "10",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]

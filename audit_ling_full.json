@@ -1,0 +1,2001 @@
+{
+  "disclaimer": "DISCLAIMERS:\n  1. Each COLUMN is assumed to hold the values of one variable (one column = sex, another = weight). Transposed data (variables in rows) produces wrong verdicts.\n  2. If the paper excluded participants, the data file must contain ONLY the included cases — auditing unfiltered data produces false mismatches.\n  3. Boolean/yes-no coded columns cannot be auto-verified and are assigned manually when prompted. Such statistics (prevalences, symptom rates) are often a paper's most important findings.",
+  "summary": {
+    "match": 50,
+    "match_human_labeled": 0,
+    "no_match": 82,
+    "skipped": 0,
+    "other": 102,
+    "total": 234
+  },
+  "results": [
+    {
+      "table": "Sleep Statistics",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Group 1",
+      "value": "362.04",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of tst_min where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'tst_min'].mean()",
+          "battery_value": 362.04375
+        }
+      ]
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Group 2",
+      "value": "380.36",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of tst_min where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'tst_min'].mean()",
+          "battery_value": 380.36
+        }
+      ]
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "REM Sleep (% of TST)",
+      "column": "Group 1",
+      "value": "11.23",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "REM Sleep (% of TST)",
+      "column": "Group 2",
+      "value": "10.62",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "NREM Sleep (% of TST)",
+      "column": "Group 1",
+      "value": "69.24",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "NREM Sleep (% of TST)",
+      "column": "Group 2",
+      "value": "71.87",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Subjective Sleep Efficiency (%)",
+      "column": "Group 1",
+      "value": "77.48",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_efficiency_pct where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'sleep_efficiency_pct'].mean()",
+          "battery_value": 77.4875
+        }
+      ]
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Subjective Sleep Efficiency (%)",
+      "column": "Group 2",
+      "value": "79.54",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of sleep_efficiency_pct where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'sleep_efficiency_pct'].mean()",
+          "battery_value": 79.54
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 1",
+      "value": "19.12",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index",
+          "computed_from": "df['arousal_index'].mean()",
+          "battery_value": 19.121428571428574
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 2",
+      "value": "14.41",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'arousal_index'].mean()",
+          "battery_value": 14.41875
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 3",
+      "value": "34.17",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'arousal_index'].mean()",
+          "battery_value": 34.17
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 1",
+      "value": "1.72",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 2",
+      "value": "2.14",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of plms_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'plms_index'].mean()",
+          "battery_value": 2.1468749999999996
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 3",
+      "value": "0.36",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of plms_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'plms_index'].mean()",
+          "battery_value": 0.36
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "59.92",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "52.27",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'ahi_rem'].mean()",
+          "battery_value": 52.278124999999996
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "63.39",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'ahi_rem'].mean()",
+          "battery_value": 63.39000000000001
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "53.61",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].mean()",
+          "battery_value": 53.61428571428571
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "50.9",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'ahi_nonrem'].mean()",
+          "battery_value": 50.900000000000006
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "62.3",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "21.95",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_rem",
+          "computed_from": "df['obstructive_apnea_rem'].mean()",
+          "battery_value": 21.952380952380953
+        }
+      ]
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Group 2",
+      "value": "21.0",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Group 3",
+      "value": "25.0",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "1.29",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of central_apnea_rem",
+          "computed_from": "df['central_apnea_rem'].mean()",
+          "battery_value": 1.2857142857142858
+        }
+      ]
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Group 2",
+      "value": "1.0",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Group 3",
+      "value": "2.2",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of central_apnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'central_apnea_rem'].mean()",
+          "battery_value": 2.2
+        }
+      ]
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "1.98",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem",
+          "computed_from": "df['mixed_apnea_rem'].mean()",
+          "battery_value": 1.9761904761904763
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 1",
+      "value": "1.29",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 2",
+      "value": "1.0",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 3",
+      "value": "2.2",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 1",
+      "value": "1.98",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 2",
+      "value": "0.53",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_rem'].mean()",
+          "battery_value": 0.53125
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 3",
+      "value": "6.6",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_rem'].mean()",
+          "battery_value": 6.6
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 1",
+      "value": "146.33",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_nonrem",
+          "computed_from": "df['obstructive_apnea_nonrem'].mean()",
+          "battery_value": 146.33333333333334
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 2",
+      "value": "123.31",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'obstructive_apnea_nonrem'].mean()",
+          "battery_value": 123.3125
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 3",
+      "value": "220.0",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'obstructive_apnea_nonrem'].mean()",
+          "battery_value": 220.0
+        }
+      ]
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_1",
+      "value": "8.4",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem",
+          "computed_from": "df['mixed_apnea_nonrem'].mean()",
+          "battery_value": 8.404761904761905
+        }
+      ]
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_2",
+      "value": "2.81",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 2.8125
+        }
+      ]
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_3",
+      "value": "26.3",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 26.3
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 1",
+      "value": "20.0",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem",
+          "computed_from": "df['hypopnea_rem'].mean()",
+          "battery_value": 20.0
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 2",
+      "value": "20.5",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'hypopnea_rem'].mean()",
+          "battery_value": 20.5
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 3",
+      "value": "18.4",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'hypopnea_rem'].mean()",
+          "battery_value": 18.4
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 1",
+      "value": "118.21",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_nonrem",
+          "computed_from": "df['hypopnea_nonrem'].mean()",
+          "battery_value": 118.21428571428571
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 2",
+      "value": "123.34",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'hypopnea_nonrem'].mean()",
+          "battery_value": 123.34375
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 3",
+      "value": "101.8",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'hypopnea_nonrem'].mean()",
+          "battery_value": 101.8
+        }
+      ]
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Females",
+      "value": "34.17",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Males",
+      "value": "14.41",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Females",
+      "value": "26.3",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Males",
+      "value": "2.81",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "ESS Score Table",
+      "row": "ESS Score",
+      "column": "Male",
+      "value": "9.12",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ess_total where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'ess_total'].mean()",
+          "battery_value": 9.125
+        }
+      ]
+    },
+    {
+      "table": "ESS Score Table",
+      "row": "ESS Score",
+      "column": "Female",
+      "value": "12.2",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ess_total where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'ess_total'].mean()",
+          "battery_value": 12.2
+        }
+      ]
+    },
+    {
+      "table": "bgroup (One-Sample t-test)",
+      "row": "NREM-AHI",
+      "column": "Mean",
+      "value": "64.26",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "REM sleep",
+      "value": "59.92",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "NREM sleep",
+      "value": "53.61",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Mixed apneas during NREM sleep",
+      "column": "females",
+      "value": "26.3",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Mixed apneas during NREM sleep",
+      "column": "males",
+      "value": "2.81",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results (Obesity subgroup)",
+      "row": "REM-AHI",
+      "column": "obesity (BMI ≥ 30 kg/m²)",
+      "value": "66.22",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "adult patients",
+      "column": "total",
+      "value": "55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "min",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "max",
+      "value": "65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "total patients enrolled",
+      "column": "total",
+      "value": "55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "age range",
+      "column": "total",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "age range",
+      "column": "total",
+      "value": "65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "patients analyzed",
+      "column": "total",
+      "value": "42",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "number of rows in the dataset (42)",
+          "computed_from": "len(df)",
+          "battery_value": 42.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "male patients",
+      "column": "males",
+      "value": "32",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "female patients",
+      "column": "females",
+      "value": "10",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ]
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI vs NREM-AHI difference",
+      "column": "REM-AHI vs NREM-AHI",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "REM-AHI vs NREM-AHI",
+      "column": "p-value",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "total AHI and ODI",
+      "column": "p-value",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "Total patients",
+      "column": "Total",
+      "value": "55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "Age",
+      "column": "Min",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "Age",
+      "column": "Max",
+      "value": "65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "Excluded patients",
+      "column": "Total",
+      "value": "13",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of apnea_feeling=1 (13 rows)",
+          "computed_from": "(df['apnea_feeling']==np.int64(1)).sum()",
+          "battery_value": 13.0
+        }
+      ]
+    },
+    {
+      "table": "Text",
+      "row": "Excluded patients",
+      "column": "Total",
+      "value": "13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Text",
+      "row": "Isolated severe mechanical upper airway obstruction",
+      "column": "n",
+      "value": "4",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of snoring=1 (4 rows)",
+          "computed_from": "(df['snoring']==np.int64(1)).sum()",
+          "battery_value": 4.0
+        }
+      ]
+    },
+    {
+      "table": "Text",
+      "row": "Normal diagnostic PSG without sleep pathology",
+      "column": "n",
+      "value": "4",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Text",
+      "row": "Narcolepsy",
+      "column": "n",
+      "value": "2",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of mallampati_score=2 (2 rows)",
+          "computed_from": "(df['mallampati_score']=='2').sum()",
+          "battery_value": 2.0
+        }
+      ]
+    },
+    {
+      "table": "Text",
+      "row": "Active seizure disorder / Convulsions",
+      "column": "n",
+      "value": "1",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Text",
+      "row": "Isolated primary snoring",
+      "column": "n",
+      "value": "1",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Text",
+      "row": "Parasomnia",
+      "column": "n",
+      "value": "1",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Text",
+      "row": "Final analytical cohort",
+      "column": "Total",
+      "value": "42",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Text",
+      "row": "Males",
+      "column": "Count",
+      "value": "32",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Text",
+      "row": "Females",
+      "column": "Count",
+      "value": "10",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "Apnea definition",
+      "column": "airflow drop",
+      "value": "90%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "Apnea definition",
+      "column": "duration",
+      "value": "10",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "Hypopnea definition",
+      "column": "airflow reduction",
+      "value": "30%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "Hypopnea definition",
+      "column": "oxygen desaturation",
+      "value": "3%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Epworth Sleepiness Scale (ESS) description",
+      "row": "number of daytime sedentary scenarios",
+      "column": "ESS",
+      "value": "8",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of night_sweats=2 (8 rows)",
+          "computed_from": "(df['night_sweats']==np.int64(2)).sum()",
+          "battery_value": 8.0
+        }
+      ]
+    },
+    {
+      "table": "Epworth Sleepiness Scale (ESS) description",
+      "row": "Likert scale range",
+      "column": "ESS",
+      "value": "0–3",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Epworth Sleepiness Scale (ESS) description",
+      "row": "aggregate ESS score range",
+      "column": "ESS",
+      "value": "0–24",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sample Size Calculation (Gabryelska et al.)",
+      "row": "p-value for REM-AHI vs NREM-AHI comparison",
+      "column": "REM vs NREM",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "Confidence level",
+      "column": "confidence",
+      "value": "95%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "Formula numerator",
+      "column": "N/A",
+      "value": "93.89",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "Formula denominator",
+      "column": "N/A",
+      "value": "2.45",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "Required sample size",
+      "column": "N/A",
+      "value": "40",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Text",
+      "row": "Alpha",
+      "column": "N/A",
+      "value": "0.05",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "Confidence level",
+      "column": "N/A",
+      "value": "95",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "Statistical power",
+      "column": "N/A",
+      "value": "80",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "Beta",
+      "column": "N/A",
+      "value": "0.2",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Demographic and Clinical Characteristics",
+      "row": "Male proportion",
+      "column": "male",
+      "value": "76.2",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Demographic and Clinical Characteristics",
+      "row": "Female proportion",
+      "column": "female",
+      "value": "23.8",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Symptoms Table (cut off header)",
+      "row": "Unlabeled row (first data row)",
+      "column": "total",
+      "value": "8",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Symptoms Table (cut off header)",
+      "row": "Unlabeled row (first data row)",
+      "column": "percentage",
+      "value": "19.0",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Group 1",
+      "value": "74.34",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Group 2",
+      "value": "51.55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Total Sleep Time (minutes)",
+      "column": "p-value",
+      "value": "0.39",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "REM Sleep (% of TST)",
+      "column": "Group 1",
+      "value": "7.72",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "REM Sleep (% of TST)",
+      "column": "Group 2",
+      "value": "5.03",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "REM Sleep (% of TST)",
+      "column": "p-value",
+      "value": "0.81",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "NREM Sleep (% of TST)",
+      "column": "Group 1",
+      "value": "9.74",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "NREM Sleep (% of TST)",
+      "column": "Group 2",
+      "value": "10.11",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "NREM Sleep (% of TST)",
+      "column": "p-value",
+      "value": "0.46",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Subjective Sleep Efficiency (%)",
+      "column": "Group 1",
+      "value": "11.48",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Subjective Sleep Efficiency (%)",
+      "column": "Group 2",
+      "value": "11.51",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Statistics",
+      "row": "Subjective Sleep Efficiency (%)",
+      "column": "p-value",
+      "value": "0.62",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Overall nocturnal sleep composition",
+      "row": "REM sleep expected physiological norm",
+      "column": "expected range",
+      "value": "20–25",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 1",
+      "value": "20.18",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of arousal_index",
+          "computed_from": "df['arousal_index'].std()",
+          "battery_value": 20.1820076319416
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 2",
+      "value": "17.26",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 3",
+      "value": "22.33",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "overall",
+      "value": "0.005",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 1",
+      "value": "4.25",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of plms_index",
+          "computed_from": "df['plms_index'].std()",
+          "battery_value": 4.258565870720016
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 2",
+      "value": "4.78",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 3",
+      "value": "1.13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "PLMS Index (events/hr)",
+      "column": "overall",
+      "value": "0.059",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "36.32",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of ahi_rem",
+          "computed_from": "df['ahi_rem'].std()",
+          "battery_value": 36.32964797130481
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "35.01",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "31.04",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "REM-AHI (events/hr)",
+      "column": "overall",
+      "value": "0.994",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "33.72",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].std()",
+          "battery_value": 33.72397693346767
+        }
+      ]
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "31.13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "41.61",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "NREM-AHI (events/hr)",
+      "column": "overall",
+      "value": "0.093",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sleep Study Results Table",
+      "row": "Unlabeled row (top of table)",
+      "column": "unknown",
+      "value": "0.62",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "31.3",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of obstructive_apnea_rem",
+          "computed_from": "df['obstructive_apnea_rem'].std()",
+          "battery_value": 31.30569369311968
+        }
+      ]
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Group 2",
+      "value": "29.63",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Group 3",
+      "value": "37.76",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Obstructive Apneas in REM (n)",
+      "column": "Test statistic",
+      "value": "0.73",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "2.69",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of central_apnea_rem",
+          "computed_from": "df['central_apnea_rem'].std()",
+          "battery_value": 2.6895072926749832
+        }
+      ]
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Group 2",
+      "value": "1.64",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Group 3",
+      "value": "4.73",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Central Apneas in REM (n)",
+      "column": "Test statistic",
+      "value": "0.23",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Apneas in REM)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "9.4",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of mixed_apnea_rem",
+          "computed_from": "df['mixed_apnea_rem'].std()",
+          "battery_value": 9.405468298498137
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 1",
+      "value": "2.69",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 2",
+      "value": "1.64",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 3",
+      "value": "4.73",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Unlabeled row (first data row)",
+      "column": "Column 4",
+      "value": "0.23",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 1",
+      "value": "9.4",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 2",
+      "value": "1.31",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 3",
+      "value": "19.12",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Column 4",
+      "value": "0.08",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 1",
+      "value": "157.43",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of obstructive_apnea_nonrem",
+          "computed_from": "df['obstructive_apnea_nonrem'].std()",
+          "battery_value": 157.43828317194672
+        }
+      ]
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 2",
+      "value": "139.62",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 3",
+      "value": "194.56",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Apnea Metrics)",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Column 4",
+      "value": "0.089",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Central Apneas in NREM)",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Comparison",
+      "value": "0.43",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_1",
+      "value": "18.62",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of mixed_apnea_nonrem",
+          "computed_from": "df['mixed_apnea_nonrem'].std()",
+          "battery_value": 18.62474033056441
+        }
+      ]
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_2",
+      "value": "5.71",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_3",
+      "value": "31.63",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Mixed Apneas in NREM (n)",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "col_4",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 1",
+      "value": "23.0",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of hypopnea_rem",
+          "computed_from": "df['hypopnea_rem'].std()",
+          "battery_value": 23.003711259431967
+        }
+      ]
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 2",
+      "value": "22.72",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 3",
+      "value": "25.07",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Hypopneas in REM)",
+      "row": "Hypopneas in REM (n)",
+      "column": "Test statistic",
+      "value": "0.8",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 1",
+      "value": "95.1",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 2",
+      "value": "96.2",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 3",
+      "value": "93.15",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table (Hypopneas in NREM)",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Test statistic",
+      "value": "0.53",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Mean NREM SpO2 (%)",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Comparison",
+      "value": "0.78",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Sex-Stratified Comparisons (ODI/hr row)",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "p_value",
+      "value": "0.22",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "females_vs_males",
+      "value": "34",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Females",
+      "value": "22.33",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Males",
+      "value": "17.26",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Females vs. Males",
+      "value": "0.005",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Females",
+      "value": "31.63",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Males",
+      "value": "5.71",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Females vs. Males",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Total AHI (One-way ANOVA)",
+      "column": "F-statistic",
+      "value": "1.11",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Total AHI (One-way ANOVA)",
+      "column": "df",
+      "value": "41",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Total AHI (One-way ANOVA)",
+      "column": "p",
+      "value": "0.297",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "ESS Score Table",
+      "row": "ESS Score",
+      "column": "Male",
+      "value": "6.22",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "ESS Score Table",
+      "row": "ESS Score",
+      "column": "Female",
+      "value": "3.88",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "ESS Score Table",
+      "row": "ESS Score",
+      "column": "Test Statistic",
+      "value": "2.15",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "ESS Score Table",
+      "row": "ESS Score",
+      "column": "p-value",
+      "value": "0.15",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence (ESS ≥ 8)",
+      "row": "Excessive sleepiness vs. Total AHI",
+      "column": "Correlation",
+      "value": "-0.305",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence (ESS ≥ 8)",
+      "row": "Excessive sleepiness vs. Total AHI",
+      "column": "p-value",
+      "value": "0.138",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence (ESS ≥ 8)",
+      "row": "Excessive sleepiness vs. REM-AHI",
+      "column": "p-value",
+      "value": "0.269",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence (ESS ≥ 8)",
+      "row": "Excessive sleepiness vs. NREM-AHI",
+      "column": "p-value",
+      "value": "0.53",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Arousal Index vs. Sleepiness",
+      "row": "Arousal Index vs. daytime sleepiness",
+      "column": "Correlation",
+      "value": "-0.27",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Arousal Index vs. Sleepiness",
+      "row": "Arousal Index vs. daytime sleepiness",
+      "column": "p-value",
+      "value": "0.89",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Unspecified (text fragment before Table 8)",
+      "row": "Correlation parameter (unspecified)",
+      "column": "Unspecified",
+      "value": "-0.27",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Unspecified (text fragment before Table 8)",
+      "row": "Correlation parameter (unspecified)",
+      "column": "Unspecified",
+      "value": "0.89",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table 8",
+      "row": "Arousal Index ($r$)",
+      "column": "NREM-AHI",
+      "value": "0.366",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table 8",
+      "row": "Arousal Index ($r$)",
+      "column": "Total AHI",
+      "value": "0.358",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (text following Table 8)",
+      "row": "Correlation (Total AHI vs PLMS Index)",
+      "column": "PLMS Index",
+      "value": "-0.046",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (text following Table 8)",
+      "row": "Correlation (Total AHI vs PLMS Index)",
+      "column": "PLMS Index",
+      "value": "0.773",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Correlation Table (partial)",
+      "row": "Unlabeled row (truncated)",
+      "column": "Unknown",
+      "value": "0.457",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Diagnostic Stratification and Obesity Subgroup Analysis",
+      "row": "Diagnostic severity vs. objective AHI values",
+      "column": "Correlation",
+      "value": "0.73",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Diagnostic Stratification and Obesity Subgroup Analysis",
+      "row": "Diagnostic severity vs. objective AHI values",
+      "column": "p-value",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Subgroup Analysis",
+      "row": "Patients with Obesity",
+      "column": "n",
+      "value": "21",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "bgroup (One-Sample t-test)",
+      "row": "REM-AHI",
+      "column": "p-value",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "bgroup (One-Sample t-test)",
+      "row": "NREM-AHI",
+      "column": "SD",
+      "value": "37.29",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI vs NREM-AHI comparison",
+      "column": "p-value",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "Total AHI and ODI correlation",
+      "column": "r",
+      "value": "0.55",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "Total AHI and ODI correlation",
+      "column": "p-value",
+      "value": "0.009",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Discussion",
+      "row": "Habitual snoring",
+      "column": "prevalence",
+      "value": "90.5",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Discussion",
+      "row": "Witnessed nocturnal choking/apnea",
+      "column": "prevalence",
+      "value": "69.0",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "choking/apnea",
+      "column": "presenting complaints",
+      "value": "69.0%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "REM sleep",
+      "column": "study cohort",
+      "value": "11.09%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Text",
+      "row": "established physiological reference ranges",
+      "column": "REM sleep",
+      "value": "20% - 25%",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "REM sleep",
+      "value": "36.32",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "NREM sleep",
+      "value": "33.72",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index comparison",
+      "column": "p-value",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "correlation between total AHI and Epworth Sleepiness Scale",
+      "column": "total AHI",
+      "value": "-0.305",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "correlation between total AHI and Epworth Sleepiness Scale",
+      "column": "total AHI",
+      "value": "0.138",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "correlation between NREM-AHI and Epworth Sleepiness Scale",
+      "column": "NREM-AHI",
+      "value": "0.53",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "NREM-AHI comparison",
+      "column": "groups",
+      "value": "0.53",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI",
+      "column": "males vs females",
+      "value": "0.297",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "Mixed apneas during NREM sleep",
+      "column": "females",
+      "value": "31.63",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Mixed apneas during NREM sleep",
+      "column": "males",
+      "value": "5.71",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "Mixed apneas during NREM sleep",
+      "column": "females vs males",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (ODI correlation)",
+      "row": "ODI",
+      "column": "total AHI",
+      "value": "0.57",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (ODI correlation)",
+      "row": "ODI vs total AHI",
+      "column": "p-value",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (REM desaturation)",
+      "row": "Desaturation severity",
+      "column": "REM sleep",
+      "value": "-0.358",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (REM desaturation)",
+      "row": "Desaturation severity vs REM sleep",
+      "column": "p-value",
+      "value": "0.025",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (Obesity subgroup)",
+      "row": "REM sleep suppression",
+      "column": "obesity (BMI ≥ 30 kg/m²)",
+      "value": "9.88",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results (Obesity subgroup)",
+      "row": "REM-AHI",
+      "column": "obesity (BMI ≥ 30 kg/m²)",
+      "value": "43.66",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results (Obesity subgroup)",
+      "row": "REM-AHI",
+      "column": "obesity (BMI ≥ 30 kg/m²)",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Conclusions",
+      "row": "AHI during REM vs NREM sleep",
+      "column": "REM vs NREM",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Conclusions",
+      "row": "Arousal Index",
+      "column": "females",
+      "value": "0.005",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Conclusions",
+      "row": "NREM mixed apneas",
+      "column": "females",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Conclusions",
+      "row": "ODI correlation with AHI",
+      "column": "ODI vs AHI",
+      "value": "0.57",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Conclusions",
+      "row": "ODI correlation with AHI",
+      "column": "ODI vs AHI",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Diagnostic Concordance",
+      "row": "Clinical disease severity classification",
+      "column": "AHI values",
+      "value": "0.73",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Diagnostic Concordance",
+      "row": "Clinical disease severity classification",
+      "column": "AHI values",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "disclaimer": "DISCLAIMERS:\n  1. Each COLUMN is assumed to hold the values of one variable (one column = sex, another = weight). Transposed data (variables in rows) produces wrong verdicts.\n  2. If the paper excluded participants, the data file must contain ONLY the included cases — auditing unfiltered data produces false mismatches.\n  3. Boolean/yes-no coded columns cannot be auto-verified and are assigned manually when prompted. Such statistics (prevalences, symptom rates) are often a paper's most important findings.",
+  "summary": {
+    "match": 6,
+    "match_human_labeled": 0,
+    "no_match": 10,
+    "skipped": 0,
+    "other": 7,
+    "total": 23
+  },
+  "results": [
+    {
+      "table": "Methods",
+      "row": "adult patients",
+      "column": "total",
+      "value": "55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "range",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "range",
+      "value": "65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "total",
+      "value": "42",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "number of rows in the dataset (42)",
+          "computed_from": "len(df)",
+          "battery_value": 42.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "males",
+      "value": "32",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "females",
+      "value": "10",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ]
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI vs NREM-AHI",
+      "column": "comparison",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI and Oxygen Desaturation Index (ODI)",
+      "column": "correlation",
+      "value": "0.570",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI and Oxygen Desaturation Index (ODI)",
+      "column": "p-value",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Methodology",
+      "row": "adult patients",
+      "column": "total",
+      "value": "55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methodology",
+      "row": "age",
+      "column": "range",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methodology",
+      "row": "age",
+      "column": "range",
+      "value": "65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methodology",
+      "row": "patients",
+      "column": "excluded",
+      "value": "13",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of apnea_feeling=1 (13 rows)",
+          "computed_from": "(df['apnea_feeling']==np.int64(1)).sum()",
+          "battery_value": 13.0
+        }
+      ]
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Isolated severe mechanical upper airway obstruction",
+      "column": "excluded",
+      "value": "4",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of snoring=1 (4 rows)",
+          "computed_from": "(df['snoring']==np.int64(1)).sum()",
+          "battery_value": 4.0
+        }
+      ]
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Normal diagnostic PSG without sleep pathology",
+      "column": "excluded",
+      "value": "4",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Narcolepsy",
+      "column": "excluded",
+      "value": "2",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of mallampati_score=2 (2 rows)",
+          "computed_from": "(df['mallampati_score']=='2').sum()",
+          "battery_value": 2.0
+        }
+      ]
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Active seizure disorder / Convulsions",
+      "column": "excluded",
+      "value": "1",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Isolated primary snoring",
+      "column": "excluded",
+      "value": "1",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Parasomnia",
+      "column": "excluded",
+      "value": "1",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Analytical Cohort",
+      "row": "total patients",
+      "column": "total",
+      "value": "42",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Analytical Cohort",
+      "row": "patients",
+      "column": "males",
+      "value": "32",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Analytical Cohort",
+      "row": "patients",
+      "column": "females",
+      "value": "10",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Introduction",
+      "row": "arterial oxygen desaturation",
+      "column": "threshold",
+      "value": "3",
+      "verdict": "UNCHECKABLE (kind=other)"
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+[
+  {
+    "table": "Methods",
+    "row": "number of patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1364
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "minimum",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "maximum",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "total patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1364
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "total",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "total",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "remaining patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "the remaining 42 patients",
+    "kind": "count",
+    "offsets": [
+      1772
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "males",
+    "column": "gender",
+    "value": "32",
+    "unit": "",
+    "snippet": "42 patients (32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1786
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "females",
+    "column": "gender",
+    "value": "10",
+    "unit": "",
+    "snippet": "42 patients (32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1786
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI difference",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1919
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1950
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Total AHI and ODI",
+    "column": "correlation coefficient",
+    "value": "0.57",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$",
+    "kind": "r",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Total AHI and ODI",
+    "column": "p-value",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "$p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      2274,
+      7098,
+      14022,
+      18022,
+      21358,
+      22006,
+      22546
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "adult patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "age",
+    "column": "min",
+    "value": "20",
+    "unit": "years",
+    "snippet": "(20–65 years of age)",
+    "kind": "min",
+    "offsets": [
+      4390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "age",
+    "column": "max",
+    "value": "65",
+    "unit": "years",
+    "snippet": "(20–65 years of age)",
+    "kind": "max",
+    "offsets": [
+      4390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "excluded patients",
+    "column": "total",
+    "value": "13",
+    "unit": "",
+    "snippet": "13 patients were excluded",
+    "kind": "count",
+    "offsets": [
+      4658
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Total excluded patients",
+    "column": "Total",
+    "value": "13",
+    "unit": "patients",
+    "snippet": "13 patients were excluded",
+    "kind": "count",
+    "offsets": [
+      4658
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Isolated severe mechanical upper airway obstruction",
+    "column": "n",
+    "value": "4",
+    "unit": "patients",
+    "snippet": "Isolated severe mechanical upper airway obstruction ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4729
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Normal diagnostic PSG without sleep pathology",
+    "column": "n",
+    "value": "4",
+    "unit": "patients",
+    "snippet": "Normal diagnostic PSG without sleep pathology ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4795
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Narcolepsy",
+    "column": "n",
+    "value": "2",
+    "unit": "patients",
+    "snippet": "Narcolepsy ($n = 2$)",
+    "kind": "count",
+    "offsets": [
+      4855
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Active seizure disorder / Convulsions",
+    "column": "n",
+    "value": "1",
+    "unit": "patients",
+    "snippet": "Active seizure disorder / Convulsions ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4880
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Isolated primary snoring",
+    "column": "n",
+    "value": "1",
+    "unit": "patients",
+    "snippet": "Isolated primary snoring ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4932
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Parasomnia",
+    "column": "n",
+    "value": "1",
+    "unit": "patients",
+    "snippet": "Parasomnia ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4971
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Final analytical cohort",
+    "column": "Total",
+    "value": "42",
+    "unit": "patients",
+    "snippet": "The final analytical cohort comprised **42 patients**",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Final analytical cohort",
+    "column": "Males",
+    "value": "32",
+    "unit": "males",
+    "snippet": "(32 males",
+    "kind": "count",
+    "offsets": [
+      1798,
+      5049
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "Final analytical cohort",
+    "column": "Females",
+    "value": "10",
+    "unit": "females",
+    "snippet": "10 females)",
+    "kind": "count",
+    "offsets": [
+      1809,
+      5060
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "Apnea definition",
+    "column": "Airflow drop threshold",
+    "value": "90%",
+    "unit": "%",
+    "snippet": "an apnea was defined as a $\\ge 90\\%$ drop in airflow amplitude",
+    "kind": "other",
+    "offsets": [
+      5695
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "Apnea definition",
+    "column": "Duration threshold",
+    "value": "10",
+    "unit": "seconds",
+    "snippet": "lasting $\\ge 10$ seconds",
+    "kind": "other",
+    "offsets": [
+      5758
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "Hypopnea definition",
+    "column": "Airflow reduction threshold",
+    "value": "30%",
+    "unit": "%",
+    "snippet": "Hypopneas were scored as a $\\ge 30\\%$ reduction in airflow",
+    "kind": "other",
+    "offsets": [
+      5784
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Scoring Criteria",
+    "row": "Hypopnea definition",
+    "column": "Oxygen desaturation threshold",
+    "value": "3%",
+    "unit": "%",
+    "snippet": "accompanied by $\\ge 3\\%$ arterial oxygen desaturation",
+    "kind": "other",
+    "offsets": [
+      5843
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]

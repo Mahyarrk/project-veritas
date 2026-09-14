@@ -1,0 +1,374 @@
+[
+  {
+    "table": "Methods",
+    "row": "number of patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients (aged 20–65 years) referred to the",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "min",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "max",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1386,
+      4361
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "range",
+    "value": "20–65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "remaining 42 patients",
+    "kind": "count",
+    "offsets": [
+      1776
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "males",
+    "column": "count",
+    "value": "32",
+    "unit": "",
+    "snippet": "32 males",
+    "kind": "count",
+    "offsets": [
+      1799,
+      5050
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "females",
+    "column": "count",
+    "value": "10",
+    "unit": "",
+    "snippet": "10 females",
+    "kind": "count",
+    "offsets": [
+      1809,
+      5060
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$), demonstrating markedly aggravated respiratory events during REM sleep despite its shorter cumulative duration.",
+    "kind": "p",
+    "offsets": [
+      1950,
+      2002,
+      14383,
+      14601,
+      19764,
+      22260
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI vs ODI",
+    "column": "correlation coefficient",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "r",
+    "offsets": [
+      2126
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI vs ODI",
+    "column": "p-value",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "p",
+    "offsets": [
+      2126
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "count",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "age",
+    "column": "min",
+    "value": "20",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "min",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "age",
+    "column": "max",
+    "value": "65",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "max",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "year",
+    "column": "min",
+    "value": "2016",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "min",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "year",
+    "column": "max",
+    "value": "2021",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "max",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "patients",
+    "column": "excluded",
+    "value": "13",
+    "unit": "",
+    "snippet": "To eliminate physiological and neurological confounders, 13 patients were excluded based on confirm",
+    "kind": "count",
+    "offsets": [
+      4601
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Isolated severe mechanical upper airway obstruction",
+    "column": "n",
+    "value": "4",
+    "unit": "",
+    "snippet": "Isolated severe mechanical upper airway obstruction ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4729
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Normal diagnostic PSG without sleep pathology",
+    "column": "n",
+    "value": "4",
+    "unit": "",
+    "snippet": "Normal diagnostic PSG without sleep pathology ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4795
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Narcolepsy",
+    "column": "n",
+    "value": "2",
+    "unit": "",
+    "snippet": "Narcolepsy ($n = 2$)",
+    "kind": "count",
+    "offsets": [
+      4855
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Active seizure disorder / Convulsions",
+    "column": "n",
+    "value": "1",
+    "unit": "",
+    "snippet": "Active seizure disorder / Convulsions ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4880
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Isolated primary snoring",
+    "column": "n",
+    "value": "1",
+    "unit": "",
+    "snippet": "Isolated primary snoring ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4932
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusions",
+    "row": "Parasomnia",
+    "column": "n",
+    "value": "1",
+    "unit": "",
+    "snippet": "Parasomnia ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4971
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Cohort",
+    "row": "final analytical cohort",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Cohort",
+    "row": "final analytical cohort",
+    "column": "males",
+    "value": "32",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Cohort",
+    "row": "final analytical cohort",
+    "column": "females",
+    "value": "10",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]

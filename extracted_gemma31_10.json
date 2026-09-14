@@ -1,0 +1,327 @@
+[
+  {
+    "table": "Methods",
+    "row": "adult patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "range",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "range",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "Polysomnographic and psychometric data from the remaining 42 patients",
+    "kind": "count",
+    "offsets": [
+      1728
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "males",
+    "value": "32",
+    "unit": "",
+    "snippet": "(32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1798,
+      5049
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "females",
+    "value": "10",
+    "unit": "",
+    "snippet": "(32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1798,
+      5049
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "comparison",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1919,
+      1950
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI and Oxygen Desaturation Index (ODI)",
+    "column": "correlation",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$)",
+    "kind": "r",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI and Oxygen Desaturation Index (ODI)",
+    "column": "p-value",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$)",
+    "kind": "p",
+    "offsets": [
+      2139
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "adult patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "age",
+    "column": "range",
+    "value": "20",
+    "unit": "years of age",
+    "snippet": "(20–65 years of age)",
+    "kind": "min",
+    "offsets": [
+      4390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "age",
+    "column": "range",
+    "value": "65",
+    "unit": "years of age",
+    "snippet": "(20–65 years of age)",
+    "kind": "max",
+    "offsets": [
+      4390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methodology",
+    "row": "patients",
+    "column": "excluded",
+    "value": "13",
+    "unit": "",
+    "snippet": "13 patients were excluded",
+    "kind": "count",
+    "offsets": [
+      4658
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Isolated severe mechanical upper airway obstruction",
+    "column": "excluded",
+    "value": "4",
+    "unit": "",
+    "snippet": "Isolated severe mechanical upper airway obstruction ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4729
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Normal diagnostic PSG without sleep pathology",
+    "column": "excluded",
+    "value": "4",
+    "unit": "",
+    "snippet": "Normal diagnostic PSG without sleep pathology ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4795
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Narcolepsy",
+    "column": "excluded",
+    "value": "2",
+    "unit": "",
+    "snippet": "Narcolepsy ($n = 2$)",
+    "kind": "count",
+    "offsets": [
+      4855
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Active seizure disorder / Convulsions",
+    "column": "excluded",
+    "value": "1",
+    "unit": "",
+    "snippet": "Active seizure disorder / Convulsions ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4880
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Isolated primary snoring",
+    "column": "excluded",
+    "value": "1",
+    "unit": "",
+    "snippet": "Isolated primary snoring ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4932
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Excluded Patients",
+    "row": "Parasomnia",
+    "column": "excluded",
+    "value": "1",
+    "unit": "",
+    "snippet": "Parasomnia ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4971
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Analytical Cohort",
+    "row": "total patients",
+    "column": "total",
+    "value": "42",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Analytical Cohort",
+    "row": "patients",
+    "column": "males",
+    "value": "32",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Analytical Cohort",
+    "row": "patients",
+    "column": "females",
+    "value": "10",
+    "unit": "",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Introduction",
+    "row": "arterial oxygen desaturation",
+    "column": "threshold",
+    "value": "3",
+    "unit": "%",
+    "snippet": "nied by $\\ge 3\\%$ arterial oxygen desaturation",
+    "kind": "other",
+    "offsets": [
+      5850
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]
