@@ -39,6 +39,12 @@ For each statistic output one JSON object with these fields:
   "row":    the row/variable name (e.g. "mean age, males"),
   "column": the column/group (e.g. "males", "total"),
   "value":  the numeric value as written,
+  "kind":   one of: mean | std | min | max | median | count |
+            p (p-value) | r (correlation) | other.
+            Use mean/std/min/max/median/count ONLY for directly reported
+            descriptive statistics of one variable; everything else is
+            "other" (accuracies, odds ratios, percentages; p-values
+            UNLESS marked p).
   "unit":   unit if stated (e.g. "years", "%"), else "",
   "snippet": the EXACT sentence or fragment from the text containing the value.
 
@@ -107,6 +113,13 @@ def _validate(proposal: dict, text_norm: str,
         "unit": str(proposal.get("unit", "")),
         "snippet": str(proposal.get("snippet", "")),
     }
+    # kind: LLM-supplied, validated against the fixed vocabulary. Never
+    # trusted beyond this allowlist — an unknown kind degrades to "other",
+    # which routes to the interactive path instead of a wrong battery.
+    _VALID_KINDS = {"mean", "std", "min", "max", "median", "count",
+                    "p", "r", "other"}
+    kind = str(proposal.get("kind", "other")).strip().lower()
+    entry = {**entry, "kind": kind if kind in _VALID_KINDS else "other"}
     snippet = entry["snippet"]
     if not entry["value"]:
         entry["status"] = "discarded: empty value"
