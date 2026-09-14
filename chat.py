@@ -85,16 +85,23 @@ def save_history(history: list[dict]) -> None:
         ensure_ascii=False, indent=2))
 
 
-def rewrite_query(history: list[dict], question: str) -> tuple[bool, str]:
+def rewrite_query(history: list, question: str) -> tuple[bool, str]:
     """Returns (dependent, self-contained search query).
 
     Falls back to (True, raw question) on any failure — when in doubt,
     confirm with the user.
+
+    Accepts history entries as dicts ({role, content}) OR tuples
+    ((role, content)) — the GUI passes tuples, the CLI passes dicts.
     """
     if not history:
         return False, question           # first turn: nothing to resolve
+    def _role(m):
+        return m["role"] if isinstance(m, dict) else m[0]
+    def _content(m):
+        return m["content"] if isinstance(m, dict) else m[1]
     convo = "\n".join(
-        f"{m['role']}: {m['content'][:400]}" for m in history[-10:]
+        f"{_role(m)}: {_content(m)[:400]}" for m in history[-10:]
     )
     try:
         c = client()
@@ -122,7 +129,7 @@ def rewrite_query(history: list[dict], question: str) -> tuple[bool, str]:
         return True, question
 
 
-def build_messages(history: list[dict], question: str,
+def build_messages(history: list, question: str,
                    excerpts: list[dict]) -> list[dict]:
     """system, system, prior turns, latest question WITH excerpts inlined.
 
@@ -130,6 +137,9 @@ def build_messages(history: list[dict], question: str,
     models weight the last user message overwhelmingly, so separating the
     question from its context makes the question look answerable only from
     history — producing bogus refusals.
+
+    History entries may be dicts ({role, content}) or tuples ((role,
+    content)) — both are normalized to OpenAI message dicts.
     """
     if excerpts:
         context = "\n\n---\n\n".join(
@@ -140,11 +150,15 @@ def build_messages(history: list[dict], question: str,
                    f"from the paper:\n\n{context}")
     else:
         content = question
+    norm_history = [
+        m if isinstance(m, dict) else {"role": m[0], "content": m[1]}
+        for m in history
+    ]
     return [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "system", "content": "Excerpts are re-retrieved each turn; "
          "older excerpts may no longer be present."},
-        *history,
+        *norm_history,
         {"role": "user", "content": content},
     ]
 
