@@ -152,7 +152,7 @@ def _extract_once(text: str) -> tuple[list, bool]:
     """
     c = client("cloudflare")
     resp = c.chat.completions.create(
-        model=CONFIG["cloudflare"]["model"],
+        model=model("cloudflare"),
         messages=[
             {"role": "system", "content": EXTRACTION_PROMPT},
             {"role": "user", "content": text},

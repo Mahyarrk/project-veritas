@@ -12,6 +12,7 @@ dependencies = [
     "python-docx>=1.1",
     "pyyaml>=6.0",
     "matplotlib>=3.11.2",
+    "streamlit>=1.63.0",
 ]
 
 [build-system]

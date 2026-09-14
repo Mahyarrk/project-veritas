@@ -1,5 +1,24 @@
 # project-veritas configuration
 # All paths relative to the project root.
+#
+# ENDPOINT CONFIGURATION
+# Three endpoints are needed:
+#   llm         — the chat model (RAG mode). Local LM Studio works well.
+#   cloudflare  — the extraction/audit model via 9router (or any
+#                 OpenAI-compatible endpoint). Needs an API key.
+#   embeddings  — text-embedding model for retrieval.
+#
+# CLI override (no config editing): every endpoint accepts environment
+# variables that override config.yaml at load time — the variable name is
+# the config block in caps, e.g.:
+#   VERITAS_LLM_URL / VERITAS_LLM_MODEL
+#   VERITAS_CLOUDFLARE_URL / VERITAS_CLOUDFLARE_KEY / VERITAS_CLOUDFLARE_MODEL
+#   VERITAS_EMBEDDINGS_URL / VERITAS_EMBEDDINGS_MODEL
+# (block name = config.yaml key, uppercased: llm→VERITAS_LLM_*, 
+#  cloudflare→VERITAS_CLOUDFLARE_*, embeddings→VERITAS_EMBEDDINGS_*)
+# Precedence: environment variable > config.yaml value.
+#
+# GUI: the same overrides are injected by gui.py from its settings panel.
 
 llm:
   base_url: "http://localhost:1234/v1"   # LM Studio local server

@@ -5,10 +5,16 @@ Determines what the user provided and reports what the tool can do:
   paper only          -> RAG chat mode (auditing unavailable)
   paper + raw data    -> RAG chat + full audit (extract, verify)
 
-Pipeline: ingest -> extract -> verify -> chat (interactive).
+Pipeline: setup -> ingest -> extract -> verify -> chat (interactive).
+
+On first run, setup asks for the user's own LLM endpoints (any
+OpenAI-compatible provider) and verifies them with a live call before
+anything else runs. The model is assigned before anything starts and
+cannot be changed mid-session — chat mode uses the same setup.
 
 Run:
   uv run main.py <paper.txt|docx> [data.csv|xlsx]
+  uv run main.py --setup          (re-run endpoint setup)
   (add --no-chat to run the audit and exit)
 """
 
@@ -18,6 +24,16 @@ from pathlib import Path
 
 import yaml
 
+import setup as setup_module
+
+# ---- FIRST-RUN SETUP: before any LLM-touching import ----
+if "--setup" in sys.argv:
+    setup_module.reconfigure()
+    sys.exit(0)
+setup_data = setup_module.ensure_setup()   # asks on first run, verifies live
+setup_module.inject_env(setup_data)        # env vars for ingest overrides
+
+# NOW the LLM-touching imports are safe: endpoints are configured.
 from extract import extract_paper, EXTRACT_PATH
 from ingest import load_paper, describe_dataset, save_store, process_file
 from verify import audit, DISCLAIMER
