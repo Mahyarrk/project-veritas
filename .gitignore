@@ -6,3 +6,7 @@ __pycache__/
 .venv/
 *.env
 .env
+*.csv
+sources/thesis_en.txt
+extracted_values_*.json
+audit_report_*.json
