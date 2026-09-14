@@ -26,7 +26,7 @@ from pathlib import Path
 
 import yaml
 
-from ingest import CONFIG, chunk_text, client, load_paper
+from ingest import CONFIG, chunk_text, client, load_paper, model
 
 EXTRACT_PATH = Path(CONFIG["paths"]["extracted"])
 
