@@ -281,6 +281,18 @@ with tab_chat:
                         st.caption(f"[{s['source']}, offset {s['offset']}] "
                                    f"(score {s['score']:.2f})")
                         st.text(s["text"][:400])
+        # auto-scroll to the newest message: an invisible anchor element
+        # with a unique key per message count, scrolled into view by JS
+        # injected only when a new message was just added this run.
+        if st.session_state.get("_scroll_to_bottom"):
+            st.markdown(
+                """<script>
+                const el = window.parent.document.querySelector(
+                    '[data-testid="stVerticalBlockBorderWrapper"]:last-of-type'
+                );
+                if (el) el.scrollTop = el.scrollHeight;
+                </script>""", unsafe_allow_html=True)
+            st.session_state["_scroll_to_bottom"] = False
 
     # --- input pinned below the container ---
     if prompt := st.chat_input("Ask about the paper..."):
@@ -301,7 +313,8 @@ with tab_chat:
         st.session_state["chat_messages"].append(
             {"role": "assistant", "content": reply,
              "sources": sources_used})
-        st.rerun()   # redraw: message appears inside the scroll container
+        st.session_state["_scroll_to_bottom"] = True
+        st.rerun()   # redraw + auto-scroll to newest message
 
 # =====================================================================
 # TAB 3: ABOUT
