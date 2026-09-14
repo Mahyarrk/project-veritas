@@ -29,27 +29,56 @@ from openai import APIConnectionError, OpenAI
 CONFIG = yaml.safe_load(Path("config.yaml").read_text())
 
 
-def client(provider: str = "llm") -> OpenAI:
-    """OpenAI-compatible client for a provider block in config.yaml.
+def _endpoint(provider: str, key: str = "base_url") -> str:
+    """Config value with env override.
 
-    provider "llm"       -> local LM Studio (Gemma), no key needed
-    provider "cloudflare" -> 9router proxy (GLM-4.7-flash), key from env
+    Precedence: VERITAS_<PROVIDER>_<KEY> env var > config.yaml value.
+    This is how the CLI (and later the GUI) re-point endpoints without
+    editing config.yaml — e.g. VERITAS_EXTRACT_MODEL overrides the
+    cloudflare block's model.
     """
-    block = CONFIG[provider]
-    api_key = os.environ.get(block.get("api_key_env", ""), "none")
-    if block.get("api_key_env") and api_key == "none":
-        raise ValueError(
-            f"environment variable {block['api_key_env']} is not set — "
-            f"export it with the {provider} API key and retry."
-        )
-    return OpenAI(base_url=block["base_url"], api_key=api_key)
+    env_prefix = f"VERITAS_{provider.upper()}_"
+    env_key = env_prefix + key.upper()
+    if os.environ.get(env_key):
+        return os.environ[env_key]
+    return CONFIG[provider][key]
+
+
+def client(provider: str = "llm") -> OpenAI:
+    """OpenAI-compatible client for a provider block in config.yaml,
+    with env overrides (see _endpoint).
+
+    provider "llm"        -> chat model (RAG mode); local LM Studio works
+    provider "cloudflare" -> extraction/audit model; key from env
+    provider "embeddings" -> embedding model for retrieval
+    """
+    base_url = _endpoint(provider, "base_url")
+    model = _endpoint(provider, "model")   # honored by callers via model()
+    api_key_env = CONFIG[provider].get("api_key_env", "")
+    api_key = os.environ.get(api_key_env, "")
+    env_key = f"VERITAS_{provider.upper()}_KEY"
+    if os.environ.get(env_key):
+        api_key = os.environ[env_key]
+    if not api_key or api_key == "none":
+        api_key = "none"   # local endpoints ignore the key; cloud needs one
+    # 15s request timeout: no LLM call should hang the pipeline. Local
+    # models answer in ~2s; a stalled server fails fast and visibly.
+    # max_retries=0: the SDK's default retry loop otherwise re-queues a
+    # 429'd request for minutes (observed: 9router + gemma free tier).
+    return OpenAI(base_url=base_url, api_key=api_key,
+                  timeout=15.0, max_retries=0)
+
+
+def model(provider: str = "llm") -> str:
+    """Model name for a provider, with env override."""
+    return _endpoint(provider, "model")
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """Get one embedding vector per text via the embeddings endpoint."""
     c = client("embeddings")
     resp = c.embeddings.create(
-        model=CONFIG["embeddings"]["model"],
+        model=model("embeddings"),
         input=texts,
     )
     return [item.embedding for item in resp.data]
