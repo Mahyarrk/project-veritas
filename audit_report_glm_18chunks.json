@@ -1,0 +1,559 @@
+{
+  "disclaimer": "DISCLAIMERS:\n  1. Each COLUMN is assumed to hold the values of one variable (one column = sex, another = weight). Transposed data (variables in rows) produces wrong verdicts.\n  2. If the paper excluded participants, the data file must contain ONLY the included cases — auditing unfiltered data produces false mismatches.\n  3. Boolean/yes-no coded columns cannot be auto-verified and are assigned manually when prompted. Such statistics (prevalences, symptom rates) are often a paper's most important findings.",
+  "summary": {
+    "match": 4,
+    "match_human_labeled": 0,
+    "no_match": 41,
+    "skipped": 0,
+    "other": 29,
+    "total": 74
+  },
+  "results": [
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Male",
+      "value": "362.04",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Female",
+      "value": "380.36",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "REM Sleep (% of TST)",
+      "column": "Male",
+      "value": "11.23",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "Total Cohort",
+      "value": "17.27",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "Male",
+      "value": "17.56",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "Female",
+      "value": "16.37",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "Group 1",
+      "value": "77.97",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "Group 2",
+      "value": "77.48",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "Group 3",
+      "value": "79.54",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 1",
+      "value": "19.12",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 2",
+      "value": "14.41",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 3",
+      "value": "34.17",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 1",
+      "value": "53.61",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of q31 where q9=Screen for disordered breathing PLMD",
+          "computed_from": "df.loc[df['q9']=='Screen for disordered breathing PLMD', 'q31'].mean()",
+          "battery_value": 54.38461538461539
+        }
+      ]
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 2",
+      "value": "50.90",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 3",
+      "value": "62.30",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "total",
+      "value": "55",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "min",
+      "value": "20",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "min of q5",
+          "computed_from": "df['q5'].min()",
+          "battery_value": 19.9
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "max",
+      "value": "65",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "max of q2",
+          "computed_from": "df['q2'].max()",
+          "battery_value": 65.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "total patients",
+      "column": "count",
+      "value": "55",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Methods",
+      "row": "remaining patients",
+      "column": "count",
+      "value": "42",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "males",
+      "column": "count",
+      "value": "32",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Methods",
+      "row": "females",
+      "column": "count",
+      "value": "10",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI vs NREM-AHI",
+      "column": "p-value",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI and NREM-AHI",
+      "column": "p-value",
+      "value": "0.001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI",
+      "column": "ODI",
+      "value": "0.570",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI",
+      "column": "ODI",
+      "value": "0.0001",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "adult patients",
+      "column": "total",
+      "value": "55",
+      "verdict": "UNRESOLVED COLLISION"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "age",
+      "column": "range",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "age",
+      "column": "range",
+      "value": "65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Study Population and Exclusion Criteria",
+      "row": "patients",
+      "column": "excluded",
+      "value": "13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "total excluded",
+      "column": "total",
+      "value": "13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "Isolated severe mechanical upper airway obstruction",
+      "column": "count",
+      "value": "4",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "Normal diagnostic PSG without sleep pathology",
+      "column": "count",
+      "value": "4",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "Narcolepsy",
+      "column": "count",
+      "value": "2",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "Active seizure disorder / Convulsions",
+      "column": "count",
+      "value": "1",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "Isolated primary snoring",
+      "column": "count",
+      "value": "1",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Exclusion criteria",
+      "row": "Parasomnia",
+      "column": "count",
+      "value": "1",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "final analytical cohort",
+      "column": "total",
+      "value": "42",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "males",
+      "column": "count",
+      "value": "32",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "females",
+      "column": "count",
+      "value": "10",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "sample size",
+      "column": "total",
+      "value": "40",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "men",
+      "column": "Number (n)",
+      "value": "32",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "men",
+      "column": "Percentage",
+      "value": "76.2",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Results",
+      "row": "women",
+      "column": "Number (n)",
+      "value": "10",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Results",
+      "row": "women",
+      "column": "Percentage",
+      "value": "23.8",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Habitual Snoring",
+      "row": "Habitual Snoring",
+      "column": "30",
+      "value": "30",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Habitual Snoring",
+      "row": "Habitual Snoring",
+      "column": "8",
+      "value": "8",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Habitual Snoring",
+      "row": "Habitual Snoring",
+      "column": "38 (90.5%)",
+      "value": "38",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Habitual Snoring",
+      "row": "Habitual Snoring",
+      "column": "38 (90.5%)",
+      "value": "90.5",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table",
+      "row": "Choking / Witnessed Apneas",
+      "column": "Column 1",
+      "value": "20",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Choking / Witnessed Apneas",
+      "column": "Column 2",
+      "value": "9",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Choking / Witnessed Apneas",
+      "column": "Column 3",
+      "value": "29 (69.0%)",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table",
+      "row": "Impaired Daytime Concentration",
+      "column": "Column 1",
+      "value": "13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Male",
+      "value": "74.34",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "Total Sleep Time (minutes)",
+      "column": "Female",
+      "value": "51.55",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "Total Sleep Time (minutes)",
+      "column": "p-value",
+      "value": "0.39",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+      "row": "REM Sleep (% of TST)",
+      "column": "Male",
+      "value": "7.72",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of q36",
+          "computed_from": "df['q36'].std()",
+          "battery_value": 7.697216253109825
+        }
+      ]
+    },
+    {
+      "table": "Text",
+      "row": "NREM sleep",
+      "column": "Overall nocturnal sleep composition",
+      "value": "69.88",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "Total Cohort",
+      "value": "15.75",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "Male",
+      "value": "16.02",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "Female",
+      "value": "15.65",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 6",
+      "row": "Sleep Latency (min)",
+      "column": "$p$-value",
+      "value": "0.83 (NS)",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "Group 1",
+      "value": "12.15",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "Group 2",
+      "value": "11.48",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "Group 3",
+      "value": "11.51",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Sleep Efficiency Index (%)",
+      "column": "P-value",
+      "value": "0.62",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 1",
+      "value": "20.18",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 2",
+      "value": "17.26",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 3",
+      "value": "22.33",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table",
+      "row": "Arousal Index (events/hr)",
+      "column": "P-value",
+      "value": "0.005",
+      "verdict": "UNCHECKABLE (kind=other)"
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 1",
+      "value": "33.72",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 2",
+      "value": "31.13",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 3",
+      "value": "41.61",
+      "verdict": "NO MATCH IN BATTERY"
+    },
+    {
+      "table": "Table 1",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Column 4",
+      "value": "0.093",
+      "verdict": "UNCHECKABLE (kind=other)"
+    }
+  ]
+}
