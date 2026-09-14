@@ -1,0 +1,1257 @@
+[
+  {
+    "table": "Methods",
+    "row": "patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "In this cross-sectional study, nocturnal polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1323
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "min",
+    "value": "20",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "min",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "age",
+    "column": "max",
+    "value": "65",
+    "unit": "years",
+    "snippet": "aged 20–65 years",
+    "kind": "max",
+    "offsets": [
+      1416
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "total patients",
+    "column": "count",
+    "value": "55",
+    "unit": "patients",
+    "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients",
+    "kind": "count",
+    "offsets": [
+      1354
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "remaining patients",
+    "column": "count",
+    "value": "42",
+    "unit": "patients",
+    "snippet": "Polysomnographic and psychometric data from the remaining 42 patients",
+    "kind": "count",
+    "offsets": [
+      1728
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "males",
+    "column": "count",
+    "value": "32",
+    "unit": "patients",
+    "snippet": "42 patients (32 males",
+    "kind": "count",
+    "offsets": [
+      1786
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Methods",
+    "row": "females",
+    "column": "count",
+    "value": "10",
+    "unit": "patients",
+    "snippet": "42 patients (32 males, 10 females)",
+    "kind": "count",
+    "offsets": [
+      1786
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI vs NREM-AHI",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+    "kind": "p",
+    "offsets": [
+      1919
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "REM-AHI and NREM-AHI",
+    "column": "p-value",
+    "value": "0.001",
+    "unit": "",
+    "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$), demonstrating markedly aggravated respiratory events during REM sleep despite its shorter cumulative duration.",
+    "kind": "p",
+    "offsets": [
+      1950
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI",
+    "column": "ODI",
+    "value": "0.570",
+    "unit": "",
+    "snippet": "Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "r",
+    "offsets": [
+      2126
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "total AHI",
+    "column": "ODI",
+    "value": "0.0001",
+    "unit": "",
+    "snippet": "Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).",
+    "kind": "p",
+    "offsets": [
+      2126
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "adult patients",
+    "column": "total",
+    "value": "55",
+    "unit": "",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "count",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "age",
+    "column": "range",
+    "value": "20",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "min",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "age",
+    "column": "range",
+    "value": "65",
+    "unit": "years",
+    "snippet": "Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed.",
+    "kind": "max",
+    "offsets": [
+      4334
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Study Population and Exclusion Criteria",
+    "row": "patients",
+    "column": "excluded",
+    "value": "13",
+    "unit": "",
+    "snippet": "To eliminate physiological and neurological confounders, 13 patients were excluded based on confirm",
+    "kind": "count",
+    "offsets": [
+      4601
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "total excluded",
+    "column": "total",
+    "value": "13",
+    "unit": "",
+    "snippet": "13 patients were excluded based on confirmed alternative diagnoses:",
+    "kind": "count",
+    "offsets": [
+      4658
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "Isolated severe mechanical upper airway obstruction",
+    "column": "count",
+    "value": "4",
+    "unit": "",
+    "snippet": "Isolated severe mechanical upper airway obstruction ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4729
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "Normal diagnostic PSG without sleep pathology",
+    "column": "count",
+    "value": "4",
+    "unit": "",
+    "snippet": "Normal diagnostic PSG without sleep pathology ($n = 4$)",
+    "kind": "count",
+    "offsets": [
+      4795
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "Narcolepsy",
+    "column": "count",
+    "value": "2",
+    "unit": "",
+    "snippet": "Narcolepsy ($n = 2$)",
+    "kind": "count",
+    "offsets": [
+      4855
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "Active seizure disorder / Convulsions",
+    "column": "count",
+    "value": "1",
+    "unit": "",
+    "snippet": "Active seizure disorder / Convulsions ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4880
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "Isolated primary snoring",
+    "column": "count",
+    "value": "1",
+    "unit": "",
+    "snippet": "Isolated primary snoring ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4932
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Exclusion criteria",
+    "row": "Parasomnia",
+    "column": "count",
+    "value": "1",
+    "unit": "",
+    "snippet": "Parasomnia ($n = 1$)",
+    "kind": "count",
+    "offsets": [
+      4971
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "final analytical cohort",
+    "column": "total",
+    "value": "42",
+    "unit": "patients",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "males",
+    "column": "count",
+    "value": "32",
+    "unit": "patients",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "females",
+    "column": "count",
+    "value": "10",
+    "unit": "patients",
+    "snippet": "The final analytical cohort comprised **42 patients** (32 males, 10 females).",
+    "kind": "count",
+    "offsets": [
+      4995
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "sample size",
+    "column": "total",
+    "value": "40",
+    "unit": "participants",
+    "snippet": "Z_{1 - \\frac{\\alpha}{2}} + Z_{1 - \\beta})^2}{(\\bar{X}_1 - \\bar{X}_2)^2} = \\frac{93.89}{2.45} \\approx 40",
+    "kind": "count",
+    "offsets": [
+      7150
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "men",
+    "column": "Number (n)",
+    "value": "32",
+    "unit": "",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "count",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "men",
+    "column": "Percentage",
+    "value": "76.2",
+    "unit": "%",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "other",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "women",
+    "column": "Number (n)",
+    "value": "10",
+    "unit": "",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "count",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Results",
+    "row": "women",
+    "column": "Percentage",
+    "value": "23.8",
+    "unit": "%",
+    "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+    "kind": "other",
+    "offsets": [
+      8022
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Habitual Snoring",
+    "row": "Habitual Snoring",
+    "column": "30",
+    "value": "30",
+    "unit": "",
+    "snippet": "30",
+    "kind": "count",
+    "offsets": [
+      5816,
+      8522,
+      8604,
+      8912,
+      12153,
+      12244,
+      12882,
+      13980,
+      15390,
+      17231,
+      17455,
+      18209,
+      20762,
+      21316,
+      21872
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Habitual Snoring",
+    "row": "Habitual Snoring",
+    "column": "8",
+    "value": "8",
+    "unit": "",
+    "snippet": "8",
+    "kind": "count",
+    "offsets": [
+      6651,
+      6814,
+      7059,
+      7233,
+      7330,
+      8088,
+      8534,
+      8660,
+      8919,
+      8926,
+      9118,
+      9814,
+      9927,
+      9995,
+      10073,
+      10083,
+      10193,
+      10194,
+      10819,
+      10916,
+      11440,
+      11529,
+      11555,
+      11565,
+      11566,
+      11657,
+      11667,
+      11765,
+      11908,
+      12470,
+      12536,
+      12669,
+      12721,
+      12730,
+      12750,
+      12834,
+      12844,
+      12859,
+      13002,
+      13026,
+      13073,
+      13117,
+      13246,
+      13267,
+      13321,
+      13353,
+      13375,
+      13376,
+      13488,
+      13510,
+      13628,
+      14001,
+      15142,
+      15143,
+      15243,
+      15278,
+      15403,
+      15648,
+      15748,
+      15976,
+      16034,
+      16229,
+      16687,
+      16816,
+      17772,
+      18337,
+      18387,
+      18497,
+      18498,
+      20775,
+      21337,
+      21814,
+      21930,
+      21931
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Habitual Snoring",
+    "row": "Habitual Snoring",
+    "column": "38 (90.5%)",
+    "value": "38",
+    "unit": "",
+    "snippet": "38 (90.5%)",
+    "kind": "count",
+    "offsets": [
+      8925
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Habitual Snoring",
+    "row": "Habitual Snoring",
+    "column": "38 (90.5%)",
+    "value": "90.5",
+    "unit": "%",
+    "snippet": "90.5%",
+    "kind": "other",
+    "offsets": [
+      8929,
+      18821
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Choking / Witnessed Apneas",
+    "column": "Column 1",
+    "value": "20",
+    "unit": "",
+    "snippet": "20",
+    "kind": "count",
+    "offsets": [
+      1421,
+      1498,
+      1507,
+      4391,
+      4480,
+      4489,
+      7348,
+      8977,
+      10366,
+      10825,
+      10923,
+      11761,
+      12399,
+      12642,
+      12953,
+      12977,
+      13106,
+      13451,
+      13580,
+      15133,
+      16068,
+      16239,
+      17783,
+      19321
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Choking / Witnessed Apneas",
+    "column": "Column 2",
+    "value": "9",
+    "unit": "",
+    "snippet": "9",
+    "kind": "count",
+    "offsets": [
+      1515,
+      5726,
+      7067,
+      7230,
+      7234,
+      7282,
+      8266,
+      8269,
+      8526,
+      8929,
+      8984,
+      8991,
+      8995,
+      9122,
+      9303,
+      9840,
+      9970,
+      9979,
+      10094,
+      10191,
+      10217,
+      10240,
+      11578,
+      11632,
+      11678,
+      11752,
+      11943,
+      11983,
+      11985,
+      12034,
+      12055,
+      12056,
+      12129,
+      12176,
+      12234,
+      12266,
+      12356,
+      12365,
+      12469,
+      12476,
+      12521,
+      12628,
+      12653,
+      12670,
+      13082,
+      13103,
+      13124,
+      13196,
+      13219,
+      13242,
+      13254,
+      13317,
+      13340,
+      13363,
+      13367,
+      13439,
+      13462,
+      13485,
+      13498,
+      13570,
+      14159,
+      14665,
+      14667,
+      15108,
+      15426,
+      15649,
+      16350,
+      17010,
+      17234,
+      17275,
+      17773,
+      17848,
+      18127,
+      18386,
+      18399,
+      18495,
+      18821,
+      18868,
+      19251,
+      19714,
+      19716,
+      20798,
+      21117,
+      21928
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Choking / Witnessed Apneas",
+    "column": "Column 3",
+    "value": "29 (69.0%)",
+    "unit": "%",
+    "snippet": "29 (69.0%)",
+    "kind": "other",
+    "offsets": [
+      8990
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Impaired Daytime Concentration",
+    "column": "Column 1",
+    "value": "13",
+    "unit": "",
+    "snippet": "13",
+    "kind": "count",
+    "offsets": [
+      1513,
+      4658,
+      8259,
+      9046,
+      11929,
+      12139,
+      12626,
+      15401,
+      17246,
+      20773
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "Total Sleep Time (minutes)",
+    "column": "Male",
+    "value": "362.04",
+    "unit": "minutes",
+    "snippet": "$362.04 \\pm 74.34$",
+    "kind": "mean",
+    "offsets": [
+      9787
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "Total Sleep Time (minutes)",
+    "column": "Male",
+    "value": "74.34",
+    "unit": "minutes",
+    "snippet": "$362.04 \\pm 74.34$",
+    "kind": "std",
+    "offsets": [
+      9787
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "Total Sleep Time (minutes)",
+    "column": "Female",
+    "value": "380.36",
+    "unit": "minutes",
+    "snippet": "$380.36 \\pm 51.55$",
+    "kind": "mean",
+    "offsets": [
+      9812
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "Total Sleep Time (minutes)",
+    "column": "Female",
+    "value": "51.55",
+    "unit": "minutes",
+    "snippet": "$380.36 \\pm 51.55$",
+    "kind": "std",
+    "offsets": [
+      9812
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "Total Sleep Time (minutes)",
+    "column": "p-value",
+    "value": "0.39",
+    "unit": "",
+    "snippet": "0.39",
+    "kind": "p",
+    "offsets": [
+      9837
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "REM Sleep (% of TST)",
+    "column": "Male",
+    "value": "11.23",
+    "unit": "% of TST",
+    "snippet": "$11.23 \\pm 7.72$",
+    "kind": "mean",
+    "offsets": [
+      9879
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)",
+    "row": "REM Sleep (% of TST)",
+    "column": "Male",
+    "value": "7.72",
+    "unit": "% of TST",
+    "snippet": "$11.23 \\pm 7.72$",
+    "kind": "std",
+    "offsets": [
+      9879
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Text",
+    "row": "NREM sleep",
+    "column": "Overall nocturnal sleep composition",
+    "value": "69.88",
+    "unit": "%",
+    "snippet": "Overall nocturnal sleep composition across the cohort comprised **69.88% NREM sleep**",
+    "kind": "other",
+    "offsets": [
+      10124
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "Total Cohort",
+    "value": "17.27",
+    "unit": "min",
+    "snippet": "$17.27 \\pm 15.75$",
+    "kind": "mean",
+    "offsets": [
+      11366
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "Total Cohort",
+    "value": "15.75",
+    "unit": "min",
+    "snippet": "$17.27 \\pm 15.75$",
+    "kind": "std",
+    "offsets": [
+      11366
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "Male",
+    "value": "17.56",
+    "unit": "min",
+    "snippet": "$17.56 \\pm 16.02$",
+    "kind": "mean",
+    "offsets": [
+      11390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "Male",
+    "value": "16.02",
+    "unit": "min",
+    "snippet": "$17.56 \\pm 16.02$",
+    "kind": "std",
+    "offsets": [
+      11390
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "Female",
+    "value": "16.37",
+    "unit": "min",
+    "snippet": "$16.37 \\pm 15.65$",
+    "kind": "mean",
+    "offsets": [
+      11414
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "Female",
+    "value": "15.65",
+    "unit": "min",
+    "snippet": "$16.37 \\pm 15.65$",
+    "kind": "std",
+    "offsets": [
+      11414
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 6",
+    "row": "Sleep Latency (min)",
+    "column": "$p$-value",
+    "value": "0.83 (NS)",
+    "unit": "",
+    "snippet": "0.83 (NS)",
+    "kind": "p",
+    "offsets": [
+      11438
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "Group 1",
+    "value": "77.97",
+    "unit": "%",
+    "snippet": "77.97 \\pm 12.15",
+    "kind": "mean",
+    "offsets": [
+      11629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "Group 1",
+    "value": "12.15",
+    "unit": "%",
+    "snippet": "77.97 \\pm 12.15",
+    "kind": "std",
+    "offsets": [
+      11629
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "Group 2",
+    "value": "77.48",
+    "unit": "%",
+    "snippet": "77.48 \\pm 11.48",
+    "kind": "mean",
+    "offsets": [
+      10069,
+      11653
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "Group 2",
+    "value": "11.48",
+    "unit": "%",
+    "snippet": "77.48 \\pm 11.48",
+    "kind": "std",
+    "offsets": [
+      10069,
+      11653
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "Group 3",
+    "value": "79.54",
+    "unit": "%",
+    "snippet": "79.54 \\pm 11.51",
+    "kind": "mean",
+    "offsets": [
+      10093,
+      11677
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "Group 3",
+    "value": "11.51",
+    "unit": "%",
+    "snippet": "79.54 \\pm 11.51",
+    "kind": "std",
+    "offsets": [
+      10093,
+      11677
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Sleep Efficiency Index (%)",
+    "column": "P-value",
+    "value": "0.62",
+    "unit": "",
+    "snippet": "0.62 (NS)",
+    "kind": "p",
+    "offsets": [
+      11700
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 1",
+    "value": "19.12",
+    "unit": "events/hr",
+    "snippet": "19.12 \\pm 20.18",
+    "kind": "mean",
+    "offsets": [
+      11751
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 1",
+    "value": "20.18",
+    "unit": "events/hr",
+    "snippet": "19.12 \\pm 20.18",
+    "kind": "std",
+    "offsets": [
+      11751
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 2",
+    "value": "14.41",
+    "unit": "events/hr",
+    "snippet": "14.41 \\pm 17.26",
+    "kind": "mean",
+    "offsets": [
+      11775,
+      13820,
+      21213
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 2",
+    "value": "17.26",
+    "unit": "events/hr",
+    "snippet": "14.41 \\pm 17.26",
+    "kind": "std",
+    "offsets": [
+      11775,
+      13820,
+      21213
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 3",
+    "value": "34.17",
+    "unit": "events/hr",
+    "snippet": "34.17 \\pm 22.33",
+    "kind": "mean",
+    "offsets": [
+      11799,
+      13798,
+      21191
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "Group 3",
+    "value": "22.33",
+    "unit": "events/hr",
+    "snippet": "34.17 \\pm 22.33",
+    "kind": "std",
+    "offsets": [
+      11799,
+      13798,
+      21191
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table",
+    "row": "Arousal Index (events/hr)",
+    "column": "P-value",
+    "value": "0.005",
+    "unit": "",
+    "snippet": "**0.005**",
+    "kind": "p",
+    "offsets": [
+      11822
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 1",
+    "value": "53.61",
+    "unit": "events/hr",
+    "snippet": "$53.61 \\pm 33.72$",
+    "kind": "mean",
+    "offsets": [
+      12101,
+      14717,
+      19734
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 1",
+    "value": "33.72",
+    "unit": "events/hr",
+    "snippet": "$53.61 \\pm 33.72$",
+    "kind": "std",
+    "offsets": [
+      12101,
+      14717,
+      19734
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 2",
+    "value": "50.90",
+    "unit": "events/hr",
+    "snippet": "$50.90 \\pm 31.13$",
+    "kind": "mean",
+    "offsets": [
+      12125
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 2",
+    "value": "31.13",
+    "unit": "events/hr",
+    "snippet": "$50.90 \\pm 31.13$",
+    "kind": "std",
+    "offsets": [
+      12125
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 3",
+    "value": "62.30",
+    "unit": "events/hr",
+    "snippet": "$62.30 \\pm 41.61$",
+    "kind": "mean",
+    "offsets": [
+      12149
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 3",
+    "value": "41.61",
+    "unit": "events/hr",
+    "snippet": "$62.30 \\pm 41.61$",
+    "kind": "std",
+    "offsets": [
+      12149
+    ],
+    "status": "validated",
+    "paper": "paper"
+  },
+  {
+    "table": "Table 1",
+    "row": "NREM-AHI (events/hr)",
+    "column": "Column 4",
+    "value": "0.093",
+    "unit": "",
+    "snippet": "0.093 (NS)",
+    "kind": "p",
+    "offsets": [
+      12173
+    ],
+    "status": "validated",
+    "paper": "paper"
+  }
+]
