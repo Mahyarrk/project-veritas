@@ -1,0 +1,3509 @@
+{
+  "disclaimer": "DISCLAIMERS:\n  1. Each COLUMN is assumed to hold the values of one variable (one column = sex, another = weight). Transposed data (variables in rows) produces wrong verdicts.\n  2. If the paper excluded participants, the data file must contain ONLY the included cases — auditing unfiltered data produces false mismatches.\n  3. Boolean/yes-no coded columns cannot be auto-verified and are assigned manually when prompted. Such statistics (prevalences, symptom rates) are often a paper's most important findings.",
+  "summary": {
+    "match": 59,
+    "match_human_labeled": 0,
+    "no_match": 0,
+    "skipped": 153,
+    "other": 21,
+    "total": 233
+  },
+  "results": [
+    {
+      "table": "Sample Size Calculation",
+      "row": "REM-AHI",
+      "column": "Gabryelska et al.",
+      "value": "5.8",
+      "unit": "",
+      "snippet": "mean $\\pm$ SD of REM-AHI $= 5.8 \\pm 1.9$",
+      "kind": "mean",
+      "offsets": [
+        7029
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "NREM-AHI",
+      "column": "Gabryelska et al.",
+      "value": "3.2",
+      "unit": "",
+      "snippet": "NREM-AHI $= 3.2 \\pm 1.55$",
+      "kind": "mean",
+      "offsets": [
+        7071
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 1",
+      "value": "19.12",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index",
+          "computed_from": "df['arousal_index'].mean()",
+          "battery_value": 19.121428571428574
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 2",
+      "value": "14.41",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'arousal_index'].mean()",
+          "battery_value": 14.41875
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 3",
+      "value": "34.17",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'arousal_index'].mean()",
+          "battery_value": 34.17
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 1",
+      "value": "1.72",
+      "unit": "events/hr",
+      "snippet": "$1.72 \\pm 4.25$",
+      "kind": "mean",
+      "offsets": [
+        11873
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 2",
+      "value": "2.14",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of plms_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'plms_index'].mean()",
+          "battery_value": 2.1468749999999996
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 3",
+      "value": "0.36",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of plms_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'plms_index'].mean()",
+          "battery_value": 0.36
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "59.92",
+      "unit": "events/hr",
+      "snippet": "$59.92 \\pm 36.32$",
+      "kind": "mean",
+      "offsets": [
+        11981,
+        14663,
+        19712
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "KNOWN THESIS ERROR (REM-AHI total; true 54.92) — must NOT match"
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "52.27",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'ahi_rem'].mean()",
+          "battery_value": 52.278124999999996
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "63.39",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'ahi_rem'].mean()",
+          "battery_value": 63.39000000000001
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "53.61",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].mean()",
+          "battery_value": 53.61428571428571
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "50.90",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'ahi_nonrem'].mean()",
+          "battery_value": 50.900000000000006
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "62.30",
+      "unit": "events/hr",
+      "snippet": "$62.30 \\pm 41.61$",
+      "kind": "mean",
+      "offsets": [
+        12149
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 1",
+      "value": "1.29",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of central_apnea_rem",
+          "computed_from": "df['central_apnea_rem'].mean()",
+          "battery_value": 1.2857142857142858
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 2",
+      "value": "1.00",
+      "unit": "",
+      "snippet": "$1.00 \\pm 1.64$",
+      "kind": "mean",
+      "offsets": [
+        12374
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 3",
+      "value": "2.20",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of central_apnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'central_apnea_rem'].mean()",
+          "battery_value": 2.2
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "1.98",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem",
+          "computed_from": "df['mixed_apnea_rem'].mean()",
+          "battery_value": 1.9761904761904763
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 2",
+      "value": "0.53",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_rem'].mean()",
+          "battery_value": 0.53125
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 3",
+      "value": "6.60",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_rem'].mean()",
+          "battery_value": 6.6
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Group 1",
+      "value": "146.33",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_nonrem",
+          "computed_from": "df['obstructive_apnea_nonrem'].mean()",
+          "battery_value": 146.33333333333334
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Group 2",
+      "value": "123.31",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'obstructive_apnea_nonrem'].mean()",
+          "battery_value": 123.3125
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Group 3",
+      "value": "220.00",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of obstructive_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'obstructive_apnea_nonrem'].mean()",
+          "battery_value": 220.0
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Group 1",
+      "value": "6.81",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of central_apnea_nonrem",
+          "computed_from": "df['central_apnea_nonrem'].mean()",
+          "battery_value": 6.809523809523809
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Group 2",
+      "value": "7.34",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of central_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'central_apnea_nonrem'].mean()",
+          "battery_value": 7.34375
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Group 3",
+      "value": "5.10",
+      "unit": "",
+      "snippet": "$5.10 \\pm 7.01$",
+      "kind": "mean",
+      "offsets": [
+        12762
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "Group 1",
+      "value": "8.40",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem",
+          "computed_from": "df['mixed_apnea_nonrem'].mean()",
+          "battery_value": 8.404761904761905
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "Group 2",
+      "value": "2.81",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 2.8125
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "Group 3",
+      "value": "26.30",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 26.3
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 1",
+      "value": "20.00",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem",
+          "computed_from": "df['hypopnea_rem'].mean()",
+          "battery_value": 20.0
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 2",
+      "value": "20.50",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'hypopnea_rem'].mean()",
+          "battery_value": 20.5
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 3",
+      "value": "18.40",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'hypopnea_rem'].mean()",
+          "battery_value": 18.4
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 1",
+      "value": "118.21",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_nonrem",
+          "computed_from": "df['hypopnea_nonrem'].mean()",
+          "battery_value": 118.21428571428571
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 2",
+      "value": "123.34",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'hypopnea_nonrem'].mean()",
+          "battery_value": 123.34375
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 3",
+      "value": "101.80",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of hypopnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'hypopnea_nonrem'].mean()",
+          "battery_value": 101.8
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 1",
+      "value": "18.40",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of hypopnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'hypopnea_rem'].mean()",
+          "battery_value": 18.4
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "Group 1",
+      "value": "92.01",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_awake_mean",
+          "computed_from": "df['spo2_awake_mean'].mean()",
+          "battery_value": 92.01190476190476
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "Group 2",
+      "value": "91.52",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_awake_mean where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'spo2_awake_mean'].mean()",
+          "battery_value": 91.521875
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "Group 3",
+      "value": "93.58",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_awake_mean where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'spo2_awake_mean'].mean()",
+          "battery_value": 93.58
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "Group 1",
+      "value": "90.78",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_rem_mean",
+          "computed_from": "df['spo2_rem_mean'].mean()",
+          "battery_value": 90.78461538461538
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "Group 2",
+      "value": "90.50",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_rem_mean where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'spo2_rem_mean'].mean()",
+          "battery_value": 90.50689655172415
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "Group 3",
+      "value": "91.59",
+      "unit": "%",
+      "snippet": "$91.59 \\pm 2.88$",
+      "kind": "mean",
+      "offsets": [
+        13362
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Group 1",
+      "value": "90.54",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_nonrem_mean",
+          "computed_from": "df['spo2_nonrem_mean'].mean()",
+          "battery_value": 90.54285714285714
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Group 2",
+      "value": "90.44",
+      "unit": "%",
+      "snippet": "$90.44 \\pm 4.47$",
+      "kind": "mean",
+      "offsets": [
+        13461
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Group 3",
+      "value": "90.86",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of spo2_nonrem_mean where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'spo2_nonrem_mean'].mean()",
+          "battery_value": 90.86
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "Group 1",
+      "value": "26.93",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of odi",
+          "computed_from": "df['odi'].mean()",
+          "battery_value": 26.930952380952384
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "Group 2",
+      "value": "24.21",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of odi where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'odi'].mean()",
+          "battery_value": 24.21875
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "Group 3",
+      "value": "35.61",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "mean of odi where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'odi'].mean()",
+          "battery_value": 35.61
+        }
+      ]
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Females",
+      "value": "34.17",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'arousal_index'].mean()",
+          "battery_value": 34.17
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "males",
+      "value": "14.41",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'arousal_index'].mean()",
+          "battery_value": 14.41875
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Females",
+      "value": "26.30",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 26.3
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "males",
+      "value": "2.81",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 2.8125
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI",
+      "column": "REM",
+      "value": "59.92",
+      "unit": "",
+      "snippet": "REM-AHI ($59.92 \\pm 36.32$) was elevated compared to NREM-AHI ($53.61 \\pm 33.72$)",
+      "kind": "mean",
+      "offsets": [
+        14654
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "KNOWN THESIS ERROR (REM-AHI total; true 54.92) — must NOT match"
+    },
+    {
+      "table": "Results",
+      "row": "NREM-AHI",
+      "column": "NREM",
+      "value": "53.61",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].mean()",
+          "battery_value": 53.61428571428571
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "REM",
+      "value": "59.92",
+      "unit": "events/hr",
+      "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+      "kind": "mean",
+      "offsets": [
+        19629
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "KNOWN THESIS ERROR (REM-AHI total; true 54.92) — must NOT match"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "NREM",
+      "value": "53.61",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].mean()",
+          "battery_value": 53.61428571428571
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "females",
+      "value": "34.17",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'arousal_index'].mean()",
+          "battery_value": 34.17
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "males",
+      "value": "14.41",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'arousal_index'].mean()",
+          "battery_value": 14.41875
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "mixed apneas during NREM sleep",
+      "column": "females",
+      "value": "26.30",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 26.3
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "mixed apneas during NREM sleep",
+      "column": "males",
+      "value": "2.81",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 2.8125
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI",
+      "column": "patients with obesity",
+      "value": "66.22",
+      "unit": "",
+      "snippet": "respiratory events were magnified (REM-AHI $= 66.22 \\pm 43.66$, $p = 0.0001$)",
+      "kind": "mean",
+      "offsets": [
+        21942
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Methods",
+      "row": "adult patients",
+      "column": "total",
+      "value": "55",
+      "unit": "",
+      "snippet": "nocturnal polysomnography (PSG) records of 55 adult patients",
+      "kind": "count",
+      "offsets": [
+        1354
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "55 = pre-exclusion cohort; dataset is the 42 included"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "range",
+      "value": "20",
+      "unit": "years",
+      "snippet": "aged 20–65 years",
+      "kind": "min",
+      "offsets": [
+        1416
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Methods",
+      "row": "age",
+      "column": "range",
+      "value": "65",
+      "unit": "years",
+      "snippet": "aged 20–65 years",
+      "kind": "max",
+      "offsets": [
+        1416
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "total",
+      "value": "42",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "number of rows in the dataset (42)",
+          "computed_from": "len(df)",
+          "battery_value": 42.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "males",
+      "value": "32",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ]
+    },
+    {
+      "table": "Methods",
+      "row": "patients",
+      "column": "females",
+      "value": "10",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ]
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI vs NREM-AHI",
+      "column": "p-value",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+      "kind": "p",
+      "offsets": [
+        1919
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI vs NREM-AHI",
+      "column": "comparison",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "ference was observed between REM-AHI and NREM-AHI ($p = 0.001$)",
+      "kind": "p",
+      "offsets": [
+        1950
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI and Oxygen Desaturation Index (ODI)",
+      "column": "correlation",
+      "value": "0.570",
+      "unit": "",
+      "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$)",
+      "kind": "r",
+      "offsets": [
+        2139
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI and Oxygen Desaturation Index (ODI)",
+      "column": "p-value",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        2139
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Methodology",
+      "row": "adult patients",
+      "column": "total",
+      "value": "55",
+      "unit": "",
+      "snippet": "Diagnostic polysomnography records of 55 adult patients",
+      "kind": "count",
+      "offsets": [
+        4334
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "55 = pre-exclusion cohort; dataset is the 42 included"
+    },
+    {
+      "table": "Methodology",
+      "row": "age",
+      "column": "range",
+      "value": "20",
+      "unit": "years of age",
+      "snippet": "(20–65 years of age)",
+      "kind": "min",
+      "offsets": [
+        4390
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Methodology",
+      "row": "age",
+      "column": "range",
+      "value": "65",
+      "unit": "years of age",
+      "snippet": "(20–65 years of age)",
+      "kind": "max",
+      "offsets": [
+        4390
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Methodology",
+      "row": "patients",
+      "column": "excluded",
+      "value": "13",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of apnea_feeling=1 (13 rows)",
+          "computed_from": "(df['apnea_feeling']==np.int64(1)).sum()",
+          "battery_value": 13.0
+        }
+      ]
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Isolated severe mechanical upper airway obstruction",
+      "column": "excluded",
+      "value": "4",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of snoring=1 (4 rows)",
+          "computed_from": "(df['snoring']==np.int64(1)).sum()",
+          "battery_value": 4.0
+        }
+      ]
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Normal diagnostic PSG without sleep pathology",
+      "column": "excluded",
+      "value": "4",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of snoring=1 (4 rows)",
+          "computed_from": "(df['snoring']==np.int64(1)).sum()",
+          "battery_value": 4.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Narcolepsy",
+      "column": "excluded",
+      "value": "2",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of mallampati_score=2 (2 rows)",
+          "computed_from": "(df['mallampati_score']=='2').sum()",
+          "battery_value": 2.0
+        }
+      ]
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Active seizure disorder / Convulsions",
+      "column": "excluded",
+      "value": "1",
+      "unit": "",
+      "snippet": "Active seizure disorder / Convulsions ($n = 1$)",
+      "kind": "count",
+      "offsets": [
+        4880
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Isolated primary snoring",
+      "column": "excluded",
+      "value": "1",
+      "unit": "",
+      "snippet": "Isolated primary snoring ($n = 1$)",
+      "kind": "count",
+      "offsets": [
+        4932
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Excluded Patients",
+      "row": "Parasomnia",
+      "column": "excluded",
+      "value": "1",
+      "unit": "",
+      "snippet": "Parasomnia ($n = 1$)",
+      "kind": "count",
+      "offsets": [
+        4971
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Analytical Cohort",
+      "row": "total patients",
+      "column": "total",
+      "value": "42",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "number of rows in the dataset (42)",
+          "computed_from": "len(df)",
+          "battery_value": 42.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Analytical Cohort",
+      "row": "patients",
+      "column": "males",
+      "value": "32",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Analytical Cohort",
+      "row": "patients",
+      "column": "females",
+      "value": "10",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "apnea definition",
+      "column": "airflow amplitude drop",
+      "value": "90",
+      "unit": "%",
+      "snippet": "an apnea was defined as a $\\ge 90\\%$ drop in airflow amplitude",
+      "kind": "other",
+      "offsets": [
+        5695
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "AASM methodology constant — not a data statistic"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "apnea definition",
+      "column": "duration",
+      "value": "10",
+      "unit": "seconds",
+      "snippet": "lasting $\\ge 10$ seconds",
+      "kind": "other",
+      "offsets": [
+        5758
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "AASM methodology constant — not a data statistic"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "hypopnea definition",
+      "column": "airflow reduction",
+      "value": "30",
+      "unit": "%",
+      "snippet": "Hypopneas were scored as a $\\ge 30\\%$ reduction in airflow",
+      "kind": "other",
+      "offsets": [
+        5784
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "AASM methodology constant — not a data statistic"
+    },
+    {
+      "table": "Scoring Criteria",
+      "row": "hypopnea definition",
+      "column": "arterial oxygen desaturation",
+      "value": "3",
+      "unit": "%",
+      "snippet": "accompanied by $\\ge 3\\%$ arterial oxygen desaturation",
+      "kind": "other",
+      "offsets": [
+        5843
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "AASM methodology constant — not a data statistic"
+    },
+    {
+      "table": "Introduction",
+      "row": "arterial oxygen desaturation",
+      "column": "threshold",
+      "value": "3",
+      "unit": "%",
+      "snippet": "nied by $\\ge 3\\%$ arterial oxygen desaturation",
+      "kind": "other",
+      "offsets": [
+        5850
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "REM-AHI",
+      "column": "Gabryelska et al.",
+      "value": "1.9",
+      "unit": "",
+      "snippet": "mean $\\pm$ SD of REM-AHI $= 5.8 \\pm 1.9$",
+      "kind": "std",
+      "offsets": [
+        7029
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "NREM-AHI",
+      "column": "Gabryelska et al.",
+      "value": "1.55",
+      "unit": "",
+      "snippet": "NREM-AHI $= 3.2 \\pm 1.55$",
+      "kind": "std",
+      "offsets": [
+        7071
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "REM-AHI vs NREM-AHI",
+      "column": "Gabryelska et al.",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "$p = 0.0001$",
+      "kind": "p",
+      "offsets": [
+        2274,
+        7098,
+        14022,
+        18022,
+        21358,
+        22006,
+        22546
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "alpha",
+      "column": "setting",
+      "value": "0.05",
+      "unit": "",
+      "snippet": "Setting $\\alpha = 0.05$",
+      "kind": "other",
+      "offsets": [
+        7257
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Sample Size Calculation",
+      "row": "confidence level",
+      "column": "setting",
+      "value": "95",
+      "unit": "%",
+      "snippet": "95% confidence lev",
+      "kind": "other",
+      "offsets": [
+        7282
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Introduction/Sample Size Calculation",
+      "row": "alpha",
+      "column": "total",
+      "value": "0.05",
+      "unit": "",
+      "snippet": "Setting $\\alpha = 0.05$",
+      "kind": "other",
+      "offsets": [
+        7257
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Introduction/Sample Size Calculation",
+      "row": "confidence level",
+      "column": "total",
+      "value": "95",
+      "unit": "%",
+      "snippet": "(95% confidence level)",
+      "kind": "other",
+      "offsets": [
+        7281
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Introduction/Sample Size Calculation",
+      "row": "statistical power",
+      "column": "total",
+      "value": "80",
+      "unit": "%",
+      "snippet": "statistical power at $80\\%$",
+      "kind": "other",
+      "offsets": [
+        7308
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Introduction/Sample Size Calculation",
+      "row": "required sample size",
+      "column": "total",
+      "value": "40",
+      "unit": "participants",
+      "snippet": "the required sample size was computed as 40 participants.",
+      "kind": "count",
+      "offsets": [
+        7354
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "men",
+      "column": "count",
+      "value": "32",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "men",
+      "column": "percentage",
+      "value": "76.2",
+      "unit": "%",
+      "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+      "kind": "other",
+      "offsets": [
+        8022
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "women",
+      "column": "count",
+      "value": "10",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "women",
+      "column": "percentage",
+      "value": "23.8",
+      "unit": "%",
+      "snippet": "The study population consisted of 32 men (76.2%) and 10 women (23.8%).",
+      "kind": "other",
+      "offsets": [
+        8022
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "REM sleep",
+      "column": "physiological norms",
+      "value": "20–25",
+      "unit": "%",
+      "snippet": "REM sleep percentage was markedly depressed compared to physiological norms (expected: 20–25%).",
+      "kind": "other",
+      "offsets": [
+        10279
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 1",
+      "value": "20.18",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of arousal_index",
+          "computed_from": "df['arousal_index'].std()",
+          "battery_value": 20.1820076319416
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 2",
+      "value": "17.26",
+      "unit": "events/hr",
+      "snippet": "$14.41 \\pm 17.26$",
+      "kind": "std",
+      "offsets": [
+        11774,
+        13819,
+        21212
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "Group 3",
+      "value": "22.33",
+      "unit": "events/hr",
+      "snippet": "$34.17 \\pm 22.33$",
+      "kind": "std",
+      "offsets": [
+        11798,
+        13797,
+        21190
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "Arousal Index (events/hr)",
+      "column": "p-value",
+      "value": "0.005",
+      "unit": "",
+      "snippet": "**0.005**",
+      "kind": "p",
+      "offsets": [
+        11822
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 1",
+      "value": "4.25",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of plms_index",
+          "computed_from": "df['plms_index'].std()",
+          "battery_value": 4.258565870720016
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 2",
+      "value": "4.78",
+      "unit": "events/hr",
+      "snippet": "$2.14 \\pm 4.78$",
+      "kind": "std",
+      "offsets": [
+        11895
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "Group 3",
+      "value": "1.13",
+      "unit": "events/hr",
+      "snippet": "$0.36 \\pm 1.13$",
+      "kind": "std",
+      "offsets": [
+        11917
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "PLMS Index (events/hr)",
+      "column": "p-value",
+      "value": "0.059",
+      "unit": "",
+      "snippet": "0.059",
+      "kind": "p",
+      "offsets": [
+        11939
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "36.32",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of ahi_rem",
+          "computed_from": "df['ahi_rem'].std()",
+          "battery_value": 36.32964797130481
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "35.01",
+      "unit": "events/hr",
+      "snippet": "$52.27 \\pm 35.01$",
+      "kind": "std",
+      "offsets": [
+        12005
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "31.04",
+      "unit": "events/hr",
+      "snippet": "$63.39 \\pm 31.04$",
+      "kind": "std",
+      "offsets": [
+        12029
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "REM-AHI (events/hr)",
+      "column": "p-value",
+      "value": "0.994",
+      "unit": "",
+      "snippet": "0.994 (NS)",
+      "kind": "p",
+      "offsets": [
+        12053
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 1",
+      "value": "33.72",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].std()",
+          "battery_value": 33.72397693346767
+        }
+      ]
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 2",
+      "value": "31.13",
+      "unit": "events/hr",
+      "snippet": "$50.90 \\pm 31.13$",
+      "kind": "std",
+      "offsets": [
+        12125
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "Group 3",
+      "value": "41.61",
+      "unit": "events/hr",
+      "snippet": "$62.30 \\pm 41.61$",
+      "kind": "std",
+      "offsets": [
+        12149
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "NREM-AHI (events/hr)",
+      "column": "p-value",
+      "value": "0.093",
+      "unit": "",
+      "snippet": "0.093 (NS)",
+      "kind": "p",
+      "offsets": [
+        12173
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Not specified",
+      "row": "Unknown",
+      "column": "Unknown",
+      "value": "0.62",
+      "unit": "",
+      "snippet": "0.62 (NS)",
+      "kind": "other",
+      "offsets": [
+        11700
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 1",
+      "value": "2.69",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of central_apnea_rem",
+          "computed_from": "df['central_apnea_rem'].std()",
+          "battery_value": 2.6895072926749832
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 2",
+      "value": "1.64",
+      "unit": "",
+      "snippet": "$1.00 \\pm 1.64$",
+      "kind": "std",
+      "offsets": [
+        12374
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 3",
+      "value": "4.73",
+      "unit": "",
+      "snippet": "$2.20 \\pm 4.73$",
+      "kind": "std",
+      "offsets": [
+        12396
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "p-value",
+      "value": "0.23",
+      "unit": "",
+      "snippet": "0.23 (NS)",
+      "kind": "p",
+      "offsets": [
+        12418
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 1",
+      "value": "9.40",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of mixed_apnea_rem",
+          "computed_from": "df['mixed_apnea_rem'].std()",
+          "battery_value": 9.405468298498137
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 2",
+      "value": "1.31",
+      "unit": "",
+      "snippet": "$0.53 \\pm 1.31$",
+      "kind": "std",
+      "offsets": [
+        12488
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "Group 3",
+      "value": "19.12",
+      "unit": "",
+      "snippet": "$6.60 \\pm 19.12$",
+      "kind": "std",
+      "offsets": [
+        12510
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in REM (n)",
+      "column": "p-value",
+      "value": "0.08",
+      "unit": "",
+      "snippet": "0.08 (NS)",
+      "kind": "p",
+      "offsets": [
+        12533,
+        13264
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Group 1",
+      "value": "157.43",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of obstructive_apnea_nonrem",
+          "computed_from": "df['obstructive_apnea_nonrem'].std()",
+          "battery_value": 157.43828317194672
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Group 2",
+      "value": "139.62",
+      "unit": "",
+      "snippet": "$123.31 \\pm 139.62$",
+      "kind": "std",
+      "offsets": [
+        12614
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "Group 3",
+      "value": "194.56",
+      "unit": "",
+      "snippet": "$220.00 \\pm 194.56$",
+      "kind": "std",
+      "offsets": [
+        12640
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Obstructive Apneas in NREM (n)",
+      "column": "p-value",
+      "value": "0.089",
+      "unit": "",
+      "snippet": "0.089 (NS)",
+      "kind": "p",
+      "offsets": [
+        12666
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Group 1",
+      "value": "7.80",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of central_apnea_nonrem",
+          "computed_from": "df['central_apnea_nonrem'].std()",
+          "battery_value": 7.800056582778182
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Group 2",
+      "value": "8.05",
+      "unit": "",
+      "snippet": "$7.34 \\pm 8.05$",
+      "kind": "std",
+      "offsets": [
+        12740
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "Group 3",
+      "value": "7.01",
+      "unit": "",
+      "snippet": "$5.10 \\pm 7.01$",
+      "kind": "std",
+      "offsets": [
+        12762
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Central Apneas in NREM (n)",
+      "column": "p-value",
+      "value": "0.43",
+      "unit": "",
+      "snippet": "0.43 (NS)",
+      "kind": "p",
+      "offsets": [
+        12784
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "Group 1",
+      "value": "18.62",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of mixed_apnea_nonrem",
+          "computed_from": "df['mixed_apnea_nonrem'].std()",
+          "battery_value": 18.62474033056441
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "Group 2",
+      "value": "5.71",
+      "unit": "",
+      "snippet": "$2.81 \\pm 5.71$",
+      "kind": "std",
+      "offsets": [
+        12856,
+        13998,
+        21334
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "Group 3",
+      "value": "31.63",
+      "unit": "",
+      "snippet": "$26.30 \\pm 31.63$",
+      "kind": "std",
+      "offsets": [
+        12878,
+        13976,
+        21312
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mixed Apneas in NREM (n)",
+      "column": "p-value",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "**0.0001**",
+      "kind": "p",
+      "offsets": [
+        12902
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 1",
+      "value": "23.00",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of hypopnea_rem",
+          "computed_from": "df['hypopnea_rem'].std()",
+          "battery_value": 23.003711259431967
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 2",
+      "value": "22.72",
+      "unit": "",
+      "snippet": "$20.50 \\pm 22.72$",
+      "kind": "std",
+      "offsets": [
+        12976
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "Group 3",
+      "value": "25.07",
+      "unit": "",
+      "snippet": "$18.40 \\pm 25.07$",
+      "kind": "std",
+      "offsets": [
+        13000
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in REM (n)",
+      "column": "p-value",
+      "value": "0.80",
+      "unit": "",
+      "snippet": "0.80 (NS)",
+      "kind": "p",
+      "offsets": [
+        13024
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 1",
+      "value": "95.10",
+      "unit": "",
+      "snippet": "$118.21 \\pm 95.10$",
+      "kind": "std",
+      "offsets": [
+        13070
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 2",
+      "value": "96.20",
+      "unit": "",
+      "snippet": "$123.34 \\pm 96.20$",
+      "kind": "std",
+      "offsets": [
+        13091
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "Group 3",
+      "value": "93.15",
+      "unit": "",
+      "snippet": "$101.80 \\pm 93.15$",
+      "kind": "std",
+      "offsets": [
+        13112
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Hypopneas in NREM (n)",
+      "column": "p-value",
+      "value": "0.53",
+      "unit": "",
+      "snippet": "0.53 (NS)",
+      "kind": "p",
+      "offsets": [
+        13137
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "Group 1",
+      "value": "25.07",
+      "unit": "",
+      "snippet": "$18.40 \\pm 25.07$",
+      "kind": "std",
+      "offsets": [
+        13000
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Unknown",
+      "column": "p-value",
+      "value": "0.80",
+      "unit": "",
+      "snippet": "0.80 (NS)",
+      "kind": "p",
+      "offsets": [
+        13024
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "unlabeled extractor artifact"
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "Group 1",
+      "value": "3.33",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of spo2_awake_mean",
+          "computed_from": "df['spo2_awake_mean'].std()",
+          "battery_value": 3.331168576981576
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "Group 2",
+      "value": "3.54",
+      "unit": "%",
+      "snippet": "$91.52 \\pm 3.54$",
+      "kind": "std",
+      "offsets": [
+        13218
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "Group 3",
+      "value": "1.93",
+      "unit": "%",
+      "snippet": "$93.58 \\pm 1.93$",
+      "kind": "std",
+      "offsets": [
+        13241
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Awake Baseline SpO2 (%)",
+      "column": "p-value",
+      "value": "0.08",
+      "unit": "",
+      "snippet": "0.08 (NS)",
+      "kind": "p",
+      "offsets": [
+        12533,
+        13264
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "Group 1",
+      "value": "4.12",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of spo2_rem_mean",
+          "computed_from": "df['spo2_rem_mean'].std()",
+          "battery_value": 4.126011101698108
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "Group 2",
+      "value": "4.48",
+      "unit": "%",
+      "snippet": "$90.50 \\pm 4.48$",
+      "kind": "std",
+      "offsets": [
+        13339
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "Group 3",
+      "value": "2.88",
+      "unit": "%",
+      "snippet": "$91.59 \\pm 2.88$",
+      "kind": "std",
+      "offsets": [
+        13362
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean REM SpO2 (%)",
+      "column": "p-value",
+      "value": "0.46",
+      "unit": "",
+      "snippet": "0.46 (NS)",
+      "kind": "p",
+      "offsets": [
+        13385
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Group 1",
+      "value": "4.20",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of spo2_nonrem_mean",
+          "computed_from": "df['spo2_nonrem_mean'].std()",
+          "battery_value": 4.207956624622435
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Group 2",
+      "value": "4.47",
+      "unit": "%",
+      "snippet": "$90.44 \\pm 4.47$",
+      "kind": "std",
+      "offsets": [
+        13461
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "Group 3",
+      "value": "3.39",
+      "unit": "%",
+      "snippet": "$90.86 \\pm 3.39$",
+      "kind": "std",
+      "offsets": [
+        13484
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Mean NREM SpO2 (%)",
+      "column": "p-value",
+      "value": "0.78",
+      "unit": "",
+      "snippet": "0.78 (NS)",
+      "kind": "p",
+      "offsets": [
+        13507
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "Group 1",
+      "value": "26.20",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "std of odi",
+          "computed_from": "df['odi'].std()",
+          "battery_value": 26.208558349862834
+        }
+      ]
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "Group 2",
+      "value": "23.74",
+      "unit": "ODI/hr",
+      "snippet": "$24.21 \\pm 23.74$",
+      "kind": "std",
+      "offsets": [
+        13590
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "Group 3",
+      "value": "32.82",
+      "unit": "ODI/hr",
+      "snippet": "$35.61 \\pm 32.82$",
+      "kind": "std",
+      "offsets": [
+        13614
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "Oxygen Desaturation Index (ODI/hr)",
+      "column": "p-value",
+      "value": "0.22",
+      "unit": "",
+      "snippet": "0.22 (NS)",
+      "kind": "p",
+      "offsets": [
+        13638
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Females",
+      "value": "34",
+      "unit": "",
+      "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34",
+      "kind": "other",
+      "offsets": [
+        13721
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "Females",
+      "value": "22.33",
+      "unit": "events/hr",
+      "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+      "kind": "std",
+      "offsets": [
+        13721
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "males",
+      "value": "17.26",
+      "unit": "events/hr",
+      "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+      "kind": "std",
+      "offsets": [
+        13721
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Arousal Index",
+      "column": "total",
+      "value": "0.005",
+      "unit": "",
+      "snippet": "Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$).",
+      "kind": "p",
+      "offsets": [
+        13721
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "Females",
+      "value": "31.63",
+      "unit": "events",
+      "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+      "kind": "std",
+      "offsets": [
+        13889
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "males",
+      "value": "5.71",
+      "unit": "events",
+      "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+      "kind": "std",
+      "offsets": [
+        13889
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "NREM Mixed Apneas",
+      "column": "total",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$).",
+      "kind": "p",
+      "offsets": [
+        13889
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Total AHI",
+      "column": "total",
+      "value": "1.11",
+      "unit": "",
+      "snippet": "One-way ANOVA revealed no significant difference in Total AHI across sexes ($F = 1.11, df = 41, p = 0.297$).",
+      "kind": "other",
+      "offsets": [
+        14056
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Total AHI",
+      "column": "total",
+      "value": "41",
+      "verdict": "MATCH",
+      "matches": [
+        {
+          "item": "count of sleep_talking=1 (41 rows)",
+          "computed_from": "(df['sleep_talking']==np.int64(1)).sum()",
+          "battery_value": 41.0
+        }
+      ]
+    },
+    {
+      "table": "Key Findings from Sex-Stratified Comparisons",
+      "row": "Total AHI",
+      "column": "total",
+      "value": "0.297",
+      "unit": "",
+      "snippet": "One-way ANOVA revealed no significant difference in Total AHI across sexes ($F = 1.11, df = 41, p = 0.297$).",
+      "kind": "p",
+      "offsets": [
+        14056
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Comparison of REM vs. NREM Respiratory Events Across the Cohort",
+      "row": "Obstructive Apnea Frequency",
+      "column": "total",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "Highly significant difference between REM and NREM sleep ($p = 0.001$).",
+      "kind": "p",
+      "offsets": [
+        14324
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "Obstructive Apnea Frequency",
+      "column": "REM vs NREM",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "Highly significant difference between REM and NREM sleep ($p = 0.001$).",
+      "kind": "p",
+      "offsets": [
+        14324
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "Central Apnea Frequency",
+      "column": "REM vs NREM",
+      "value": "0.004",
+      "unit": "",
+      "snippet": "Significant difference between REM and NREM sleep ($p = 0.004$).",
+      "kind": "p",
+      "offsets": [
+        14429
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Mixed Apnea Frequency",
+      "column": "sleep states",
+      "value": "0.006",
+      "unit": "",
+      "snippet": "Significant differences between sleep states ($p = 0.006$ and $p = 0.001$, respectively).",
+      "kind": "p",
+      "offsets": [
+        14538
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Hypopnea Frequency",
+      "column": "sleep states",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "Significant differences between sleep states ($p = 0.006$ and $p = 0.001$, respectively).",
+      "kind": "p",
+      "offsets": [
+        14538
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI",
+      "column": "REM",
+      "value": "36.32",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of ahi_rem",
+          "computed_from": "df['ahi_rem'].std()",
+          "battery_value": 36.32964797130481
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "NREM-AHI",
+      "column": "NREM",
+      "value": "33.72",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].std()",
+          "battery_value": 33.72397693346767
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Table",
+      "row": "ESS Score",
+      "column": "Test Statistic",
+      "value": "2.15",
+      "unit": "",
+      "snippet": "$F = 2.15, df = 1$",
+      "kind": "other",
+      "offsets": [
+        15152
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Table",
+      "row": "ESS Score",
+      "column": "p-value",
+      "value": "0.150",
+      "unit": "",
+      "snippet": "0.150",
+      "kind": "p",
+      "offsets": [
+        15177
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence",
+      "row": "ESS cut-off",
+      "column": "total",
+      "value": "8",
+      "unit": "",
+      "snippet": "Setting the cut-off at $\\ge 8$",
+      "kind": "other",
+      "offsets": [
+        15250
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence",
+      "row": "excessive sleepiness vs Total AHI",
+      "column": "total",
+      "value": "-0.305",
+      "unit": "",
+      "snippet": "excessive sleepiness did not exhibit a statistically significant linear correlation with Total AHI ($r = -0.305, p = 0.138$)",
+      "kind": "r",
+      "offsets": [
+        15282
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence",
+      "row": "excessive sleepiness vs Total AHI",
+      "column": "total",
+      "value": "0.138",
+      "unit": "",
+      "snippet": "excessive sleepiness did not exhibit a statistically significant linear correlation with Total AHI ($r = -0.305, p = 0.138$)",
+      "kind": "p",
+      "offsets": [
+        15282
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence",
+      "row": "excessive sleepiness vs REM-AHI",
+      "column": "total",
+      "value": "0.269",
+      "unit": "",
+      "snippet": "REM-AHI ($p = 0.269$)",
+      "kind": "p",
+      "offsets": [
+        15408,
+        20780
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Impact of Pathological Somnolence",
+      "row": "excessive sleepiness vs NREM-AHI",
+      "column": "total",
+      "value": "0.53",
+      "unit": "",
+      "snippet": "or NREM-AHI ($p = 0.53$)",
+      "kind": "p",
+      "offsets": [
+        15431,
+        20803
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Arousal Index vs. Sleepiness",
+      "row": "Arousal Index and daytime sleepiness",
+      "column": "total",
+      "value": "-0.27",
+      "unit": "",
+      "snippet": "($r = -0.27, p = 0.89$)",
+      "kind": "r",
+      "offsets": [
+        15629
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Arousal Index vs. Sleepiness",
+      "row": "Arousal Index and daytime sleepiness",
+      "column": "total",
+      "value": "0.89",
+      "unit": "",
+      "snippet": "($r = -0.27, p = 0.89$)",
+      "kind": "p",
+      "offsets": [
+        15629
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Text",
+      "row": "statistical significance",
+      "column": "not specified",
+      "value": "-0.27",
+      "unit": "",
+      "snippet": "eve statistical significance ($r = -0.27, p = 0.89$).",
+      "kind": "r",
+      "offsets": [
+        15600
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Text",
+      "row": "statistical significance",
+      "column": "not specified",
+      "value": "0.89",
+      "unit": "",
+      "snippet": "eve statistical significance ($r = -0.27, p = 0.89$).",
+      "kind": "p",
+      "offsets": [
+        15600
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "NREM-AHI",
+      "value": "0.366",
+      "unit": "",
+      "snippet": "The Arousal Index demonstrated a statistically significant positive correlation with both NREM-AHI ($r = 0.366, p = 0.017$)",
+      "kind": "r",
+      "offsets": [
+        16081
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "NREM-AHI",
+      "value": "0.017",
+      "unit": "",
+      "snippet": "The Arousal Index demonstrated a statistically significant positive correlation with both NREM-AHI ($r = 0.366, p = 0.017$)",
+      "kind": "p",
+      "offsets": [
+        16081
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "Total AHI",
+      "value": "0.358",
+      "unit": "",
+      "snippet": "and Total AHI ($r = 0.358, p = 0.020$).",
+      "kind": "r",
+      "offsets": [
+        16205
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "Total AHI",
+      "value": "0.020",
+      "unit": "",
+      "snippet": "and Total AHI ($r = 0.358, p = 0.020$).",
+      "kind": "p",
+      "offsets": [
+        16205
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Total AHI and PLMS Index",
+      "column": "not specified",
+      "value": "-0.046",
+      "unit": "",
+      "snippet": "The correlation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+      "kind": "r",
+      "offsets": [
+        16245
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Total AHI and PLMS Index",
+      "column": "not specified",
+      "value": "0.773",
+      "unit": "",
+      "snippet": "The correlation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+      "kind": "p",
+      "offsets": [
+        16245
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Text",
+      "row": "Total AHI and PLMS Index",
+      "column": "correlation",
+      "value": "-0.046",
+      "unit": "",
+      "snippet": "orrelation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+      "kind": "r",
+      "offsets": [
+        16250
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Text",
+      "row": "Total AHI and PLMS Index",
+      "column": "p-value",
+      "value": "0.773",
+      "unit": "",
+      "snippet": "orrelation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).",
+      "kind": "p",
+      "offsets": [
+        16250
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Discussion",
+      "row": "Habitual snoring",
+      "column": "prevalence",
+      "value": "90.5",
+      "unit": "%",
+      "snippet": "Habitual snoring (90.5%)",
+      "kind": "other",
+      "offsets": [
+        18803
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Discussion",
+      "row": "witnessed nocturnal choking/apnea",
+      "column": "prevalence",
+      "value": "69.0",
+      "unit": "%",
+      "snippet": "witnessed nocturnal choking/apnea (69.0%)",
+      "kind": "other",
+      "offsets": [
+        18832
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "REM",
+      "value": "36.32",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of ahi_rem",
+          "computed_from": "df['ahi_rem'].std()",
+          "battery_value": 36.32964797130481
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "NREM",
+      "value": "33.72",
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].std()",
+          "battery_value": 33.72397693346767
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
+    },
+    {
+      "table": "Results",
+      "row": "Apnea-Hypopnea Index",
+      "column": "REM vs NREM",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \\pm 36.32$ vs. $53.61 \\pm 33.72$ events/hr, $p = 0.001$)",
+      "kind": "p",
+      "offsets": [
+        19629
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "subjective daytime sleepiness (ESS) vs total AHI",
+      "column": "total AHI",
+      "value": "-0.305",
+      "unit": "",
+      "snippet": "subjective daytime sleepiness quantified by the Epworth Sleepiness Scale did not exhibit a linear correlation with total AHI ($r = -0.305, p = 0.138$)",
+      "kind": "r",
+      "offsets": [
+        20628
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "subjective daytime sleepiness (ESS) vs total AHI",
+      "column": "total AHI",
+      "value": "0.138",
+      "unit": "",
+      "snippet": "subjective daytime sleepiness quantified by the Epworth Sleepiness Scale did not exhibit a linear correlation with total AHI ($r = -0.305, p = 0.138$)",
+      "kind": "p",
+      "offsets": [
+        20628
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "subjective daytime sleepiness (ESS) vs REM-AHI",
+      "column": "REM-AHI",
+      "value": "0.269",
+      "unit": "",
+      "snippet": "REM-AHI ($p = 0.269$)",
+      "kind": "p",
+      "offsets": [
+        15408,
+        20780
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "subjective daytime sleepiness (ESS) vs NREM-AHI",
+      "column": "NREM-AHI",
+      "value": "0.53",
+      "unit": "",
+      "snippet": "or NREM-AHI ($p = 0.53$)",
+      "kind": "p",
+      "offsets": [
+        15431,
+        20803
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "NREM-AHI",
+      "column": "total",
+      "value": "0.53",
+      "unit": "",
+      "snippet": "or NREM-AHI ($p = 0.53$).",
+      "kind": "p",
+      "offsets": [
+        15431,
+        20803
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "total AHI",
+      "column": "males vs females",
+      "value": "0.297",
+      "unit": "",
+      "snippet": "total AHI did not differ significantly between males and females ($p = 0.297$).",
+      "kind": "p",
+      "offsets": [
+        21043
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "females",
+      "value": "22.33",
+      "unit": "events/hr",
+      "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+      "kind": "std",
+      "offsets": [
+        21132
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "males",
+      "value": "17.26",
+      "unit": "events/hr",
+      "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+      "kind": "std",
+      "offsets": [
+        21132
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "Arousal Index",
+      "column": "females vs males",
+      "value": "0.005",
+      "unit": "",
+      "snippet": "females exhibited a significantly elevated Arousal Index ($34.17 \\pm 22.33$ vs. $14.41 \\pm 17.26$ events/hr, $p = 0.005$)",
+      "kind": "p",
+      "offsets": [
+        21132
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "mixed apneas during NREM sleep",
+      "column": "females",
+      "value": "31.63",
+      "unit": "events",
+      "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+      "kind": "std",
+      "offsets": [
+        21258
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "mixed apneas during NREM sleep",
+      "column": "males",
+      "value": "5.71",
+      "unit": "events",
+      "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+      "kind": "std",
+      "offsets": [
+        21258
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "mixed apneas during NREM sleep",
+      "column": "females vs males",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "a higher incidence of mixed apneas during NREM sleep ($26.30 \\pm 31.63$ vs. $2.81 \\pm 5.71$ events, $p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        21258
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "Oxygen Desaturation Index (ODI) and total AHI",
+      "column": "total",
+      "value": "0.570",
+      "unit": "",
+      "snippet": "Oxygen Desaturation Index (ODI) demonstrated a robust, statistically significant positive correlation with total AHI ($r = 0.570, p = 0.0001$)",
+      "kind": "r",
+      "offsets": [
+        21595
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "Oxygen Desaturation Index (ODI) and total AHI",
+      "column": "total",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "Oxygen Desaturation Index (ODI) demonstrated a robust, statistically significant positive correlation with total AHI ($r = 0.570, p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        21595
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Results",
+      "row": "desaturations during REM sleep",
+      "column": "REM sleep",
+      "value": "-0.358",
+      "unit": "",
+      "snippet": "with desaturations exhibiting greater severity during REM sleep ($r = -0.358, p = 0.025$)",
+      "kind": "r",
+      "offsets": [
+        21739
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "desaturations during REM sleep",
+      "column": "REM sleep",
+      "value": "0.025",
+      "unit": "",
+      "snippet": "with desaturations exhibiting greater severity during REM sleep ($r = -0.358, p = 0.025$)",
+      "kind": "p",
+      "offsets": [
+        21739
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "REM sleep suppression",
+      "column": "patients with obesity",
+      "value": "9.88",
+      "unit": "%",
+      "snippet": "In patients with obesity ($\\text{BMI} \\ge 30\\ \\text{kg/m}^2$), REM sleep was further suppressed ($9.88\\%$)",
+      "kind": "other",
+      "offsets": [
+        21830
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI",
+      "column": "patients with obesity",
+      "value": "43.66",
+      "unit": "",
+      "snippet": "respiratory events were magnified (REM-AHI $= 66.22 \\pm 43.66$, $p = 0.0001$)",
+      "kind": "std",
+      "offsets": [
+        21942
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Results",
+      "row": "REM-AHI",
+      "column": "patients with obesity",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "respiratory events were magnified (REM-AHI $= 66.22 \\pm 43.66$, $p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        21942
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Conclusions",
+      "row": "Apnea-Hypopnea Index (REM vs NREM)",
+      "column": "total",
+      "value": "0.001",
+      "unit": "",
+      "snippet": "The Apnea-Hypopnea Index is significantly higher during REM sleep compared to NREM sleep ($p = 0.001$)",
+      "kind": "p",
+      "offsets": [
+        22169
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Conclusions",
+      "row": "Arousal Index",
+      "column": "females",
+      "value": "0.005",
+      "unit": "",
+      "snippet": "females demonstrated a significantly higher Arousal Index ($p = 0.005$)",
+      "kind": "p",
+      "offsets": [
+        22441
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by user)"
+    },
+    {
+      "table": "Conclusions",
+      "row": "NREM mixed apneas",
+      "column": "females",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "and increased NREM mixed apneas ($p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        22513
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Conclusions",
+      "row": "Oxygen Desaturation Index (ODI) and overall AHI",
+      "column": "total",
+      "value": "0.570",
+      "unit": "",
+      "snippet": "The Oxygen Desaturation Index (ODI) directly and strongly correlates with overall AHI ($r = 0.570, p = 0.0001$)",
+      "kind": "r",
+      "offsets": [
+        22591
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Conclusions",
+      "row": "Oxygen Desaturation Index (ODI) and overall AHI",
+      "column": "total",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "The Oxygen Desaturation Index (ODI) directly and strongly correlates with overall AHI ($r = 0.570, p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        22591
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Diagnostic Concordance",
+      "row": "Clinical disease severity classification vs measured AHI values",
+      "column": "total",
+      "value": "0.73",
+      "unit": "",
+      "snippet": "Clinical disease severity classification corresponds directly with higher measured AHI values ($r = 0.73, p = 0.0001$)",
+      "kind": "r",
+      "offsets": [
+        22801
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    },
+    {
+      "table": "Diagnostic Concordance",
+      "row": "Clinical disease severity classification vs measured AHI values",
+      "column": "total",
+      "value": "0.0001",
+      "unit": "",
+      "snippet": "Clinical disease severity classification corresponds directly with higher measured AHI values ($r = 0.73, p = 0.0001$)",
+      "kind": "p",
+      "offsets": [
+        22801
+      ],
+      "status": "validated",
+      "paper": "paper",
+      "verdict": "SKIPPED (by operator)",
+      "note": "p/r coefficient — no battery support; r could be computed but kind=other"
+    }
+  ]
+}
