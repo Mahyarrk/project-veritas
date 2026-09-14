@@ -240,6 +240,9 @@ def extract_paper(path: Path) -> list[dict]:
         n_ok = sum(1 for e in entries if e["status"] == "validated")
         print(f"  chunk {c['index']}: {len(proposals)} proposals "
               f"({n_ok} validated cumulative)")
+        # incremental save: a killed run loses at most the current chunk
+        Path(EXTRACT_PATH).write_text(
+            json.dumps(_dedupe(entries), ensure_ascii=False, indent=2))
 
     deduped = _dedupe(entries)
     if incomplete:
