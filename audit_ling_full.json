@@ -3,9 +3,9 @@
   "summary": {
     "match": 50,
     "match_human_labeled": 0,
-    "no_match": 82,
+    "no_match": 62,
     "skipped": 0,
-    "other": 102,
+    "other": 122,
     "total": 234
   },
   "results": [
@@ -322,7 +322,15 @@
       "row": "Unlabeled row (first data row)",
       "column": "Column 1",
       "value": "1.29",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of central_apnea_rem",
+          "computed_from": "df['central_apnea_rem'].mean()",
+          "battery_value": 1.2857142857142858
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Table (Apnea Metrics)",
@@ -336,14 +344,30 @@
       "row": "Unlabeled row (first data row)",
       "column": "Column 3",
       "value": "2.2",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of central_apnea_rem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'central_apnea_rem'].mean()",
+          "battery_value": 2.2
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Table (Apnea Metrics)",
       "row": "Mixed Apneas in REM (n)",
       "column": "Column 1",
       "value": "1.98",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_rem",
+          "computed_from": "df['mixed_apnea_rem'].mean()",
+          "battery_value": 1.9761904761904763
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Table (Apnea Metrics)",
@@ -546,28 +570,60 @@
       "row": "Arousal Index",
       "column": "Females",
       "value": "34.17",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'arousal_index'].mean()",
+          "battery_value": 34.17
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Key Findings from Sex-Stratified Comparisons",
       "row": "Arousal Index",
       "column": "Males",
       "value": "14.41",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of arousal_index where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'arousal_index'].mean()",
+          "battery_value": 14.41875
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Key Findings from Sex-Stratified Comparisons",
       "row": "NREM Mixed Apneas",
       "column": "Females",
       "value": "26.3",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 26.3
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Key Findings from Sex-Stratified Comparisons",
       "row": "NREM Mixed Apneas",
       "column": "Males",
       "value": "2.81",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 2.8125
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "ESS Score Table",
@@ -616,21 +672,45 @@
       "row": "Apnea-Hypopnea Index",
       "column": "NREM sleep",
       "value": "53.61",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].mean()",
+          "battery_value": 53.61428571428571
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Results",
       "row": "Mixed apneas during NREM sleep",
       "column": "females",
       "value": "26.3",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 26.3
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Results",
       "row": "Mixed apneas during NREM sleep",
       "column": "males",
       "value": "2.81",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "mean of mixed_apnea_nonrem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mixed_apnea_nonrem'].mean()",
+          "battery_value": 2.8125
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Results (Obesity subgroup)",
@@ -784,7 +864,15 @@
       "row": "Excluded patients",
       "column": "Total",
       "value": "13",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of apnea_feeling=1 (13 rows)",
+          "computed_from": "(df['apnea_feeling']==np.int64(1)).sum()",
+          "battery_value": 13.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Text",
@@ -805,7 +893,15 @@
       "row": "Normal diagnostic PSG without sleep pathology",
       "column": "n",
       "value": "4",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of snoring=1 (4 rows)",
+          "computed_from": "(df['snoring']==np.int64(1)).sum()",
+          "battery_value": 4.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Text",
@@ -847,21 +943,45 @@
       "row": "Final analytical cohort",
       "column": "Total",
       "value": "42",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "number of rows in the dataset (42)",
+          "computed_from": "len(df)",
+          "battery_value": 42.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Text",
       "row": "Males",
       "column": "Count",
       "value": "32",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of sex=1 (32 rows)",
+          "computed_from": "(df['sex']==np.int64(1)).sum()",
+          "battery_value": 32.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Text",
       "row": "Females",
       "column": "Count",
       "value": "10",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of sex=2 (10 rows)",
+          "computed_from": "(df['sex']==np.int64(2)).sum()",
+          "battery_value": 10.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Scoring Criteria",
@@ -1001,7 +1121,15 @@
       "row": "Unlabeled row (first data row)",
       "column": "total",
       "value": "8",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "count of night_sweats=2 (8 rows)",
+          "computed_from": "(df['night_sweats']==np.int64(2)).sum()",
+          "battery_value": 8.0
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Sleep Symptoms Table (cut off header)",
@@ -1337,7 +1465,15 @@
       "row": "Unlabeled row (first data row)",
       "column": "Column 1",
       "value": "2.69",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of central_apnea_rem",
+          "computed_from": "df['central_apnea_rem'].std()",
+          "battery_value": 2.6895072926749832
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Table (Apnea Metrics)",
@@ -1365,7 +1501,15 @@
       "row": "Mixed Apneas in REM (n)",
       "column": "Column 1",
       "value": "9.4",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of mixed_apnea_rem",
+          "computed_from": "df['mixed_apnea_rem'].std()",
+          "battery_value": 9.405468298498137
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Table (Apnea Metrics)",
@@ -1827,14 +1971,30 @@
       "row": "Apnea-Hypopnea Index",
       "column": "REM sleep",
       "value": "36.32",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of ahi_rem",
+          "computed_from": "df['ahi_rem'].std()",
+          "battery_value": 36.32964797130481
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Results",
       "row": "Apnea-Hypopnea Index",
       "column": "NREM sleep",
       "value": "33.72",
-      "verdict": "NO MATCH IN BATTERY"
+      "verdict": "MATCH (restatement)",
+      "matches": [
+        {
+          "item": "std of ahi_nonrem",
+          "computed_from": "df['ahi_nonrem'].std()",
+          "battery_value": 33.72397693346767
+        }
+      ],
+      "note": "duplicate publication of an already-verified statistic (different label, same number)"
     },
     {
       "table": "Results",

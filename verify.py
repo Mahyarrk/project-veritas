@@ -149,9 +149,14 @@ def _ask(prompt: str) -> str:
 
 
 def consume(entry: dict, thesis_value: str, row_info: dict,
-            pool: list[dict], results: list[dict], label: str) -> None:
-    """Record a consumed match (removes the battery entry from the pool)."""
+            pool: list[dict], results: list[dict], label: str,
+            used_pool: list[dict] | None = None) -> None:
+    """Record a consumed match. Moves the battery entry to used_pool (not
+    deleted) so restated statistics can be recognized as MATCH (restatement)
+    instead of false NO MATCH."""
     pool.remove(entry)
+    if used_pool is not None:
+        used_pool.append(entry)
     results.append({
         **row_info, "value": thesis_value,
         "verdict": label,
@@ -161,18 +166,59 @@ def consume(entry: dict, thesis_value: str, row_info: dict,
     })
 
 
+def audit_restatement(entry: dict, row_info: dict, used_pool: list[dict],
+                      results: list[dict]) -> bool:
+    """A NO MATCH statistic whose value exactly equals an already-consumed
+    battery entry is a restatement of the same result (the paper repeats
+    numbers in prose with different labels). Verdict recorded deterministically;
+    returns True if classified."""
+    try:
+        v = float(str(entry["value"]).replace(",", "").replace("%", ""))
+    except ValueError:
+        return False
+    for u in used_pool:
+        if u["kind"] == entry.get("kind") and abs(u["value"] - v) <= 0.01:
+            results.append({
+                **row_info, "value": entry["value"],
+                "verdict": "MATCH (restatement)",
+                "matches": [{"item": u["description"],
+                             "computed_from": u["expression"],
+                             "battery_value": u["value"]}],
+                "note": "duplicate publication of an already-verified "
+                        "statistic (different label, same number)",
+            })
+            return True
+    return False
+
+
 def user_resolve(row_info: dict, thesis_value: str, kind: str,
                  pool: list[dict], results: list[dict],
-                 state: dict) -> None:
-    """Interactive resolution for unmatched/colliding statistics."""
+                 state: dict,
+                 used_pool: list[dict] | None = None) -> None:
+    """Interactive resolution for unmatched/colliding statistics.
+    used_pool (when provided) extends the candidate list with consumed
+    entries — selecting one records MATCH (restatement), which is how a
+    paper's restated number gets tied to an already-used battery entry."""
     print(f"\n  needs your input: {row_info['row']} "
           f"({row_info['column']}) = {thesis_value}  [kind: {kind}]")
     print(f"  options: <number of a candidate> | relabel as "
           f"({'/'.join(KINDS)}) | skip | skip all")
-    candidates = match_value(thesis_value, kind, pool) or \
-        match_value(thesis_value, "any_unused", pool)
-    for i, c in enumerate(candidates[:5], 1):
+    candidates = match_value(thesis_value, kind, pool)
+    used_hits = []
+    if used_pool:
+        try:
+            v = float(str(thesis_value).replace(",", "").replace("%", ""))
+            used_hits = [u for u in used_pool
+                         if u["kind"] == kind
+                         and abs(u["value"] - v) <= 0.01]
+        except ValueError:
+            used_hits = []
+    for i, c in enumerate(candidates, 1):
         print(f"    {i}. {c['description']} = {c['value']}")
+    off = len(candidates)
+    for j, u in enumerate(used_hits, 1):
+        print(f"    {off + j}. [used] {u['description']} = {u['value']} "
+              f"(consumed by an earlier match)")
     ans = _ask("  your choice: ")
     if ans.lower() == "skip all":
         state["skip_all"] = True
@@ -183,10 +229,24 @@ def user_resolve(row_info: dict, thesis_value: str, kind: str,
         results.append({**row_info, "value": thesis_value,
                         "verdict": "SKIPPED (by user)"})
         return
-    if ans.isdigit() and 1 <= int(ans) <= len(candidates):
-        consume(candidates[int(ans) - 1], thesis_value, row_info,
-                pool, results, "MATCH (human-selected)")
-        return
+    if ans.isdigit():
+        k = int(ans)
+        if 1 <= k <= off:
+            consume(candidates[k - 1], thesis_value, row_info,
+                    pool, results, "MATCH (human-selected)", used_pool)
+            return
+        if off < k <= off + len(used_hits):
+            results.append({
+                **row_info, "value": thesis_value,
+                "verdict": "MATCH (restatement, user-confirmed)",
+                "matches": [{"item": used_hits[k - off - 1]["description"],
+                             "computed_from":
+                                 used_hits[k - off - 1]["expression"],
+                             "battery_value":
+                                 used_hits[k - off - 1]["value"]}],
+                "note": "user confirmed this restates an earlier match",
+            })
+            return
     if ans in KINDS:
         # relabel: search the pool under the human-provided kind
         hits = match_value(thesis_value, ans, pool)
@@ -253,6 +313,7 @@ def audit(extracted_path: Path, df: pd.DataFrame,
 
     results: list[dict] = []
     state = {"skip_all": False}
+    used_pool: list[dict] = []   # consumed battery entries — restatement lookup
 
     # ---- PASS 1: means ----
     means = [e for e in validated
@@ -269,7 +330,8 @@ def audit(extracted_path: Path, df: pd.DataFrame,
                     "column": entry.get("column")}
         hits = match_value(entry["value"], "mean", pool)
         if len(hits) == 1:
-            consume(hits[0], entry["value"], row_info, pool, results, "MATCH")
+            consume(hits[0], entry["value"], row_info, pool, results,
+                    "MATCH", used_pool)
         elif len(hits) > 1:
             print(f"\n  COLLISION: {entry['row']} ({entry['column']}) = "
                   f"{entry['value']} matches {len(hits)} statistics:")
@@ -277,14 +339,16 @@ def audit(extracted_path: Path, df: pd.DataFrame,
                 print(f"    {i}. {c['description']} = {c['value']}")
             if interactive:
                 user_resolve(entry, entry["value"], "mean", pool,
-                             results, state)
+                             results, state, used_pool)
             else:
                 results.append({**row_info, "value": entry["value"],
                                 "verdict": "UNRESOLVED COLLISION"})
         else:
+            if audit_restatement(entry, row_info, used_pool, results):
+                continue
             if interactive and not state["skip_all"]:
                 user_resolve(entry, entry["value"], "mean", pool,
-                             results, state)
+                             results, state, used_pool)
             else:
                 results.append({**row_info, "value": entry["value"],
                                 "verdict": "NO MATCH IN BATTERY"})
@@ -384,22 +448,27 @@ def audit(extracted_path: Path, df: pd.DataFrame,
         if kind not in KINDS:
             if interactive and not state["skip_all"]:
                 user_resolve(entry, entry["value"], "other", pool,
-                             results, state)
+                             results, state, used_pool)
             else:
                 results.append({**row_info, "value": entry["value"],
                                 "verdict": "UNCHECKABLE (kind=other)"})
             continue
         hits = match_value(entry["value"], kind, pool)
         if len(hits) == 1:
-            consume(hits[0], entry["value"], row_info, pool, results, "MATCH")
+            consume(hits[0], entry["value"], row_info, pool, results,
+                    "MATCH", used_pool)
         elif len(hits) > 1 and interactive:
-            user_resolve(entry, entry["value"], kind, pool, results, state)
+            user_resolve(entry, entry["value"], kind, pool, results,
+                         state, used_pool)
         elif len(hits) > 1:
             results.append({**row_info, "value": entry["value"],
                             "verdict": "UNRESOLVED COLLISION"})
         else:
+            if audit_restatement(entry, row_info, used_pool, results):
+                continue
             if interactive and not state["skip_all"]:
-                user_resolve(entry, entry["value"], kind, pool, results, state)
+                user_resolve(entry, entry["value"], kind, pool, results,
+                             state, used_pool)
             else:
                 results.append({**row_info, "value": entry["value"],
                                 "verdict": "NO MATCH IN BATTERY"})
