@@ -4,6 +4,17 @@
 
 Author: **Dr Mahyar Mirzazadeh, M.D.** — [LinkedIn](https://www.linkedin.com/in/mahyar-mirzazadeh-550b3b166)
 
+**AI disclosure:** This project was built with AI assistance (Claude, via
+the Hermes agent framework) used as a coding tool — drafting, testing, and
+debugging the implementation under the author's direction. All scientific
+and product decisions — the audit methodology, the validation design, the
+tolerance policy, the interpretation of results, and the decision to
+publish — were made by the author. The LLM that powers the tool at runtime
+(extraction model) is likewise a tool: its every output passes a
+deterministic validation gauntlet before being trusted, and no statistic
+is ever verified by LLM judgment alone — verification is always computed
+from the raw data.
+
 ## What it does
 
 Give it two things:
