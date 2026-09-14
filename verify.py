@@ -36,8 +36,8 @@ from ingest import CONFIG
 
 AUDIT_PATH = Path(CONFIG["paths"]["audit_report"])
 
-REL_TOL = 0.015   # papers round to 2 decimals; dual tolerance
-ABS_TOL = 0.06
+REL_TOL = 0.0      # exact match or nothing...
+ABS_TOL = 0.01     # ...within ±0.01 absolute — papers round to 2 decimals
 
 DISCLAIMER = (
     "DISCLAIMERS:\n"
@@ -224,6 +224,19 @@ def audit(extracted_path: Path, df: pd.DataFrame,
     # Group columns auto-detect: every categorical/boolean column can split
     # the cohort (a 1/2 sex column is exactly how papers encode groups).
     group_cols = [g for g in kinds["categorical"]]
+    # duplicate splits (sex vs sex_label) double every subgroup entry —
+    # keep the first column for each distinct cohort partition
+    seen_group_sizes: list = []
+    deduped_group_cols: list[str] = []
+    for gcol in group_cols:
+        sizes = tuple(sorted((df[gcol] == gv).sum() for gv in
+                             df[gcol].dropna().unique()))
+        if len(sizes) < 2:
+            continue   # single-value column: no split, pure noise ties
+        if sizes not in seen_group_sizes:
+            seen_group_sizes.append(sizes)
+            deduped_group_cols.append(gcol)
+    group_cols = deduped_group_cols
     for col in kinds["numeric"]:
         if col in kinds["boolean"]:
             continue
@@ -307,14 +320,54 @@ def audit(extracted_path: Path, df: pd.DataFrame,
                 pool.append(e)
 
     # ---- PASS 2: other kinds ----
+    # dataset row count: papers' "n = 42" is len(df), not a column count
+    pool.append({
+        "kind": "count", "column": "(rows)", "group": None,
+        "expression": "len(df)",
+        "description": f"number of rows in the dataset ({len(df)})",
+        "value": float(len(df)),
+    })
+    # subgroup sizes: "32 males / 10 females" are counts OF a group value.
+    # Only group columns THEMSELVES — not every column's non-null count
+    # within every subgroup (those are cohort-size echoes that flood the
+    # pool: 30 numeric columns x male subgroup = 30 spurious "32"s).
+    # sex_label duplicates sex (same split, string labels) — skip columns
+    # whose value-set is a relabeling of an already-added group column.
+    seen_group_sizes: list = []
+    for gcol in kinds["categorical"]:
+        sizes = tuple(sorted((df[gcol] == gv).sum() for gv in
+                             df[gcol].dropna().unique()))
+        if len(sizes) < 2:
+            continue   # single-value column: no split, pure noise ties
+        if sizes in seen_group_sizes:
+            continue   # duplicate cohort split (e.g. sex vs sex_label)
+        seen_group_sizes.append(sizes)
+        for gv in df[gcol].dropna().unique():
+            mask = df[gcol] == gv
+            pool.append({
+                "kind": "count", "column": gcol, "group": str(gv),
+                "expression": f"(df['{gcol}']=={gv!r}).sum()",
+                "description": f"count of {gcol}={gv} "
+                               f"({int(mask.sum())} rows)",
+                "value": float(mask.sum()),
+            })
     for kind in ["std", "min", "max", "median", "count"]:
         for col in kinds["numeric"]:
             if col in kinds["boolean"]:
                 continue
+            if kind == "count":
+                # count(col) = non-null count of a complete column = dataset
+                # row count (42) echoed 30x — floods the pool and makes
+                # every "n = 42" a 30-way collision. Row count is already
+                # in the pool once; per-column non-null counts add nothing
+                # a paper would publish.
+                continue
             e = compute_kind(kind, df, col)
             if e:
                 pool.append(e)
-            if group_col:
+            if group_col and kind != "count":
+                # count-per-subgroup = cohort-size echoes (42/32/10 across
+                # every column) — computed above from group columns only
                 for gv in df[group_col].dropna().unique():
                     e = compute_kind(kind, df, col, group_col, gv)
                     if e:
