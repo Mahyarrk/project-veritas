@@ -1,0 +1,474 @@
+# Qazvin University of Medical Sciences
+
+**Faculty of Medicine**
+
+**Title:** Comparative Evaluation of the Apnea-Hypopnea Index (AHI) During REM versus Non-REM Sleep in Patients with Obstructive Sleep Apnea
+
+**Author:** Mahyar Mirzazadeh, M.D.
+
+**Academic Supervisor:** Shabnam Jalilolghadr, M.D.
+
+**Co-Advisor:** Maryam Soleimannejad, M.D.
+
+---
+
+## Abstract
+
+**Background:** Sleep-disordered breathing, particularly among adults and individuals with obesity, induces severe fragmentation of sleep architecture. Given the critical role of restorative sleep in systemic homeostasis, the recurrent nocturnal asphyxia and autonomic stress associated with untreated obstructive sleep apnea (OSA) are linked long-term to major cardiovascular, metabolic, and neuropsychiatric sequelae—including stroke, myocardial infarction, type 2 diabetes mellitus, systemic hypertension, cognitive decline, and depression. Characterizing polysomnographic respiratory parameters across distinct sleep states provides essential prognostic utility for tailored clinical management.
+
+**Objective:** To investigate the stage-dependent severity of sleep apnea by evaluating discrepancies in the Apnea-Hypopnea Index (AHI) between Rapid Eye Movement (REM) and Non-Rapid Eye Movement (NREM) sleep stages within an adult Iranian cohort.
+
+**Methods:** In this cross-sectional study, nocturnal polysomnography (PSG) records of 55 adult patients (aged 20–65 years) referred to the Sleep Disorders Clinic at Qods Hospital between 2016 and 2021 (1395–1400 SH) with presumptive diagnoses of OSA and suspected Periodic Limb Movement Disorder (PLMD) were reviewed. Thirteen cases presenting with confounding neurological or isolated ENT pathologies were excluded. Polysomnographic and psychometric data from the remaining 42 patients (32 males, 10 females) were extracted and subjected to comparative and correlational statistical analyses.
+
+**Results:** A statistically significant difference was observed between REM-AHI and NREM-AHI ($p = 0.001$), demonstrating markedly aggravated respiratory events during REM sleep despite its shorter cumulative duration. Furthermore, total AHI demonstrated a strong, statistically significant positive correlation with the Oxygen Desaturation Index (ODI) ($r = 0.570$, $p = 0.0001$).
+
+**Conclusion:** Although REM sleep constitutes a substantially smaller fraction of total nocturnal sleep time, respiratory event frequency is markedly exacerbated during this stage compared to NREM sleep. These findings highlight the clinical necessity of targeted therapeutic interventions to prevent the neurocognitive and systemic morbidities driven by REM-related sleep fragmentation and hypoxemia.
+
+**Keywords:** Obstructive Sleep Apnea (OSA), Apnea-Hypopnea Index (AHI), REM Sleep, Non-REM Sleep, Polysomnography, Oxygen Desaturation Index (ODI).
+
+---
+
+## Study Aims and Hypotheses
+
+### Primary Objective
+
+To comparatively evaluate the Apnea-Hypopnea Index (AHI) during REM sleep versus NREM sleep in patients with obstructive sleep apnea.
+
+### Secondary Objectives
+
+1. Quantify the mean AHI during REM sleep in adult OSA patients.
+
+
+2. Quantify the mean AHI during NREM sleep in adult OSA patients.
+
+
+3. Statistically compare mean REM-AHI against NREM-AHI.
+
+
+4. Evaluate the impact of daytime somnolence, measured via the Epworth Sleepiness Scale (ESS), on REM-AHI.
+
+
+5. Evaluate the impact of ESS scores on NREM-AHI.
+
+
+6. Compare the differential predictive impact of ESS scores across REM versus NREM respiratory event severities.
+
+
+
+### Applied Clinical Objective
+
+Delineating sleep architecture parameters in OSA and isolating the physiological burden across REM and NREM sleep provides clinicians with diagnostic precision to tailor pharmacological and ventilatory therapies based on patient-specific phenotype and diurnal sleepiness.
+
+### Research Hypotheses
+
+* $H_1$: There is a statistically significant difference between mean REM-AHI and mean NREM-AHI.
+
+
+* $H_2$: Subjective daytime somnolence (ESS score) significantly correlates with REM-AHI.
+
+
+* $H_3$: Subjective daytime somnolence (ESS score) significantly correlates with NREM-AHI.
+
+
+* $H_4$: The predictive effect of the ESS score differs significantly between REM and NREM respiratory event indices.
+
+
+
+---
+
+## Methodology
+
+### Study Population and Exclusion Criteria
+
+Diagnostic polysomnography records of 55 adult patients (20–65 years of age) evaluated at Qods Children's Hospital Sleep Disorders Center between 2016 and 2021 were reviewed. All participants presented with habitual snoring and suspected sleep-disordered breathing.
+
+To eliminate physiological and neurological confounders, 13 patients were excluded based on confirmed alternative diagnoses:
+
+* Isolated severe mechanical upper airway obstruction ($n = 4$)
+
+
+* Normal diagnostic PSG without sleep pathology ($n = 4$)
+
+
+* Narcolepsy ($n = 2$)
+
+
+* Active seizure disorder / Convulsions ($n = 1$)
+
+
+* Isolated primary snoring ($n = 1$)
+
+
+* Parasomnia ($n = 1$)
+
+
+
+The final analytical cohort comprised **42 patients** (32 males, 10 females).
+
+### Data Collection & Polysomnographic Instrumentation
+
+Standard full-night diagnostic polysomnography was conducted recording multi-channel physiological parameters:
+
+* **Neurophysiological:** Electroencephalography (EEG), Electrooculography (EOG), submental and bilateral anterior tibialis Electromyography (EMG), and single-lead Electrocardiography (ECG).
+
+
+* **Cardiorespiratory:** Nasal-oral airflow thermistor/pressure transducer, thoracic and abdominal respiratory effort bands, and pulse oximetry ($\text{SpO}_2$).
+
+
+* **Scoring Criteria:** In accordance with American Academy of Sleep Medicine (AASM) standards, an apnea was defined as a $\ge 90\%$ drop in airflow amplitude lasting $\ge 10$ seconds. Hypopneas were scored as a $\ge 30\%$ reduction in airflow accompanied by $\ge 3\%$ arterial oxygen desaturation or an EEG arousal.
+
+
+* **Diagnostic Indices Recorded:** Total Sleep Time (TST, min), Sleep Latency (min), Wake After Sleep Onset (WASO), Sleep Efficiency (%), Arousal Index (events/hr), Periodic Limb Movements in Sleep index (PLMS/hr), total AHI, stage-specific AHI (REM-AHI, NREM-AHI), isolated obstructive, central, and mixed apnea counts across stages, hypopnea frequency, baseline awake $\text{SpO}_2$, mean REM and NREM $\text{SpO}_2$, Oxygen Desaturation Index (ODI, events/hr), and proportional duration of sleep stages (N1, N2, N3, REM).
+
+
+
+### Subjective Sleepiness Assessment
+
+Subjective daytime hypersomnolence was quantified using the validated Persian translation of the **Epworth Sleepiness Scale (ESS)**, scoring dozing probability across 8 daytime sedentary scenarios on a 4-point Likert scale (0–3; aggregate range: 0–24). Consistent with standardized clinical diagnostic criteria, an ESS score $\ge 8$ was operationalized as significant excessive daytime sleepiness.
+
+### Sample Size Calculation
+
+Sample size was determined using the two-sample mean comparison formula based on data reported by Gabryelska et al. (mean $\pm$ SD of REM-AHI $= 5.8 \pm 1.9$; NREM-AHI $= 3.2 \pm 1.55$; $p = 0.0001$):
+
+$$n_1 = n_2 = \frac{(S_1^2 + S_2^2)(Z_{1 - \frac{\alpha}{2}} + Z_{1 - \beta})^2}{(\bar{X}_1 - \bar{X}_2)^2} = \frac{93.89}{2.45} \approx 40$$
+
+Setting $\alpha = 0.05$ (95% confidence level) and statistical power at $80\%$ ($\beta = 0.20$), the required sample size was computed as 40 participants.
+
+### Statistical Analysis
+
+Statistical processing was executed via IBM SPSS Statistics (Version 23). Continuous clinical and PSG parameters were expressed as Mean $\pm$ Standard Deviation ($\text{Mean} \pm \text{SD}$). Between-group comparisons across sex and sleep stages were evaluated using independent-samples $t$-tests and One-Way Analysis of Variance (ANOVA). Linear associations between parametric indices were assessed using Pearson's correlation coefficient ($r$). The alpha threshold for statistical significance was set at $p < 0.05$.
+
+---
+
+## Results
+
+### Demographic and Clinical Characteristics
+
+The study population consisted of 32 men (76.2%) and 10 women (23.8%).
+
+**Table 1: Age Distribution Stratified by Sex**
+
+| Sex | Number ($n$) | Mean Age (Years) | Standard Deviation |
+| --- | --- | --- | --- |
+| **Male**<br> | 32
+
+ | 45.13
+
+ | 9.39
+
+ |
+| **Female**<br> | 10
+
+ | 50.50
+
+ | 12.50
+
+ |
+| **Total Cohort** | 42 | 46.41 | 10.31 |
+
+**Table 2: Body Mass Index (BMI) Stratified by Sex**
+
+| Cohort Group | Mean BMI ($\text{kg/m}^2$) | Standard Deviation |
+| --- | --- | --- |
+| **Male**<br> | 30.09
+
+ | 4.83
+
+ |
+| **Female**<br> | 32.32
+
+ | 3.22
+
+ |
+| **Total Cohort**<br> | 30.62
+
+ | 4.57
+
+ |
+| Overall cohort BMI ranged from $21.8$ to $43.3\ \text{kg/m}^2$.
+
+ |  |  |
+
+**Table 3: Prevalence of Reported Nocturnal and Diurnal Symptoms**
+
+| Clinical Symptom | Male ($n = 32$) | Female ($n = 10$) | Total Prevalence ($n = 42$) |
+| --- | --- | --- | --- |
+| **Habitual Snoring**<br> | 30
+
+ | 8
+
+ | 38 (90.5%) |
+| **Choking / Witnessed Apneas**<br> | 20
+
+ | 9
+
+ | 29 (69.0%) |
+| **Impaired Daytime Concentration**<br> | 13
+
+ | 1
+
+ | 14 (33.3%) |
+| **Nocturnal Diaphoresis**<br> | 6
+
+ | 2
+
+ | 8 (19.0%) |
+| **Morning Headaches**<br> | 6
+
+ | 1
+
+ | 7 (16.7%) |
+| **Nocturnal Somniloquy (Sleep Talking)**<br> | 0
+
+ | 1
+
+ | 1 (2.4%) |
+| **Frequent Nightmares**<br> | 4
+
+ | 0
+
+ | 4 (9.5%) |
+
+None of the participants reported a history of motor vehicle collisions, sleepwalking, sleep-onset cataplexy/sleep paralysis, or sedative-hypnotic usage.
+
+---
+
+### Polysomnographic Architecture and Stage Distribution
+
+**Table 4: Macro Sleep Architecture Stratified by Sex (One-Way ANOVA)**
+
+| Polysomnographic Parameter | Male ($\text{Mean} \pm \text{SD}$) | Female ($\text{Mean} \pm \text{SD}$) | $p$-value |
+| --- | --- | --- | --- |
+| **Total Sleep Time (minutes)**<br> | $362.04 \pm 74.34$<br> | $380.36 \pm 51.55$<br> | 0.39
+
+ |
+| **REM Sleep (% of TST)**<br> | $11.23 \pm 7.72$<br> | $10.62 \pm 5.03$<br> | 0.81
+
+ |
+| **NREM Sleep (% of TST)**<br> | $69.24 \pm 9.74$<br> | $71.87 \pm 10.11$<br> | 0.46
+
+ |
+| **Subjective Sleep Efficiency (%)**<br> | $77.48 \pm 11.48$<br> | $79.54 \pm 11.51$<br> | 0.62 |
+
+Overall nocturnal sleep composition across the cohort comprised **69.88% NREM sleep**, **11.09% REM sleep**, and **19.03% wakefulness after sleep onset**. REM sleep percentage was markedly depressed compared to physiological norms (expected: 20–25%).
+
+**Table 5: Proportional Distribution of Individual Sleep Stages vs. Physiological Norms**
+
+| Sleep Stage | Cohort Mean (%) | Established Clinical Norm (%) | Clinical Interpretation |
+| --- | --- | --- | --- |
+| **N1 (Light Sleep)**<br> | 11.53%
+
+ | 3% – 5%
+
+ | **Elevated** (Marked sleep fragmentation)
+
+ |
+| **N2 (Intermediate Sleep)**<br> | 53.56%
+
+ | 50% – 55%
+
+ | **Within Normal Limits** |
+| **N3 (Slow-Wave Sleep)**<br> | 4.76%
+
+ | $\ge 8\% - 20\%$<br> | **Suppressed** (Loss of deep, restorative sleep)
+
+ |
+| **REM Sleep**<br> | 11.08%
+
+ | 20% – 25%
+
+ | **Suppressed** (Significant REM deficiency)
+
+ |
+
+---
+
+### Comparative Polysomnographic Metrics Across Sex and Sleep Stages
+
+**Table 6: Comprehensive Polysomnographic Indices and Sex-Based Comparison**
+
+| Polysomnographic Variable | Total Cohort ($\text{Mean} \pm \text{SD}$) | Male ($\text{Mean} \pm \text{SD}$) | Female ($\text{Mean} \pm \text{SD}$) | $p$-value |
+| --- | --- | --- | --- | --- |
+| **Sleep Latency (min)**<br> | $17.27 \pm 15.75$<br> | $17.56 \pm 16.02$<br> | $16.37 \pm 15.65$<br> | 0.83 (NS) |
+| **Arousal Frequency (Nocturnal awakenings)**<br> | $27.00 \pm 14.26$<br> | $28.62 \pm 14.72$<br> | $21.80 \pm 11.88$<br> | 0.19 (NS)
+
+ |
+| **Sleep Efficiency Index (%)**<br> | $77.97 \pm 12.15$<br> | $77.48 \pm 11.48$<br> | $79.54 \pm 11.51$<br> | 0.62 (NS) |
+| **Arousal Index (events/hr)**<br> | $19.12 \pm 20.18$<br> | $14.41 \pm 17.26$<br> | $34.17 \pm 22.33$<br> | **0.005**<br> |
+| **PLMS Index (events/hr)**<br> | $1.72 \pm 4.25$<br> | $2.14 \pm 4.78$<br> | $0.36 \pm 1.13$<br> | 0.059
+
+ |
+| **REM-AHI (events/hr)**<br> | $59.92 \pm 36.32$<br> | $52.27 \pm 35.01$<br> | $63.39 \pm 31.04$<br> | 0.994 (NS)
+
+ |
+| **NREM-AHI (events/hr)**<br> | $53.61 \pm 33.72$<br> | $50.90 \pm 31.13$<br> | $62.30 \pm 41.61$<br> | 0.093 (NS)
+
+ |
+| **Obstructive Apneas in REM (n)**<br> | $21.95 \pm 31.30$<br> | $21.00 \pm 29.63$<br> | $25.00 \pm 37.76$<br> | 0.73 (NS) |
+| **Central Apneas in REM (n)**<br> | $1.29 \pm 2.69$<br> | $1.00 \pm 1.64$<br> | $2.20 \pm 4.73$<br> | 0.23 (NS) |
+| **Mixed Apneas in REM (n)**<br> | $1.98 \pm 9.40$<br> | $0.53 \pm 1.31$<br> | $6.60 \pm 19.12$<br> | 0.08 (NS) |
+| **Obstructive Apneas in NREM (n)**<br> | $146.33 \pm 157.43$<br> | $123.31 \pm 139.62$<br> | $220.00 \pm 194.56$<br> | 0.089 (NS) |
+| **Central Apneas in NREM (n)**<br> | $6.81 \pm 7.80$<br> | $7.34 \pm 8.05$<br> | $5.10 \pm 7.01$<br> | 0.43 (NS) |
+| **Mixed Apneas in NREM (n)**<br> | $8.40 \pm 18.62$<br> | $2.81 \pm 5.71$<br> | $26.30 \pm 31.63$<br> | **0.0001**<br> |
+| **Hypopneas in REM (n)**<br> | $20.00 \pm 23.00$<br> | $20.50 \pm 22.72$<br> | $18.40 \pm 25.07$<br> | 0.80 (NS) |
+| **Hypopneas in NREM (n)**<br> | $118.21 \pm 95.10$ | $123.34 \pm 96.20$ | $101.80 \pm 93.15$<br> | 0.53 (NS) |
+| **Awake Baseline $\text{SpO}_2$ (%)**<br> | $92.01 \pm 3.33$<br> | $91.52 \pm 3.54$<br> | $93.58 \pm 1.93$<br> | 0.08 (NS) |
+| **Mean REM $\text{SpO}_2$ (%)**<br> | $90.78 \pm 4.12$<br> | $90.50 \pm 4.48$<br> | $91.59 \pm 2.88$<br> | 0.46 (NS) |
+| **Mean NREM $\text{SpO}_2$ (%)**<br> | $90.54 \pm 4.20$<br> | $90.44 \pm 4.47$<br> | $90.86 \pm 3.39$<br> | 0.78 (NS) |
+| **Oxygen Desaturation Index (ODI/hr)**<br> | $26.93 \pm 26.20$<br> | $24.21 \pm 23.74$<br> | $35.61 \pm 32.82$<br> | 0.22 (NS) |
+
+*Key Findings from Sex-Stratified Comparisons:*
+
+* **Arousal Index:** Females exhibited a significantly elevated Arousal Index compared to males ($34.17 \pm 22.33$ vs. $14.41 \pm 17.26$ events/hr, $p = 0.005$).
+
+
+* **NREM Mixed Apneas:** Females presented with a markedly greater frequency of mixed apneas during NREM sleep ($26.30 \pm 31.63$ vs. $2.81 \pm 5.71$ events, $p = 0.0001$).
+
+
+* **Total AHI:** One-way ANOVA revealed no significant difference in Total AHI across sexes ($F = 1.11, df = 41, p = 0.297$).
+
+
+
+---
+
+### Comparison of REM vs. NREM Respiratory Events Across the Cohort
+
+When analyzing the cohort independent of sex:
+
+* **Obstructive Apnea Frequency:** Highly significant difference between REM and NREM sleep ($p = 0.001$).
+
+
+* **Central Apnea Frequency:** Significant difference between REM and NREM sleep ($p = 0.004$).
+
+
+* **Mixed Apnea & Hypopnea Frequencies:** Significant differences between sleep states ($p = 0.006$ and $p = 0.001$, respectively).
+
+
+* **Overall Severity:** REM-AHI ($59.92 \pm 36.32$) was elevated compared to NREM-AHI ($53.61 \pm 33.72$), demonstrating that respiratory instability intensifies during REM episodes.
+
+
+
+---
+
+### Epworth Sleepiness Scale (ESS) Correlations
+
+**Table 7: ESS Subjective Sleepiness Scores Stratified by Sex**
+
+| Variable | Male ($\text{Mean} \pm \text{SD}$) | Female ($\text{Mean} \pm \text{SD}$) | Test Statistic | $p$-value |
+| --- | --- | --- | --- | --- |
+| **ESS Score**<br> | $9.12 \pm 6.22$<br> | $12.20 \pm 3.88$<br> | $F = 2.15, df = 1$<br> | 0.150
+
+ |
+
+* **Impact of Pathological Somnolence ($\text{ESS} \ge 8$):** Setting the cut-off at $\ge 8$, excessive sleepiness did not exhibit a statistically significant linear correlation with Total AHI ($r = -0.305, p = 0.138$), REM-AHI ($p = 0.269$), or NREM-AHI ($p = 0.53$).
+
+
+* **Arousal Index vs. Sleepiness:** While an inverse correlation was identified between Arousal Index and daytime sleepiness, it did not achieve statistical significance ($r = -0.27, p = 0.89$).
+
+
+
+---
+
+### Correlational Analyses of Respiratory, Arousal, and Desaturation Indices
+
+**Table 8: Pearson Correlation Matrix — Arousal Index and Stage-Specific AHI**
+
+| Correlation Parameter | REM-AHI | NREM-AHI | Total AHI |
+| --- | --- | --- | --- |
+| **Arousal Index ($r$)**<br> | $0.271$<br> | **$0.366$**<br> | **$0.358$**<br> |
+| **Statistical Significance ($p$)**<br> | $0.080$<br> | **$0.017$**<br> | **$0.020$**<br> |
+
+The Arousal Index demonstrated a statistically significant positive correlation with both NREM-AHI ($r = 0.366, p = 0.017$) and Total AHI ($r = 0.358, p = 0.020$). The correlation between Total AHI and PLMS Index was non-significant ($r = -0.046, p = 0.773$).
+
+**Table 9: Pearson Correlation Matrix — Desaturation Metrics and Stage-Specific Oxygenation**
+
+| Correlation Pair | Pearson Correlation ($r$) | $p$-value | Significance |
+| --- | --- | --- | --- |
+| **Total AHI vs. ODI**<br> | **$0.570$**<br> | **$0.0001$**<br> | Highly Significant
+
+ |
+| **Total AHI vs. REM Mean $\text{SpO}_2$**<br> | **$-0.358$**<br> | **$0.025$**<br> | Statistically Significant
+
+ |
+| **Total AHI vs. NREM Mean $\text{SpO}_2$**<br> | $-0.271$<br> | $0.083$<br> | Non-Significant Trend
+
+ |
+| **ODI vs. REM Mean $\text{SpO}_2$**<br> | $-0.123$<br> | $0.457$<br> | Non-Significant
+
+ |
+| **ODI vs. NREM Mean $\text{SpO}_2$**<br> | $-0.057$<br> | $0.719$<br> | Non-Significant
+
+ |
+
+---
+
+### Diagnostic Stratification and Obesity Subgroup Analysis
+
+**Categorical OSA Severity (Based on Final Diagnostic Scoring):**
+
+* **Mild OSA:** $7.14\%$ ($n = 3$)
+
+
+* **Moderate OSA:** $30.95\%$ ($n = 13$)
+
+
+* **Severe OSA:** $61.90\%$ ($n = 26$)
+
+
+
+Diagnostic severity strongly correlated with higher objective AHI values ($r = 0.73, p = 0.0001$).
+
+**Subgroup Analysis: Patients with Obesity ($\text{BMI} \ge 30\ \text{kg/m}^2$, $n = 21$):**
+
+**Table 10: Comparison of Stage-Dependent AHI in the Obese Subgroup (One-Sample $t$-test)**
+
+| Variable | $\text{Mean} \pm \text{SD}$ (events/hr) | $t$-statistic | Degrees of Freedom ($df$) | $p$-value |
+| --- | --- | --- | --- | --- |
+| **REM-AHI**<br> | $66.22 \pm 43.66$<br> | $7.89$<br> | $20$<br> | **$0.0001$**<br> |
+| **NREM-AHI**<br> | $64.26 \pm 37.29$<br> | — | — | — |
+
+In the obese cohort, stage-dependent AHI was elevated across both states, with REM-AHI maintaining a statistically significant elevation over NREM-AHI ($p = 0.0001$). Furthermore, total AHI and ODI maintained a strong direct correlation ($r = 0.55, p = 0.009$).
+
+**Table 11: Sleep Stage Distribution in the Obese Subgroup ($\text{BMI} \ge 30\ \text{kg/m}^2$)**
+
+| Sleep Stage | Mean Percentage (%) | Standard Deviation |
+| --- | --- | --- |
+| **N1 Stage**<br> | $11.38\%$<br> | $5.01$<br> |
+| **N2 Stage**<br> | $53.98\%$<br> | $9.47$<br> |
+| **N3 Stage (Slow-Wave)**<br> | $5.77\%$<br> | $5.25$<br> |
+| **REM Sleep**<br> | $9.88\%$<br> | $6.47$<br> |
+
+---
+
+## Discussion
+
+This study evaluated stage-dependent respiratory instability in adult patients with obstructive sleep apnea, focusing on differences between REM and NREM sleep stages and the predictive value of daytime sleepiness (ESS) and oxygen desaturation metrics (ODI).
+
+Habitual snoring (90.5%) and witnessed nocturnal choking/apnea (69.0%) were the most prevalent presenting complaints. These cardinal symptoms correspond with established clinical literature indicating that sleep architecture breakdown directly compromises diurnal neurocognitive performance, working memory, and sustained attention.
+
+A key neurophysiological observation was the marked suppression of REM sleep across the entire study cohort ($11.09\%$ of TST) relative to established physiological reference ranges ($20\% - 25\%$). While the "first-night effect" in a clinical sleep laboratory contributes to decreased sleep efficiency, this REM deprivation is primarily driven by recurrent obstructive apneas triggering micro-arousals at REM onset.
+
+Despite REM sleep occupying a limited fraction of total sleep time, the **Apnea-Hypopnea Index was significantly elevated during REM compared to NREM sleep ($59.92 \pm 36.32$ vs. $53.61 \pm 33.72$ events/hr, $p = 0.001$)**. This confirms the primary study hypothesis. Physiologically, this stage-specific exacerbation stems from the skeletal muscle atonia characteristic of REM sleep. Loss of tone in the upper airway dilator musculature (particularly the genioglossus) alongside depressed ventilatory responsiveness to chemical stimuli (hypoxemia and hypercapnia) renders the pharynx vulnerable to collapse during REM episodes.
+
+These findings align with large-scale polysomnographic analyses, including investigations by Kim et al. at Seoul National University, which reported pronounced increases in AHI and respiratory event duration during REM sleep. Conversely, our results contrast with those of Gabryelska et al., who reported higher absolute AHI during NREM sleep but observed that daytime hypersomnolence was disproportionately driven by REM-AHI.
+
+In our cohort, subjective daytime sleepiness quantified by the Epworth Sleepiness Scale did not exhibit a linear correlation with total AHI ($r = -0.305, p = 0.138$), REM-AHI ($p = 0.269$), or NREM-AHI ($p = 0.53$). This discrepancy illustrates that subjective questionnaires capture behavioral and perceived fatigue, which often decouples from physiological metrics in severe OSA cohorts.
+
+When assessing sex-stratified metrics, total AHI did not differ significantly between males and females ($p = 0.297$). However, females exhibited a significantly elevated Arousal Index ($34.17 \pm 22.33$ vs. $14.41 \pm 17.26$ events/hr, $p = 0.005$) and a higher incidence of mixed apneas during NREM sleep ($26.30 \pm 31.63$ vs. $2.81 \pm 5.71$ events, $p = 0.0001$). While Zhang et al. observed longer sleep latency and worse sleep efficiency in females, our data identified slightly longer latencies in males, although desaturation levels between sexes remained comparable.
+
+Finally, the Oxygen Desaturation Index (ODI) demonstrated a robust, statistically significant positive correlation with total AHI ($r = 0.570, p = 0.0001$), with desaturations exhibiting greater severity during REM sleep ($r = -0.358, p = 0.025$). In patients with obesity ($\text{BMI} \ge 30\ \text{kg/m}^2$), REM sleep was further suppressed ($9.88\%$), and respiratory events were magnified (REM-AHI $= 66.22 \pm 43.66$, $p = 0.0001$), emphasizing that obesity and REM sleep atonia compound mechanical pharyngeal collapsibility.
+
+---
+
+## Conclusions
+
+1. **Stage-Dependent Severity:** The Apnea-Hypopnea Index is significantly higher during REM sleep compared to NREM sleep ($p = 0.001$), confirming that REM atonia substantially exacerbates pharyngeal collapse.
+
+
+2. **Sex-Specific Profiles:** Overall AHI did not differ significantly across sex; however, females demonstrated a significantly higher Arousal Index ($p = 0.005$) and increased NREM mixed apneas ($p = 0.0001$).
+
+
+3. **Desaturation Burden:** The Oxygen Desaturation Index (ODI) directly and strongly correlates with overall AHI ($r = 0.570, p = 0.0001$), serving as an objective marker of systemic nocturnal hypoxemia.
+
+
+4. **Diagnostic Concordance:** Clinical disease severity classification corresponds directly with higher measured AHI values ($r = 0.73, p = 0.0001$), validating polysomnography as the indispensable gold standard for grading upper airway collapse.
