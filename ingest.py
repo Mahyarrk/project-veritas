@@ -61,12 +61,14 @@ def client(provider: str = "llm") -> OpenAI:
         api_key = os.environ[env_key]
     if not api_key or api_key == "none":
         api_key = "none"   # local endpoints ignore the key; cloud needs one
-    # Timeout rule: fail fast, never hang. 15s for pings/extraction JSON
-    # (short outputs); 120s for chat, whose RAG prompts make a local model
-    # generate for 20s+ legitimately (measured: 22s for one answer).
-    # max_retries=0: the SDK's default retry loop otherwise re-queues a
-    # 429'd request for minutes (observed: 9router + gemma free tier).
-    timeout = 120.0 if provider == "llm" else 15.0
+    # Timeout rule: fail fast, never hang. Measured workloads:
+    #   ping/extraction JSON: seconds (but dense table chunks on 9router
+    #     legitimately run 20-40s — big JSON output from a big table);
+    #   chat RAG answers: ~22s on local gemma (4 chunks + generation).
+    # So: chat 120s, extraction 60s (2× the slowest observed chunk),
+    # everything else 15s. max_retries=0: the SDK's default retry loop
+    # otherwise re-queues a 429'd request for minutes (observed: 9router).
+    timeout = {"llm": 120.0, "cloudflare": 60.0}.get(provider, 15.0)
     return OpenAI(base_url=base_url, api_key=api_key,
                   timeout=timeout, max_retries=0)
 
