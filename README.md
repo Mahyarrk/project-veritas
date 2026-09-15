@@ -174,7 +174,7 @@ endpoint; API key via environment variable, never stored in the repo).
 ## Author
 
 **Dr Mahyar Mirzazadeh, M.D.** —
-[LinkedIn](https://www.linkedin.com/in/mahyar-mirzazadeh)
+[LinkedIn](https://www.linkedin.com/in/mahyar-mirzazadeh-550b3b166)
 
 ## Repository layout
 
