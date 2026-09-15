@@ -342,7 +342,12 @@ def audit(extracted_path: Path, df: pd.DataFrame,
                              results, state, used_pool)
             else:
                 results.append({**row_info, "value": entry["value"],
-                                "verdict": "UNRESOLVED COLLISION"})
+                                "verdict": "UNRESOLVED COLLISION",
+                                "matches": [{"item": c["description"],
+                                             "computed_from":
+                                                 c["expression"],
+                                             "battery_value": c["value"]}
+                                            for c in hits]})
         else:
             if audit_restatement(entry, row_info, used_pool, results):
                 continue
@@ -462,7 +467,11 @@ def audit(extracted_path: Path, df: pd.DataFrame,
                          state, used_pool)
         elif len(hits) > 1:
             results.append({**row_info, "value": entry["value"],
-                            "verdict": "UNRESOLVED COLLISION"})
+                            "verdict": "UNRESOLVED COLLISION",
+                            "matches": [{"item": c["description"],
+                                         "computed_from": c["expression"],
+                                         "battery_value": c["value"]}
+                                        for c in hits]})
         else:
             if audit_restatement(entry, row_info, used_pool, results):
                 continue

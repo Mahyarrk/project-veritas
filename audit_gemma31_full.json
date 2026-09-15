@@ -70,7 +70,19 @@
       "row": "PLMS Index (events/hr)",
       "column": "Group 1",
       "value": "1.72",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "mean of plms_index",
+          "computed_from": "df['plms_index'].mean()",
+          "battery_value": 1.7214285714285713
+        },
+        {
+          "item": "mean of plms_index where night_sweats=1",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(1), 'plms_index'].mean()",
+          "battery_value": 1.7294117647058822
+        }
+      ]
     },
     {
       "table": "Not specified",
@@ -168,7 +180,19 @@
       "row": "NREM-AHI (events/hr)",
       "column": "Group 3",
       "value": "62.30",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "mean of ahi_rem where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'ahi_rem'].mean()",
+          "battery_value": 62.3
+        },
+        {
+          "item": "mean of ahi_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'ahi_nonrem'].mean()",
+          "battery_value": 62.3
+        }
+      ]
     },
     {
       "table": "Table",
@@ -189,7 +213,614 @@
       "row": "Unknown",
       "column": "Group 2",
       "value": "1.00",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "mean of mva_history",
+          "computed_from": "df['mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where mallampati_score=3+",
+          "computed_from": "df.loc[df['mallampati_score']=='3+', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where mallampati_score=3",
+          "computed_from": "df.loc[df['mallampati_score']=='3', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where mallampati_score=2",
+          "computed_from": "df.loc[df['mallampati_score']=='2', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where referral_reason=screen sleep disordered breathing plmd",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing plmd', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where referral_reason=screen sleep disordered breathing",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where referral_reason=Screen for disordered breathing PLMD",
+          "computed_from": "df.loc[df['referral_reason']=='Screen for disordered breathing PLMD', 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where snoring=2",
+          "computed_from": "df.loc[df['snoring']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where snoring=1",
+          "computed_from": "df.loc[df['snoring']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where apnea_feeling=2",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where apnea_feeling=1",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where night_sweats=1",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where night_sweats=2",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where morning_headache=2",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where morning_headache=1",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where poor_concentration=1",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where poor_concentration=2",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where sleep_talking=1",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(1), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of mva_history where sleep_talking=2",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(2), 'mva_history'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking",
+          "computed_from": "df['sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where mallampati_score=3+",
+          "computed_from": "df.loc[df['mallampati_score']=='3+', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where mallampati_score=3",
+          "computed_from": "df.loc[df['mallampati_score']=='3', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where mallampati_score=2",
+          "computed_from": "df.loc[df['mallampati_score']=='2', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where referral_reason=screen sleep disordered breathing plmd",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing plmd', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where referral_reason=screen sleep disordered breathing",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where referral_reason=Screen for disordered breathing PLMD",
+          "computed_from": "df.loc[df['referral_reason']=='Screen for disordered breathing PLMD', 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where snoring=2",
+          "computed_from": "df.loc[df['snoring']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where snoring=1",
+          "computed_from": "df.loc[df['snoring']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where apnea_feeling=2",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where apnea_feeling=1",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where night_sweats=1",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where night_sweats=2",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where morning_headache=2",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where morning_headache=1",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where poor_concentration=1",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where poor_concentration=2",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where sleep_talking=1",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(1), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleepwalking where sleep_talking=2",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(2), 'sleepwalking'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks",
+          "computed_from": "df['sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where mallampati_score=3+",
+          "computed_from": "df.loc[df['mallampati_score']=='3+', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where mallampati_score=3",
+          "computed_from": "df.loc[df['mallampati_score']=='3', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where mallampati_score=2",
+          "computed_from": "df.loc[df['mallampati_score']=='2', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where referral_reason=screen sleep disordered breathing plmd",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing plmd', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where referral_reason=screen sleep disordered breathing",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where referral_reason=Screen for disordered breathing PLMD",
+          "computed_from": "df.loc[df['referral_reason']=='Screen for disordered breathing PLMD', 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where snoring=2",
+          "computed_from": "df.loc[df['snoring']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where snoring=1",
+          "computed_from": "df.loc[df['snoring']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where apnea_feeling=2",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where apnea_feeling=1",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where night_sweats=1",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where night_sweats=2",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where morning_headache=2",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where morning_headache=1",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where poor_concentration=1",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where poor_concentration=2",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where sleep_talking=1",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(1), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_attacks where sleep_talking=2",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(2), 'sleep_attacks'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis",
+          "computed_from": "df['sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where mallampati_score=3+",
+          "computed_from": "df.loc[df['mallampati_score']=='3+', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where mallampati_score=3",
+          "computed_from": "df.loc[df['mallampati_score']=='3', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where mallampati_score=2",
+          "computed_from": "df.loc[df['mallampati_score']=='2', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where referral_reason=screen sleep disordered breathing plmd",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing plmd', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where referral_reason=screen sleep disordered breathing",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where referral_reason=Screen for disordered breathing PLMD",
+          "computed_from": "df.loc[df['referral_reason']=='Screen for disordered breathing PLMD', 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where snoring=2",
+          "computed_from": "df.loc[df['snoring']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where snoring=1",
+          "computed_from": "df.loc[df['snoring']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where apnea_feeling=2",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where apnea_feeling=1",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where night_sweats=1",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where night_sweats=2",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where morning_headache=2",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where morning_headache=1",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where poor_concentration=1",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where poor_concentration=2",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where sleep_talking=1",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(1), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of sleep_paralysis where sleep_talking=2",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(2), 'sleep_paralysis'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use",
+          "computed_from": "df['hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where mallampati_score=3+",
+          "computed_from": "df.loc[df['mallampati_score']=='3+', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where mallampati_score=3",
+          "computed_from": "df.loc[df['mallampati_score']=='3', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where mallampati_score=2",
+          "computed_from": "df.loc[df['mallampati_score']=='2', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where referral_reason=screen sleep disordered breathing plmd",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing plmd', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where referral_reason=screen sleep disordered breathing",
+          "computed_from": "df.loc[df['referral_reason']=='screen sleep disordered breathing', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where referral_reason=Screen for disordered breathing PLMD",
+          "computed_from": "df.loc[df['referral_reason']=='Screen for disordered breathing PLMD', 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where snoring=2",
+          "computed_from": "df.loc[df['snoring']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where snoring=1",
+          "computed_from": "df.loc[df['snoring']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where apnea_feeling=2",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where apnea_feeling=1",
+          "computed_from": "df.loc[df['apnea_feeling']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where night_sweats=1",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where night_sweats=2",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where morning_headache=2",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where morning_headache=1",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where poor_concentration=1",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where poor_concentration=2",
+          "computed_from": "df.loc[df['poor_concentration']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where sleep_talking=1",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(1), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of hypnotic_use where sleep_talking=2",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(2), 'hypnotic_use'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of plms_index where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'plms_index'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of central_apnea_rem where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'central_apnea_rem'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of central_apnea_rem where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'central_apnea_rem'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of central_apnea_rem where snoring=1",
+          "computed_from": "df.loc[df['snoring']==np.int64(1), 'central_apnea_rem'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of central_apnea_rem where night_sweats=2",
+          "computed_from": "df.loc[df['night_sweats']==np.int64(2), 'central_apnea_rem'].mean()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "mean of central_apnea_nonrem where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'central_apnea_nonrem'].mean()",
+          "battery_value": 1.0
+        }
+      ]
     },
     {
       "table": "Table",
@@ -322,7 +953,19 @@
       "row": "Central Apneas in NREM (n)",
       "column": "Group 3",
       "value": "5.10",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "mean of sleep_latency_min where mallampati_score=4",
+          "computed_from": "df.loc[df['mallampati_score']=='4', 'sleep_latency_min'].mean()",
+          "battery_value": 5.1
+        },
+        {
+          "item": "mean of central_apnea_nonrem where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'central_apnea_nonrem'].mean()",
+          "battery_value": 5.1
+        }
+      ]
     },
     {
       "table": "Table",
@@ -540,7 +1183,24 @@
       "row": "Mean REM SpO2 (%)",
       "column": "Group 3",
       "value": "91.59",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "mean of spo2_rem_mean where sex=2",
+          "computed_from": "df.loc[df['sex']==np.int64(2), 'spo2_rem_mean'].mean()",
+          "battery_value": 91.59
+        },
+        {
+          "item": "mean of spo2_awake_mean where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'spo2_awake_mean'].mean()",
+          "battery_value": 91.6
+        },
+        {
+          "item": "mean of spo2_rem_mean where mallampati_score=2+",
+          "computed_from": "df.loc[df['mallampati_score']=='2+', 'spo2_rem_mean'].mean()",
+          "battery_value": 91.6
+        }
+      ]
     },
     {
       "table": "Table",
@@ -561,7 +1221,24 @@
       "row": "Mean NREM SpO2 (%)",
       "column": "Group 2",
       "value": "90.44",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "mean of spo2_nonrem_mean where sex=1",
+          "computed_from": "df.loc[df['sex']==np.int64(1), 'spo2_nonrem_mean'].mean()",
+          "battery_value": 90.44375000000001
+        },
+        {
+          "item": "mean of spo2_nonrem_mean where sleep_talking=1",
+          "computed_from": "df.loc[df['sleep_talking']==np.int64(1), 'spo2_nonrem_mean'].mean()",
+          "battery_value": 90.44390243902438
+        },
+        {
+          "item": "mean of spo2_nonrem_mean where morning_headache=1",
+          "computed_from": "df.loc[df['morning_headache']==np.int64(1), 'spo2_nonrem_mean'].mean()",
+          "battery_value": 90.4342857142857
+        }
+      ]
     },
     {
       "table": "Table",
@@ -964,21 +1641,102 @@
       "row": "Active seizure disorder / Convulsions",
       "column": "excluded",
       "value": "1",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "count of mallampati_score=3+ (1 rows)",
+          "computed_from": "(df['mallampati_score']=='3+').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of mallampati_score=2+ (1 rows)",
+          "computed_from": "(df['mallampati_score']=='2+').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of mallampati_score=4 (1 rows)",
+          "computed_from": "(df['mallampati_score']=='4').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of referral_reason=screen sleep disordered breathing (1 rows)",
+          "computed_from": "(df['referral_reason']=='screen sleep disordered breathing').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of sleep_talking=2 (1 rows)",
+          "computed_from": "(df['sleep_talking']==np.int64(2)).sum()",
+          "battery_value": 1.0
+        }
+      ]
     },
     {
       "table": "Excluded Patients",
       "row": "Isolated primary snoring",
       "column": "excluded",
       "value": "1",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "count of mallampati_score=3+ (1 rows)",
+          "computed_from": "(df['mallampati_score']=='3+').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of mallampati_score=2+ (1 rows)",
+          "computed_from": "(df['mallampati_score']=='2+').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of mallampati_score=4 (1 rows)",
+          "computed_from": "(df['mallampati_score']=='4').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of referral_reason=screen sleep disordered breathing (1 rows)",
+          "computed_from": "(df['referral_reason']=='screen sleep disordered breathing').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of sleep_talking=2 (1 rows)",
+          "computed_from": "(df['sleep_talking']==np.int64(2)).sum()",
+          "battery_value": 1.0
+        }
+      ]
     },
     {
       "table": "Excluded Patients",
       "row": "Parasomnia",
       "column": "excluded",
       "value": "1",
-      "verdict": "UNRESOLVED COLLISION"
+      "verdict": "UNRESOLVED COLLISION",
+      "matches": [
+        {
+          "item": "count of mallampati_score=3+ (1 rows)",
+          "computed_from": "(df['mallampati_score']=='3+').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of mallampati_score=2+ (1 rows)",
+          "computed_from": "(df['mallampati_score']=='2+').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of mallampati_score=4 (1 rows)",
+          "computed_from": "(df['mallampati_score']=='4').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of referral_reason=screen sleep disordered breathing (1 rows)",
+          "computed_from": "(df['referral_reason']=='screen sleep disordered breathing').sum()",
+          "battery_value": 1.0
+        },
+        {
+          "item": "count of sleep_talking=2 (1 rows)",
+          "computed_from": "(df['sleep_talking']==np.int64(2)).sum()",
+          "battery_value": 1.0
+        }
+      ]
     },
     {
       "table": "Analytical Cohort",
