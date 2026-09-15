@@ -1,3 +1,9 @@
+> **License note:** This is an English translation of an MD thesis
+> (Qazvin University of Medical Sciences, 2023), authored by Mahyar
+> Mirzazadeh, M.D. It is provided as the validation corpus for
+> project-veritas under CC BY 4.0 — you may share and adapt it with
+> attribution to the author.
+
 # Qazvin University of Medical Sciences
 
 **Faculty of Medicine**
