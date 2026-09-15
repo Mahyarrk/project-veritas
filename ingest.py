@@ -65,10 +65,11 @@ def client(provider: str = "llm") -> OpenAI:
     #   ping/extraction JSON: seconds (but dense table chunks on 9router
     #     legitimately run 20-40s — big JSON output from a big table);
     #   chat RAG answers: ~22s on local gemma (4 chunks + generation).
-    # So: chat 120s, extraction 60s (2× the slowest observed chunk),
+    # So: chat 120s, extraction 120s (user-directed: 2× the previous 60s —
+    # slow 9router moments must not kill an otherwise-working audit),
     # everything else 15s. max_retries=0: the SDK's default retry loop
     # otherwise re-queues a 429'd request for minutes (observed: 9router).
-    timeout = {"llm": 120.0, "cloudflare": 60.0}.get(provider, 15.0)
+    timeout = {"llm": 120.0, "cloudflare": 120.0}.get(provider, 15.0)
     return OpenAI(base_url=base_url, api_key=api_key,
                   timeout=timeout, max_retries=0)
 
