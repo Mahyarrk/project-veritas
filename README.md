@@ -1,11 +1,17 @@
 # project-veritas 🔬
 
+> **AI-use disclaimer:** built with AI assistance under my direction,
+> review, and design decisions — every feature, threshold, and test
+> protocol was chosen by me, and the validation case (my own thesis,
+> with independently known errors) was my design. AI accelerated the
+> work; it did not make the scientific decisions.
+
 **A statistics auditor for published research papers.** Give it a paper
 and the raw data behind it; it extracts every published statistic,
 recomputes each one from the data, and tells you — with the exact
 computation attached — which numbers check out and which don't.
 
-Built and validated on a real case: it audited an MD thesis on REM vs
+Built and validated on a real case: it audited my MD thesis on REM vs
 NREM sleep apnea and flagged **both known value errors** in it (errors
 independently confirmed by a separate hand analysis of the raw data).
 
@@ -58,8 +64,8 @@ raw data (csv/xlsx)┘            │                │
 
 ## The validation case
 
-The tool was validated against its authors' own thesis — whose errors
-are independently known from a prior hand analysis:
+I validated it against my own thesis — whose errors are independently
+known from a prior hand analysis:
 
 | Known error | Published | True value | Tool verdict |
 |---|---|---|---|
@@ -144,8 +150,8 @@ endpoint; API key via environment variable, never stored in the repo).
 
 ## Honest limitations
 
-1. **One validation case.** The tool was built and tuned on a single
-   paper — our own thesis. It has not yet been run blind on third-party
+1. **One validation case.** I built and tuned the tool on a single
+   paper — my own thesis. It has not yet been run blind on third-party
    papers; that is the immediate next step.
 2. **Value errors only.** The auditor verifies whether published numbers
    match the data. It cannot detect wrong test choices (t-test vs
@@ -154,7 +160,7 @@ endpoint; API key via environment variable, never stored in the repo).
 3. **The data must be the included cohort.** If the paper excluded
    participants, the file must contain only the included cases — the
    disclaimers state this because auditing unfiltered data produces
-   false mismatches (we observed exactly that before fixing the input).
+   false mismatches (I observed exactly that before fixing the input).
 4. **Statistical scope.** p-values, correlation coefficients, and
    subset statistics (e.g. a BMI≥30 subgroup) are extracted but not yet
    recomputable — the battery computes means/SDs/min/max/median/count
@@ -167,11 +173,8 @@ endpoint; API key via environment variable, never stored in the repo).
 
 ## Author
 
-**Dr Mahyar Mirzazadeh, M.D.** — general practitioner, Qazvin; sleep-medicine
-research background (MD thesis: AHI in REM vs NREM sleep in OSA).
-Building AI-assisted research tooling at the medicine × data-science
-intersection. The tool's first audit target was, fittingly, his own
-thesis — [LinkedIn](https://www.linkedin.com/in/mahyar-mirzazadeh).
+**Dr Mahyar Mirzazadeh, M.D.** —
+[LinkedIn](https://www.linkedin.com/in/mahyar-mirzazadeh)
 
 ## Repository layout
 
