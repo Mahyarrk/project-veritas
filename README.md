@@ -99,7 +99,24 @@ Full methodology and per-model results: [`docs/`](docs/).
 ## Model choice — measured, not assumed
 
 Four extraction models were compared on identical protocol
-([10-chunk A/B](docs/model_ab_10chunk.md), then full-paper runs):
+([10-chunk A/B](docs/model_ab_10chunk.md), then full-paper runs).
+
+**10-chunk A/B** (chunks 0–9, identical pipeline and audit):
+
+| Model | Time (s) | Stats | MATCH | NO MATCH | COLLISION | UNCHECKABLE |
+|---|---|---|---|---|---|---|
+| GLM-4.7-flash (reasoning) | 461 | 26 | 6 | 14 | 3 | 3 |
+| nemotron-3-super | 177 | 25 | 4 | 10 | 0 | 11 |
+| gemma4:31b | **23** | 23 | 6 | 10 | 3 | 4 |
+| ling-3.0-flash | 63 | **31** | 6 | 14 | 3 | 8 |
+
+gemma-4-31b was 20× faster than GLM and 7.7× faster than nemotron; all
+four passed every proposed statistic through the validation gauntlet
+(zero discard noise). The strict ±0.01 audit even caught GLM emitting an
+age range ('20–65') as one malformed statistic, which nemotron and gemma
+both split correctly.
+
+**Full-paper runs** (all 36 chunks):
 
 | Model | Full-paper extraction | Verified matches |
 |---|---|---|
