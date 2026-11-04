@@ -185,8 +185,11 @@ verify.py         battery auditor: recompute, match, resolve, report
 main.py           CLI entry: capability tiers, pipeline
 gui.py            Streamlit UI (endpoints → audit → chat)
 setup.py          first-run endpoint configuration
-validate_case.py  formal scoring against known thesis errors
-config.yaml       endpoints, models, retrieval params, paths
-docs/             validation case, model A/B, run reports
-sources/          thesis_en.txt (the public validation corpus)
+validate_case.py  validation test suite against known thesis errors
+config.yaml       model settings, tolerance thresholds, and paths
+docs/             model benchmarks, validation protocols, and technical reports
+runs/             committed run artifacts: extraction outputs, audit
+                  reports, and the validation sweep results
+scripts/          utility scripts (validation chart generator)
+sources/          public validation text (thesis_en.txt)
 ```

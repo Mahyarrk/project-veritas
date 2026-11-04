@@ -1,9 +1,9 @@
 # Accuracy Analysis — GLM-4.7-flash Extraction, 18 Chunks
 
 Date: 2026-09-14. Source artifacts:
-`extracted_values_glm_18chunks.json` (74 validated statistics from thesis
+`runs/extracted/extracted_values_glm_18chunks.json` (74 validated statistics from thesis
 chunks 0–17), audited non-interactively against `Book1.xlsx` (55 rows).
-Report: `audit_report_glm_18chunks.json`.
+Report: `runs/audits/audit_report_glm_18chunks.json`.
 
 ## Headline verdict distribution (74 statistics)
 

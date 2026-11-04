@@ -19,7 +19,7 @@ teardown (undocumented at the time), run 2 deliberately at 18 chunks.
 
 - Log: `/tmp/thesis_audit_glm_run2.log`
 - Started 11:14, stopped 13:20 (~2 h 6 min), chunks 0–17 complete
-- **74 validated statistics saved** to `extracted_values_glm_18chunks.json`
+- **74 validated statistics saved** to `runs/extracted/extracted_values_glm_18chunks.json`
   (74 entries, all status=validated; incremental save per chunk)
 - Kind distribution: count 26, mean 15, std 15, p 8, min 2, max 2, r 1,
   other 5

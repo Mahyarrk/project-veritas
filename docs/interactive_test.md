@@ -1,6 +1,6 @@
 # Interactive Audit Test — Operator-Driven Resolution
 
-Date: 2026-09-14. Extraction: `extracted_gemma31_full.json` (gemma4:31b,
+Date: 2026-09-14. Extraction: `runs/extracted/extracted_gemma31_full.json` (gemma4:31b,
 233 statistics). Data: 42-patient dataset. Mode: `interactive=True` — the
 tool's human-in-the-loop path, driven by an operator (Soroush) applying a
 published decision policy instead of ad-hoc guesses.

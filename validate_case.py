@@ -22,7 +22,7 @@ Scored dimensions:
     sensitivity/specificity tradeoff that justifies ±0.01.
 
 Modes:
-  default     consume committed artifacts (extracted_gemma31_full.json)
+  default     consume committed artifacts (runs/extracted/extracted_gemma31_full.json)
   --fresh     rerun extraction first (needs API access, ~4 min)
 
 Run:  uv run validate_case.py [--fresh]
@@ -87,7 +87,7 @@ def audit_at_tolerance(tol_abs: float, tol_rel: float = 0.0) -> dict:
     try:
         import pandas as pd
         df = pd.read_csv(DATA)
-        return V.audit(Path("extracted_gemma31_full.json"), df,
+        return V.audit(Path("runs/extracted/extracted_gemma31_full.json"), df,
                        interactive=False)
     finally:
         V.REL_TOL, V.ABS_TOL = old_rel, old_abs
@@ -180,9 +180,9 @@ def main() -> None:
         "tolerance_sweep": sweep,
         "extraction_model": CONFIG["cloudflare"]["model"],
     }
-    Path("validation_report.json").write_text(
+    Path("runs/validation_report.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=2))
-    print("\nwritten: validation_report.json")
+    print("\nwritten: runs/validation_report.json")
 
 
 if __name__ == "__main__":

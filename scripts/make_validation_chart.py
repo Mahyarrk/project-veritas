@@ -1,8 +1,10 @@
 """Generate the tolerance-sweep chart for the validation case.
 
-Reads validation_report.json (written by validate_case.py), renders the
-sensitivity/coverage tradeoff that justifies the ±0.01 tolerance, and
+Reads runs/validation_report.json (written by validate_case.py), renders
+the sensitivity/coverage tradeoff that justifies the ±0.01 tolerance, and
 saves docs/validation_tolerance_sweep.png for the README.
+
+Run from the repo root:  uv run scripts/make_validation_chart.py
 """
 
 import json
@@ -13,7 +15,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 
-rep = json.loads(Path("validation_report.json").read_text())
+rep = json.loads(Path("runs/validation_report.json").read_text())
 sweep = rep["tolerance_sweep"]
 tols = [s["tol"] for s in sweep]
 matches = [s["matches"] for s in sweep]

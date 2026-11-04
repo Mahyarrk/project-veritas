@@ -3,7 +3,7 @@
 Date: 2026-09-14. Chunks 0–9 of `sources/thesis_en.txt` (Abstract through
 early Results), identical extraction pipeline and audit (non-interactive,
 42-patient dataset, strict ±0.01 tolerance) for every model. Models via
-9router. Artifacts: `extracted_*10.json`, `audit_*10.json` per model.
+9router. Artifacts: `runs/extracted/extracted_*10.json`, `runs/audits/audit_*10.json` per model.
 
 ## Headline table
 
