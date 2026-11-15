@@ -178,7 +178,7 @@ def main() -> None:
         "known_errors": KNOWN_VALUE_ERRORS,
         "detection": det,
         "tolerance_sweep": sweep,
-        "extraction_model": CONFIG["cloudflare"]["model"],
+        "extraction_model": CONFIG["extract"]["model"],
     }
     Path("runs/validation_report.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=2))

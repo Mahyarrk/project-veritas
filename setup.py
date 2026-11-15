@@ -32,7 +32,7 @@ SETUP_PATH = Path.home() / ".veritas" / "setup.json"
 ROLES = ["chat", "extract", "embed"]
 
 # Map our roles to the env-var names ingest.py's override system reads.
-# (llm->chat role; cloudflare->extract role; embeddings->embed role)
+# (llm->chat role; extract->extract role; embeddings->embed role)
 ENV_MAP = {
     "chat": {
         "url": "VERITAS_LLM_URL",
@@ -40,9 +40,9 @@ ENV_MAP = {
         "key": "VERITAS_LLM_KEY",
     },
     "extract": {
-        "url": "VERITAS_CLOUDFLARE_URL",
-        "model": "VERITAS_CLOUDFLARE_MODEL",
-        "key": "VERITAS_CLOUDFLARE_KEY",
+        "url": "VERITAS_EXTRACT_URL",
+        "model": "VERITAS_EXTRACT_MODEL",
+        "key": "VERITAS_EXTRACT_KEY",
     },
     "embed": {
         "url": "VERITAS_EMBEDDINGS_URL",

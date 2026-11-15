@@ -2,36 +2,40 @@
 # All paths relative to the project root.
 #
 # ENDPOINT CONFIGURATION
-# Three endpoints are needed:
+# Three endpoints are needed, one config block each:
 #   llm         — the chat model (RAG mode). Local LM Studio works well.
-#   cloudflare  — the extraction/audit model via 9router (or any
-#                 OpenAI-compatible endpoint). Needs an API key.
+#   extract     — the extraction/audit model (any OpenAI-compatible
+#                 endpoint; 9router works, an API key is then needed).
 #   embeddings  — text-embedding model for retrieval.
 #
 # CLI override (no config editing): every endpoint accepts environment
 # variables that override config.yaml at load time — the variable name is
-# the config block in caps, e.g.:
-#   VERITAS_LLM_URL / VERITAS_LLM_MODEL
-#   VERITAS_CLOUDFLARE_URL / VERITAS_CLOUDFLARE_KEY / VERITAS_CLOUDFLARE_MODEL
-#   VERITAS_EMBEDDINGS_URL / VERITAS_EMBEDDINGS_MODEL
-# (block name = config.yaml key, uppercased: llm→VERITAS_LLM_*, 
-#  cloudflare→VERITAS_CLOUDFLARE_*, embeddings→VERITAS_EMBEDDINGS_*)
+# the config block in caps:
+#   VERITAS_LLM_URL / VERITAS_LLM_MODEL / VERITAS_LLM_KEY
+#   VERITAS_EXTRACT_URL / VERITAS_EXTRACT_MODEL / VERITAS_EXTRACT_KEY
+#   VERITAS_EMBEDDINGS_URL / VERITAS_EMBEDDINGS_MODEL / VERITAS_EMBEDDINGS_KEY
 # Precedence: environment variable > config.yaml value.
+# The key has no config.yaml field on purpose: supply it via
+# VERITAS_EXTRACT_KEY (or the GUI). Nothing secret lives in this file.
 #
 # GUI: the same overrides are injected by gui.py from its settings panel.
 
 llm:
   base_url: "http://localhost:1234/v1"   # LM Studio local server
-  model: "google/gemma-4-e4b"            # the auditor/chat model
+  model: "lfm3-1.7b"                     # chat model — whatever your server serves
   temperature: 0.0                       # accuracy-first: deterministic outputs
   max_tokens: 1024                       # per-response cap (JSON verdicts are small)
 
-cloudflare:                              # via 9router proxy, OpenAI-compatible
-  base_url: "http://localhost:20128/v1"
-  api_key_env: "VERITAS_CF_KEY"          # key read from env — never stored in repo
-  # extraction model: ollama/gemma4:31b (full-paper test after ling run)
+extract:                                 # audit model, any OpenAI-compatible
+  base_url: "http://localhost:20128/v1"  # 9router proxy
+  # extraction model: cx/gpt-6-luna via 9router.
+  # Measured on 3 thesis chunks (176/173/13 digits): 51.9s / 43.3s / 17.1s,
+  # 3808 / 3364 / 1921 tokens, 98 statistics, 100% validated, 0 discarded.
+  # Fits the 4096 max_tokens cap and the 120s extraction timeout as shipped.
+  # (superseded: ollama/gemma4:31b — no credentials on the ollama provider;
+  #  cf/@cf/qwen/qwen3.8-27b — correct but 243s/chunk, needs 8192+ tokens)
   # (ling full run: runs/extracted/extracted_ling_full.json — 234 stats, 6.5 min)
-  model: "ollama/gemma4:31b"
+  model: "cx/gpt-6-luna"
   max_tokens: 4096
 
 embeddings:

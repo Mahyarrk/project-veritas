@@ -146,19 +146,19 @@ def _validate(proposal: dict, text_norm: str,
 def _extract_once(text: str) -> tuple[list, bool]:
     """One LLM extraction call. Returns (proposals, was_truncated).
 
-    Uses the cloudflare provider (GLM-4.7-flash via 9router): extraction
+    Uses the extract provider (cx/gpt-6-luna via 9router): extraction
     is the slow path, and the remote model is ~100x faster than local
     Gemma on this hardware.
     """
-    c = client("cloudflare")
+    c = client("extract")
     resp = c.chat.completions.create(
-        model=model("cloudflare"),
+        model=model("extract"),
         messages=[
             {"role": "system", "content": EXTRACTION_PROMPT},
             {"role": "user", "content": text},
         ],
         temperature=CONFIG["llm"]["temperature"],
-        max_tokens=CONFIG["cloudflare"]["max_tokens"],
+        max_tokens=CONFIG["extract"]["max_tokens"],
     )
     msg = resp.choices[0].message
     raw = (msg.content or "").strip()

@@ -35,7 +35,7 @@ def _endpoint(provider: str, key: str = "base_url") -> str:
     Precedence: VERITAS_<PROVIDER>_<KEY> env var > config.yaml value.
     This is how the CLI (and later the GUI) re-point endpoints without
     editing config.yaml — e.g. VERITAS_EXTRACT_MODEL overrides the
-    cloudflare block's model.
+    extract block's model.
     """
     env_prefix = f"VERITAS_{provider.upper()}_"
     env_key = env_prefix + key.upper()
@@ -49,16 +49,17 @@ def client(provider: str = "llm") -> OpenAI:
     with env overrides (see _endpoint).
 
     provider "llm"        -> chat model (RAG mode); local LM Studio works
-    provider "cloudflare" -> extraction/audit model; key from env
+    provider "extract" -> extraction/audit model; key from env
     provider "embeddings" -> embedding model for retrieval
     """
     base_url = _endpoint(provider, "base_url")
     model = _endpoint(provider, "model")   # honored by callers via model()
-    api_key_env = CONFIG[provider].get("api_key_env", "")
-    api_key = os.environ.get(api_key_env, "")
-    env_key = f"VERITAS_{provider.upper()}_KEY"
-    if os.environ.get(env_key):
-        api_key = os.environ[env_key]
+    # One key mechanism, no indirection: VERITAS_<PROVIDER>_KEY.
+    # A config.yaml `api_key_env` field used to point at a bespoke variable
+    # name on top of this, which produced a variable that was never set and
+    # a GUI that sent the variable's NAME as the token. Secrets do not
+    # belong in config.yaml, and one lookup is enough.
+    api_key = os.environ.get(f"VERITAS_{provider.upper()}_KEY", "")
     if not api_key or api_key == "none":
         api_key = "none"   # local endpoints ignore the key; cloud needs one
     # Timeout rule: fail fast, never hang. Measured workloads:
@@ -69,7 +70,7 @@ def client(provider: str = "llm") -> OpenAI:
     # slow 9router moments must not kill an otherwise-working audit),
     # everything else 15s. max_retries=0: the SDK's default retry loop
     # otherwise re-queues a 429'd request for minutes (observed: 9router).
-    timeout = {"llm": 120.0, "cloudflare": 120.0}.get(provider, 15.0)
+    timeout = {"llm": 120.0, "extract": 120.0}.get(provider, 15.0)
     return OpenAI(base_url=base_url, api_key=api_key,
                   timeout=timeout, max_retries=0)
 
