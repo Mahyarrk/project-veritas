@@ -1,6 +1,6 @@
 [project]
 name = "project-veritas"
-version = "0.5.1"
+version = "0.5.5"
 description = "RAG chat + statistical auditor for scientific papers, fully local"
 authors = [{ name = "Dr Mahyar Mirzazadeh, M.D." }]
 license = {text = "AGPL-3.0"}
