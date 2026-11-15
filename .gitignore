@@ -23,6 +23,13 @@
 *.odt
 sources/thesis_en.txt.islocal
 
+# ---- generated documents ----
+# PDFs here are build output (the mastery manual and its draft) produced
+# from docs/book/*.py. The generators are the source; the artefacts are
+# regenerated on demand and do not belong in history. README figures are
+# PNGs and stay tracked.
+*.pdf
+
 # ---- secrets ----
 *.env
 .env
