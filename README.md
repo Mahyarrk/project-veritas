@@ -25,19 +25,19 @@ data and shows the exact expression that produced each verdict.
 
 ```
 paper (txt/docx) ──┐
-                   ├──► ingest ──► extract (LLM) ──► verify (battery) ──► report
-raw data (csv/xlsx)┘                  │                   │
-                            every statistic        each statistic recomputed
-                            with its snippet,      from the data (pandas):
-                            validated & deduped    verdict + provenance
+                   ├──► extract (LLM) ──► verify (battery) ──► report
+raw data (csv/xlsx)┘         │                   │
+                  every statistic        each statistic recomputed
+                  with its snippet,      from the data (pandas):
+                  validated & deduped    verdict + provenance
 ```
 
-1. **Extract.** An LLM (default: gemma-4-31b via any OpenAI-compatible endpoint)
-   reads the paper in chunks and proposes every statistic: value, kind
-   (mean/std/count/p/r/other), table, and the exact snippet containing it. A
-   deterministic gauntlet then checks each proposal: the digits must appear in
-   the snippet, kinds must come from a fixed vocabulary, duplicates are dropped.
-   The LLM proposes; it never verifies.
+1. **Extract.** An LLM (whatever your endpoint serves; configured in
+   `config.yaml`) reads the paper in chunks and proposes every statistic: value,
+   kind (mean/std/count/p/r/other), table, and the exact snippet containing it. A
+   deterministic gauntlet then checks each proposal: the snippet must really occur
+   in the paper, the digits must appear in that snippet, kinds must come from a
+   fixed vocabulary, duplicates are dropped. The LLM proposes; it never verifies.
 2. **Verify.** No LLM in this step. A battery recomputes what the data can
    produce: every mean, SD, min, max, median, and count, overall and per
    subgroup. Each published statistic is compared against the battery at a strict
@@ -49,8 +49,11 @@ raw data (csv/xlsx)┘                  │                   │
    > MATCH: Total Sleep Time (Male) = 362.04 →
    > `df.loc[df['sex']==1, 'tst_min'].mean()` = 362.0437
 
-   Ambiguities (one published value tying two battery entries) go to the user as
-   a dropdown listing every tying candidate. Nothing is silently guessed.
+   A published value that ties between an overall statistic and one or more
+   subgroup statistics resolves to the overall one and is labelled
+   `MATCH (tie-break: overall)` — the inference is visible in the report, not
+   folded into a plain MATCH. Remaining ties go to the user as a dropdown
+   listing every candidate. Nothing is silently guessed.
 
 ## The validation case
 
@@ -68,8 +71,11 @@ in a REM-vs-NREM context) is documented but out of scope: value verification
 checks numbers, not test choices.
 
 The tolerance was chosen empirically. A sweep from ±0.001 to ±0.05 shows matches
-peaking at ±0.01 (80 verified of 233 extracted), with zero false matches of the
-known errors at every tolerance.
+peaking at ±0.01 (109 verified verdicts of 233 extracted, including restatements
+and tie-breaks), with zero false matches of the known errors at every tolerance.
+Wider tolerances lose matches rather than gain them: more published values fall
+inside the window, so more of them become ties and are withheld as collisions
+instead of being credited.
 
 ![tolerance sweep](docs/validation_tolerance_sweep.png)
 
@@ -77,11 +83,19 @@ known errors at every tolerance.
 
 | Verdict | n | Meaning |
 |---|---|---|
-| MATCH | 59 | Recomputed from data, expression shown |
-| MATCH (restatement) | 21 | The paper restates a verified number in prose |
-| NO MATCH | 56 | No data-supported value (includes the 2 known errors) |
-| COLLISION | 9 | Genuine ties, resolved by the user via dropdown |
+| MATCH | 77 | Recomputed from data, expression shown |
+| MATCH (tie-break: overall) | 7 | Tied with a subgroup coincidence; overall statistic won |
+| MATCH (restatement) | 25 | The paper restates a verified number in prose |
+| NO MATCH | 18 | No data-supported value (includes the 2 known errors) |
+| COLLISION | 18 | Genuine ties, resolved by the user via dropdown |
 | UNCHECKABLE | 88 | p-values, r coefficients, subgroup stats (battery roadmap) |
+
+Subgroup standard deviations are computed and matched. An earlier version
+silently never built that part of the battery — a dead guard meant only subgroup
+*means* and *counts* existed, so 43 standard deviations were reported as NO MATCH
+when the data did contain them. Fixing it moved MATCH from 59 to 77 and NO MATCH
+from 56 to 18, while both known thesis errors stayed flagged: recall recovered,
+nothing unmasked.
 
 Full methodology and per-model results: [`docs/`](docs/).
 
@@ -111,23 +125,24 @@ nemotron and gemma both split correctly.
 | GLM-4.7-flash (reasoning) | did not finish (stalled at 7 h) | — |
 | nemotron-3-super | — | — |
 | ling-3.0-flash | 6.5 min, 234 stats | 70 |
-| **gemma-4-31b (default)** | **4.3 min, 233 stats, no gaps** | **80** |
+| **gemma-4-31b** | **4.3 min, 233 stats, no gaps** | **80** |
+
+Those runs predate the subgroup-SD fix, so their MATCH counts are on the old
+battery. The banner run above (233 statistics) is the current one, extracted with
+the model configured in `config.yaml`, `cx/gpt-6-luna` via a router.
 
 Nine statistics were found identically by all four models. The verdicts are
 model-independent: the verifier is deterministic, the extractor only proposes.
 
 ## Features
 
-- **RAG chat about the paper.** Every answer carries its source excerpts,
-  persisted per message and checkable at any time. The chat refuses
-  deterministically when the document cannot support the question.
-- **Human-in-the-loop audit.** Collisions become dropdowns of the actual tying
-  battery expressions. Known-safe skips (external-literature values, methodology
-  constants) are operator decisions with logged reasons.
+- **Human-in-the-loop audit.** Every published value the battery cannot assign to
+  exactly one statistic becomes a dropdown of the actual candidates, in the same
+  interface that runs the audit. Known-safe skips are operator decisions.
 - **No silent failures.** Unknown LLM output layouts are reported, never guessed.
-  Endpoints are live-verified before anything runs; stalled calls fail fast
-  (15 s pings, 120 s chat and extraction) instead of hanging.
-- **First-run setup.** Bring your own OpenAI-compatible endpoints (local
+  A truncated chunk is flagged in the output as `extraction_incomplete`. The
+  endpoint is live-verified before anything runs.
+- **Bring your own endpoint.** Any OpenAI-compatible provider works (local
   LM Studio, Ollama, hosted routers). Keys stay in `~/.veritas/`, never in the
   repo.
 
@@ -136,20 +151,19 @@ model-independent: the verifier is deterministic, the extractor only proposes.
 ```bash
 git clone https://github.com/Mahyarrk/project-veritas
 cd project-veritas
-uv sync                      # Python 3.12, deps from pyproject.toml
-uv run streamlit run gui.py  # endpoint setup → Audit | Chat | About
+uv sync                      # Python 3.12+, deps from pyproject.toml
+uv run streamlit run gui.py  # endpoint setup → upload paper + data → verdicts
 ```
 
-CLI equivalent:
+Reproduce the validation case (headless, no GUI needed):
 
 ```bash
-uv run main.py paper.txt data.csv            # full pipeline + chat
-uv run main.py paper.txt data.csv --no-chat  # audit only
-uv run validate_case.py                      # reproduce the validation case
+uv run validate_case.py
+uv run validate_case.py --fresh   # re-extract first (needs the endpoint + key)
 ```
 
-Configure the extraction model in `config.yaml` (any OpenAI-compatible endpoint;
-API key via environment variable, never stored in the repo).
+Configure the extraction model and the audit tolerance in `config.yaml`; the API
+key is supplied by `VERITAS_EXTRACT_KEY`, never stored in the repo.
 
 ## Limitations
 
@@ -159,16 +173,25 @@ API key via environment variable, never stored in the repo).
 2. **Value errors only.** The auditor checks whether published numbers match the
    data. It cannot detect wrong test choices, wrong denominators beyond the
    data's cohorts, or selective reporting.
-3. **The data must be the included cohort.** If the paper excluded participants,
+3. **Recall is unmeasured.** The verdicts are precise — every MATCH shows the
+   expression that produced it — but there is no gold-standard set of every
+   statistic in the thesis, so how much of each paper gets checked is unknown.
+   88 of 233 extracted values remain uncheckable by construction (p-values,
+   correlations). Coverage is a lower bound, not a measurement.
+4. **The data must be the included cohort.** If the paper excluded participants,
    the file must contain only the included cases. Auditing unfiltered data
    produces false mismatches; I observed exactly that before fixing the input.
-4. **Statistical scope.** p-values, correlation coefficients, and subset
-   statistics (e.g. a BMI≥30 subgroup) are extracted but not yet recomputable.
-   The battery currently covers means, SDs, min/max, medians, and counts, overall
-   and per categorical split. Correlation and subgroup batteries are next.
-5. **Extraction is LLM-dependent.** The gauntlet catches malformed proposals (one
+5. **Statistical scope.** p-values, correlation coefficients, and subset
+   statistics beyond categorical splits (e.g. a BMI≥30 subgroup) are extracted
+   but not yet recomputable. The battery covers means, SDs, min/max, medians and
+   counts, overall and per categorical split.
+6. **Extraction is LLM-dependent.** The gauntlet catches malformed proposals (one
    model emitted "20–65" as a single minimum; rejected), but no extraction is
    exhaustive. A token-limited chunk is flagged, never silently dropped.
+7. **Nobody can rerun the validation from the repo alone.** The dataset and the
+   thesis text are excluded from version control (they contain clinical data), so
+   `validate_case.py` reproduces the reported numbers only on a machine that has
+   them.
 
 ## Author
 
@@ -177,19 +200,18 @@ API key via environment variable, never stored in the repo).
 ## Repository layout
 
 ```
-ingest.py         document + data loading, chunking, embeddings
-retrieve.py       cosine retrieval with provenance, refusal floor
-chat.py           multi-turn RAG with query rewriting
+core.py           config, endpoint client, paper + dataset loading (one each)
 extract.py        LLM statistic extraction + validation gauntlet
-verify.py         battery auditor: recompute, match, resolve, report
-main.py           CLI entry: capability tiers, pipeline
-gui.py            Streamlit UI (endpoints → audit → chat)
-setup.py          first-run endpoint configuration
-validate_case.py  validation test suite against known thesis errors
-config.yaml       model settings, tolerance thresholds, and paths
-docs/             model benchmarks, validation protocols, and technical reports
-runs/             committed run artifacts: extraction outputs, audit
-                  reports, and the validation sweep results
+verify.py         the auditor: battery, matching, tie-break, verdicts
+gui.py            Streamlit UI — the only interface (this is the whole product)
+validate_case.py  validation against known thesis errors + tolerance sweep
+config.yaml       model settings, tolerance, paths
+docs/             model benchmarks, validation protocols, technical reports
+runs/             committed run artifacts: extraction outputs, audit reports
 scripts/          utility scripts (validation chart generator)
-sources/          public validation text (thesis_en.txt)
+sources/          validation inputs (not committed: clinical data)
 ```
+
+`verify.py` contains no model calls. That is the design, not an accident: the
+extractor proposes claims, the auditor recomputes them from raw data and shows
+the expression behind every verdict.

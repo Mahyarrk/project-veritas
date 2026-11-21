@@ -1,34 +1,21 @@
 """
-extract.py — extract published statistics from a paper using the LLM.
+extract.py — ask the LLM for published statistics, then verify the answer.
 
-Accuracy architecture: the LLM proposes, deterministic code disposes.
-Every proposal must pass:
-  1. snippet (whitespace-normalized) exists in the document,
-  2. value (digit-sequence) present in the validated snippet,
-  3. no duplicate extraction (deduplicated on value+row+column).
-Proposals failing any check are discarded with a reason and can never
-enter the audit. Statistics-dense chunks that trigger truncation are
-split and retried recursively; incomplete extractions are flagged in
-the output, never silent.
-
-Output: extracted_values.json — list of
-  {paper, table, row, column, value, unit, snippet, source, offsets,
-   status}  where offsets lists every occurrence in the document,
-   and paper is always "paper" (single-document processing).
-
-Run:  uv run extract.py sources/paper.txt
+Accuracy architecture: the LLM proposes, deterministic code disposes. Every
+proposal must pass three checks before it can reach the auditor:
+  1. its snippet really occurs in the paper (whitespace-normalized),
+  2. the value's digits really occur in that snippet,
+  3. it is not a duplicate of an entry already extracted.
+Anything failing a check is kept with a `discarded: ...` status — never
+silently dropped, never able to enter the audit. A chunk that hits the token
+limit is split and retried; if it still truncates, the output carries an
+explicit `extraction_incomplete` flag.
 """
 
 import json
 import re
-import sys
-from pathlib import Path
 
-import yaml
-
-from ingest import CONFIG, chunk_text, client, load_paper, model
-
-EXTRACT_PATH = Path(CONFIG["paths"]["extracted"])
+from core import CONFIG, chunk_text, client, load_paper, model, setting
 
 EXTRACTION_PROMPT = """You are a meticulous research assistant. Extract
 every published statistic from the text below: means, standard deviations,
@@ -54,6 +41,9 @@ statistics, output [].
 Text:
 """
 
+VALID_KINDS = {"mean", "std", "min", "max", "median", "count",
+               "p", "r", "other"}
+
 
 def _norm(s: str) -> str:
     """Whitespace-normalize for matching (LLM snippets often reflow lines)."""
@@ -65,126 +55,138 @@ def _digits(s: str) -> str:
     return re.sub(r"\D", "", s)
 
 
-def _normalize_with_map(text: str) -> tuple[str, list[int]]:
-    """Collapse whitespace runs to single spaces; return normalized text and
-    a map from normalized index -> original index (for provenance offsets)."""
-    norm_chars, offset_map = [], []
+def normalize_with_map(text: str) -> tuple[str, list[int]]:
+    """Collapse whitespace runs to single spaces, returning the normalized text
+    and a map from normalized index back to original index, so provenance
+    offsets survive normalization."""
+    out, index = [], []
     i = 0
     while i < len(text):
-        ch = text[i]
-        if ch.isspace():
-            j = i
-            while j < len(text) and text[j].isspace():
-                j += 1
-            if i > 0 and j < len(text):  # keep one space, skip edges
-                norm_chars.append(" ")
-                offset_map.append(i)
-            i = j
+        if not text[i].isspace():
+            out.append(text[i])
+            index.append(i)
+            i += 1
             continue
-        norm_chars.append(ch)
-        offset_map.append(i)
-        i += 1
-    return "".join(norm_chars), offset_map
+        j = i
+        while j < len(text) and text[j].isspace():
+            j += 1
+        if i > 0 and j < len(text):      # keep one space, drop edge runs
+            out.append(" ")
+            index.append(i)
+        i = j
+    return "".join(out), index
 
 
 def _find_offsets(text_norm: str, snippet_norm: str,
-                  offset_map: list[int]) -> list[int]:
-    """All occurrence offsets of a normalized snippet, mapped back to
-    original document coordinates."""
-    offsets = []
-    start = 0
-    while True:
-        i = text_norm.find(snippet_norm, start)
-        if i == -1:
-            break
-        offsets.append(offset_map[i])
+                  index: list[int]) -> list[int]:
+    """Every occurrence of a normalized snippet, in document coordinates."""
+    offsets, start = [], 0
+    while (i := text_norm.find(snippet_norm, start)) != -1:
+        offsets.append(index[i])
         start = i + 1
     return offsets
 
 
-def _validate(proposal: dict, text_norm: str,
-              offset_map: list[int]) -> dict:
-    """Deterministic validation gauntlet. Never trusts the LLM."""
-    entry = {
-        "table": str(proposal.get("table", "")),
-        "row": str(proposal.get("row", "")),
-        "column": str(proposal.get("column", "")),
-        "value": str(proposal.get("value", "")).strip(),
-        "unit": str(proposal.get("unit", "")),
-        "snippet": str(proposal.get("snippet", "")),
-    }
-    # kind: LLM-supplied, validated against the fixed vocabulary. Never
-    # trusted beyond this allowlist — an unknown kind degrades to "other",
-    # which routes to the interactive path instead of a wrong battery.
-    _VALID_KINDS = {"mean", "std", "min", "max", "median", "count",
-                    "p", "r", "other"}
+def validate(proposal: dict, text_norm: str, index: list[int]) -> dict:
+    """The deterministic gauntlet. Never trusts the LLM."""
+    entry = {k: str(proposal.get(k, "")).strip()
+             for k in ("table", "row", "column", "value", "unit")}
+    entry["snippet"] = str(proposal.get("snippet", ""))
     kind = str(proposal.get("kind", "other")).strip().lower()
-    entry = {**entry, "kind": kind if kind in _VALID_KINDS else "other"}
-    snippet = entry["snippet"]
+    entry["kind"] = kind if kind in VALID_KINDS else "other"
+
     if not entry["value"]:
         entry["status"] = "discarded: empty value"
         return entry
-    if not snippet:
+    if not entry["snippet"]:
         entry["status"] = "discarded: no snippet"
         return entry
-
-    snip_norm = _norm(snippet)
-    offsets = _find_offsets(text_norm, snip_norm, offset_map)
+    offsets = _find_offsets(text_norm, _norm(entry["snippet"]), index)
     if not offsets:
         entry["status"] = "discarded: snippet not found in document"
         return entry
-
-    if _digits(entry["value"]) and _digits(entry["value"]) not in _digits(snip_norm):
+    if _digits(entry["value"]) not in _digits(_norm(entry["snippet"])):
         entry["status"] = "discarded: value digits not present in snippet"
         return entry
-
     entry["offsets"] = offsets
     entry["status"] = "validated"
     return entry
 
 
 def _extract_once(text: str) -> tuple[list, bool]:
-    """One LLM extraction call. Returns (proposals, was_truncated).
+    """One LLM call, with bounded retry on transient upstream failures.
 
-    Uses the extract provider (cx/gpt-6-luna via 9router): extraction
-    is the slow path, and the remote model is ~100x faster than local
-    Gemma on this hardware.
+    Returns (proposals, was_truncated).
+
+    Routers and hosted backends flake: observed 503s whose own message says
+    "reset after Ns", and 503s that wrap an upstream `[404] Not Found` in the
+    body. A single flake must not destroy a 36-chunk extraction that has
+    already made 20 successful calls. max_retries stays 0 on the client (the
+    SDK's own retry loop re-queues 429s for minutes, which is why it was
+    disabled); this is an explicit retry instead.
+
+    Five attempts, backoff 4/8/16/30s — ~58s of total patience. Measured on
+    this project's own model: the codex backend was unavailable for longer
+    than a 12s budget, so three attempts was not enough.
+
+    Status classification is what makes this safe: a genuine 400 or 401 is a
+    permanent problem and is raised immediately, so a wrong key does not cost
+    a minute of retries. An error whose body happens to contain "404" is not
+    permanent when it arrives inside a 503 — it is the router relaying an
+    upstream miss, and it clears on retry (verified against this project's
+    own envelope).
     """
-    c = client("extract")
-    resp = c.chat.completions.create(
+    import time
+
+    from openai import (APIConnectionError, APITimeoutError,
+                        InternalServerError, RateLimitError)
+
+    transient = (APIConnectionError, APITimeoutError, InternalServerError,
+                 RateLimitError)
+    delays = [4, 8, 16, 30]
+    for attempt, delay in enumerate(delays + [None]):
+        try:
+            return _call_model(text)
+        except transient:
+            if delay is None:
+                raise
+            time.sleep(delay)
+    raise RuntimeError("unreachable")
+
+
+def _call_model(text: str) -> tuple[list, bool]:
+    """The single HTTP call plus JSON salvage. No retry logic here."""
+    resp = client("extract").chat.completions.create(
         model=model("extract"),
-        messages=[
-            {"role": "system", "content": EXTRACTION_PROMPT},
-            {"role": "user", "content": text},
-        ],
-        temperature=CONFIG["llm"]["temperature"],
+        messages=[{"role": "system", "content": EXTRACTION_PROMPT},
+                  {"role": "user", "content": text}],
+        temperature=CONFIG["extract"].get("temperature", 0.0),
         max_tokens=CONFIG["extract"]["max_tokens"],
     )
     msg = resp.choices[0].message
     raw = (msg.content or "").strip()
-    # reasoning models may put everything in `reasoning` with null content —
-    # fall back to it so truncation detection and salvage still work
-    if not raw and (msg.reasoning or getattr(msg, "reasoning_content", None)):
-        raw = (msg.reasoning or msg.reasoning_content or "").strip()
+    if not raw:
+        # reasoning models may put everything in a side channel with null
+        # content; getattr keeps the fallback from crashing on the models
+        # that never expose it at all
+        raw = str(getattr(msg, "reasoning", None)
+                  or getattr(msg, "reasoning_content", None) or "").strip()
     truncated = resp.choices[0].finish_reason == "length"
-
     raw = re.sub(r"^```(json)?\s*|\s*```$", "", raw)
-    try:
-        return json.loads(raw), truncated
-    except json.JSONDecodeError:
-        pass
-    match = re.search(r"\[.*\]", raw, re.DOTALL)
-    if not match:
-        return [], truncated
-    try:
-        return json.loads(match.group(0)), truncated
-    except json.JSONDecodeError:
-        return [], truncated
+    for candidate in (raw, (m.group(0) if (m := re.search(r"\[.*\]", raw,
+                                                        re.DOTALL)) else "")):
+        if not candidate:
+            continue
+        try:
+            return json.loads(candidate), truncated
+        except json.JSONDecodeError:
+            continue
+    return [], truncated
 
 
 def _extract_recursive(text: str, depth: int = 0) -> tuple[list, bool]:
-    """Extract from a chunk; on truncation, split at a paragraph boundary
-    and recurse. Returns (proposals, incomplete_flag)."""
+    """Extract from a chunk; on truncation split at a paragraph boundary and
+    recurse. Returns (proposals, incomplete_flag)."""
     proposals, truncated = _extract_once(text)
     if not truncated:
         return proposals, False
@@ -195,56 +197,110 @@ def _extract_recursive(text: str, depth: int = 0) -> tuple[list, bool]:
     if split == -1:
         split = mid
     left, right = text[:split], text[split:]
-    left_props, left_inc = _extract_recursive(left, depth + 1)
-    right_props, right_inc = _extract_recursive(right, depth + 1)
-    return left_props + right_props, left_inc or right_inc
+    a, a_inc = _extract_recursive(left, depth + 1)
+    b, b_inc = _extract_recursive(right, depth + 1)
+    return a + b, a_inc or b_inc
 
 
-def _dedupe(entries: list[dict]) -> list[dict]:
-    """Merge duplicate extractions (overlap chunks share statistics).
-    Keeps the longest snippet; merges offsets."""
-    deduped: dict[tuple, dict] = {}
+def dedupe(entries: list[dict]) -> list[dict]:
+    """Merge duplicates across overlapping chunks. Keeps the longest snippet
+    and unions the offsets, so one statistic keeps every place it appears."""
+    merged: dict[tuple, dict] = {}
     for e in entries:
         if e["status"] != "validated":
             continue
         key = (e["value"], e["table"], e["row"], e["column"])
-        if key not in deduped:
-            deduped[key] = e
+        cur = merged.get(key)
+        if cur is None:
+            merged[key] = e
             continue
-        cur = deduped[key]
         winner = e if len(e["snippet"]) >= len(cur["snippet"]) else cur
-        winner["offsets"] = sorted(set(
-            cur.get("offsets", []) + e.get("offsets", [])))
-        deduped[key] = winner
-    return list(deduped.values())
+        winner["offsets"] = sorted(set(cur.get("offsets", [])
+                                       + e.get("offsets", [])))
+        merged[key] = winner
+    return list(merged.values())
 
 
-def extract_paper(path: Path) -> list[dict]:
-    """Whole-paper extraction: chunk → LLM extract → validate → dedupe.
-    Every entry carries paper="paper" from validation time — a constant,
-    never modified downstream."""
+def _chunk_key(chunk: dict) -> str:
+    """Stable identity for a chunk: its index plus a hash of its text.
+
+    The hash matters because the same index means different text if the paper
+    or the chunking config changed. A manifest entry whose key no longer
+    matches is not eligible to be skipped.
+    """
+    import hashlib
+    return f"{chunk['index']}:{hashlib.sha256(chunk['text'].encode()).hexdigest()[:12]}"
+
+
+def extract_paper(path, progress=None, save_to=None, resume=False) -> list[dict]:
+    """Whole-paper extraction: chunk -> propose -> validate -> dedupe.
+
+    progress(chunk_index, n_chunks, n_validated) is called after each chunk if
+    supplied — the GUI renders it, scripts ignore it.
+
+    save_to: when given, the deduped result is rewritten after EVERY chunk.
+    A long extraction is the one place this project talks to a remote model for
+    tens of minutes, so an interrupted run must never lose finished work.
+
+    resume: with save_to, progress is tracked in `<save_to>.chunks`, a JSON
+    manifest of completed chunk keys and their validated entries. On restart,
+    completed chunks are skipped and their entries reloaded, so a crash costs
+    the chunk in flight rather than the whole run. Hosted routers do flake —
+    observed 503s on this project's own model — and paying for 20 good chunks
+    a second time is not a defensible failure mode.
+
+    A chunk is recorded as complete only after its model call succeeded. A
+    chunk that fails permanently stays unrecorded and is retried next run.
+    """
     text = load_paper(path)
-    text_norm, offset_map = _normalize_with_map(text)
+    text_norm, index = normalize_with_map(text)
     chunks = chunk_text(text)
+
+    manifest_path = (save_to.parent / (save_to.name + ".chunks")
+                     if save_to is not None and resume else None)
+    done: dict[str, list[dict]] = {}
+    if manifest_path is not None and manifest_path.exists():
+        try:
+            done = json.loads(manifest_path.read_text())
+        except (json.JSONDecodeError, TypeError):
+            done = {}      # unreadable manifest: start clean rather than crash
 
     entries: list[dict] = []
     incomplete = False
+
     for c in chunks:
+        key = _chunk_key(c)
+        if key in done:
+            entries.extend(done[key])
+            if progress:
+                progress(c["index"], len(chunks),
+                         sum(1 for e in entries if e["status"] == "validated"))
+            continue
+
         proposals, inc = _extract_recursive(c["text"])
         incomplete = incomplete or inc
+        chunk_entries = []
         for p in proposals:
             if isinstance(p, dict):
-                entry = _validate(p, text_norm, offset_map)
-                entry["paper"] = "paper"        # constant, set at birth
-                entries.append(entry)
-        n_ok = sum(1 for e in entries if e["status"] == "validated")
-        print(f"  chunk {c['index']}: {len(proposals)} proposals "
-              f"({n_ok} validated cumulative)")
-        # incremental save: a killed run loses at most the current chunk
-        Path(EXTRACT_PATH).write_text(
-            json.dumps(_dedupe(entries), ensure_ascii=False, indent=2))
+                entry = validate(p, text_norm, index)
+                entry["paper"] = "paper"
+                chunk_entries.append(entry)
+        entries.extend(chunk_entries)
 
-    deduped = _dedupe(entries)
+        if manifest_path is not None:
+            done[key] = chunk_entries
+            manifest_path.write_text(json.dumps(done, ensure_ascii=False))
+
+        if save_to is not None:
+            save_to.write_text(json.dumps(dedupe(entries), ensure_ascii=False,
+                                          indent=2))
+        if progress:
+            progress(c["index"], len(chunks),
+                     sum(1 for e in dedupe(entries)
+                         if e["status"] == "validated"))
+
+
+    deduped = dedupe(entries)
     if incomplete:
         deduped.append({
             "paper": "paper",
@@ -252,25 +308,6 @@ def extract_paper(path: Path) -> list[dict]:
             "note": "a chunk hit the token limit after recursive splits; "
                     "some statistics may be missing from this extraction",
         })
+    if save_to is not None:
+        save_to.write_text(json.dumps(deduped, ensure_ascii=False, indent=2))
     return deduped
-
-
-def main() -> None:
-    if len(sys.argv) < 2:
-        sys.exit("usage: uv run extract.py <paper.txt|paper.docx>")
-    path = Path(sys.argv[1])
-    if not path.exists():
-        sys.exit(f"not found: {path}")
-
-    results = extract_paper(path)
-    EXTRACT_PATH.write_text(json.dumps(results, ensure_ascii=False, indent=2))
-
-    ok = sum(1 for r in results if r["status"] == "validated")
-    flagged = sum(1 for r in results if r["status"] == "extraction_incomplete")
-    discarded = sum(1 for r in results if str(r["status"]).startswith("discarded"))
-    print(f"\nvalidated: {ok} | discarded: {discarded} | flagged: {flagged}")
-    print(f"written: {EXTRACT_PATH}")
-
-
-if __name__ == "__main__":
-    main()

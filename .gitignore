@@ -46,6 +46,9 @@ chat_history.json
 extracted_values.json
 extracted_values_*.json
 store.json
+# extraction resume manifest: per-chunk progress, meaningless outside its run
+extracted_values.json.chunks
+runs/*.log
 
 # ---- environments / caches ----
 .venv/
