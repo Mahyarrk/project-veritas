@@ -1,4 +1,6 @@
 {
+  "extraction_model": "cx/gpt-6-luna",
+  "tolerance": 0.01,
   "known_errors": [
     {
       "id": "E1",
@@ -18,60 +20,59 @@
   "detection": {
     "E1": {
       "label": "REM-AHI total mean = 59.92",
-      "detected": true,
-      "occurrences_in_paper": 3,
-      "flagged": 3
+      "occurrences": 3,
+      "flagged": 3,
+      "detected": true
     },
     "E2": {
       "label": "REM-AHI female SD = 31.04",
-      "detected": true,
-      "occurrences_in_paper": 1,
-      "flagged": 1
+      "occurrences": 1,
+      "flagged": 1,
+      "detected": true
     }
   },
   "tolerance_sweep": [
     {
       "tol": 0.001,
-      "matches": 38,
-      "errors_detected": 4,
+      "matches": 53,
+      "errors_detected": 2,
       "false_matches": 0
     },
     {
       "tol": 0.002,
-      "matches": 44,
-      "errors_detected": 4,
+      "matches": 65,
+      "errors_detected": 2,
       "false_matches": 0
     },
     {
       "tol": 0.005,
-      "matches": 66,
-      "errors_detected": 4,
+      "matches": 95,
+      "errors_detected": 2,
       "false_matches": 0
     },
     {
       "tol": 0.01,
-      "matches": 80,
-      "errors_detected": 4,
+      "matches": 109,
+      "errors_detected": 2,
       "false_matches": 0
     },
     {
       "tol": 0.02,
-      "matches": 74,
-      "errors_detected": 4,
+      "matches": 103,
+      "errors_detected": 2,
       "false_matches": 0
     },
     {
       "tol": 0.03,
-      "matches": 70,
-      "errors_detected": 4,
+      "matches": 99,
+      "errors_detected": 2,
       "false_matches": 0
     },
     {
       "tol": 0.05,
-      "matches": 53,
-      "errors_detected": 4,
+      "matches": 76,
+      "errors_detected": 2,
       "false_matches": 0
     }
-  ],
-  "extraction_model": "ollama/gemma4:31b"
+  ]
 }
